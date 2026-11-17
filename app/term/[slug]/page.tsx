@@ -24,7 +24,7 @@ export default async function TermPage({ params }: Props) {
     <div className="page-heading"><p className="eyebrow"><Link href="/guide">Field guide</Link> / {topicLabels[term.topic][0]}</p>
       <h1>{term.en}</h1><p lang="zh-Hans">{term.zh}</p><div className="flex flex-wrap gap-2"><span className="chip">{kindLabels[term.kind]}</span><span className="chip">{mappingLabels[map.status]}</span></div></div>
     <div className={"term-layout" + ("object" in map ? "" : " text-only")}>
-      {"object" in map && <Viewer target={map.object} overlay={"overlay" in map ? map.overlay : undefined}/>}
+      {"object" in map && <Viewer key={term.slug} target={map.object} overlay={"overlay" in map ? map.overlay : undefined}/>}
       <article className="card detail"><TermFacts term={term}/>
         {map.status === "scene" && <Link className="primary" href={"/scenes/" + map.scene}>Open process scene <ArrowRight size={17}/></Link>}
         {"object" in map && <Link className="text-link" href={"/atlas?term=" + term.slug}>Open in ship atlas <ArrowRight size={15}/></Link>}

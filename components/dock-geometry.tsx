@@ -12,6 +12,9 @@ const frames: Record<SceneId,{ship:number[];water:number[];platform:number[];x:n
 const blocks = [-6,-4,-2,0,2,4,6];
 const sides = [-1,1];
 const winches = [-7,-2.4,2.4,7];
+const inspectionPoints: [number, number, number][] = [
+  [0,-.67,1.64], [-8,-1.12,.18], [-7.1,-1.30,.56],
+];
 function Blocks({ y }: {y:number}) {
   return <group>{blocks.map(x => <group key={x}>
     <BoxPiece p={[x,y,0]} s={[.8,.32,.85]} color="#8d8070"/>
@@ -87,6 +90,12 @@ export function DockGeometry({scene,stage,reduced}: {scene:SceneId;stage:number;
         <BoxPiece p={[0,-.05,0]} s={[14.9,.10,4.6]} color="#7d6b54"/><Blocks y={.10}/>
       </group>}
       <SchematicShip simplified/>
+      {scene === "dry-dock" && stage === 3 && inspectionPoints.map(point => (
+        <mesh key={point[0]} position={point} renderOrder={6}>
+          <sphereGeometry args={[.13, 12, 8]}/>
+          <meshBasicMaterial color="#ffd187" depthTest={false} depthWrite={false}/>
+        </mesh>
+      ))}
     </group>
     <mesh ref={water} position={[scene==="dry-dock" ? 0 : 1,initial.current[2],0]} rotation={[-Math.PI/2,0,0]} renderOrder={4}>
       <planeGeometry args={scene==="dry-dock" ? [22.8,8.9] : [46,27]}/>
