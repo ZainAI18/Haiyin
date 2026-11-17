@@ -2,11 +2,16 @@
 import type { ObjectId } from "@/lib/domain";
 import type { ViewerProps } from "./visual-types";
 const positions: Record<ObjectId,[number,number]> = {
-  hull:[365,238], bow:[622,249], stern:[154,249], rudder:[122,287], "rudder-stock":[127,257],
+  hull:[365,238], bow:[599,229], stern:[119,237], rudder:[122,287], "rudder-stock":[127,257],
   propeller:[172,284], "propeller-boss":[174,282], shaft:[196,273], anchor:[582,225], "sea-chest":[276,266],
   "bilge-keel":[406,264], anodes:[236,272], deck:[389,214],
+  stem:[623,218], "fore-bottom":[564,279], forecastle:[581,204], hawse:[595,217],
+  "bow-thruster":[545,263], "thruster-grid":[545,263], "bottom-shell":[363,284], "side-shell":[365,245],
+  hatch:[378,202], superstructure:[236,177], "anchor-shank":[582,226], "anchor-arm":[582,236],
+  "anchor-ring":[582,215], fluke:[573,231], crown:[582,234], "propeller-blade":[180,291],
+  "shaft-outlet":[203,270], "rudder-drain-plug":[128,298],
 };
-const markers: ObjectId[] = ["rudder","propeller","anchor","bilge-keel","sea-chest"];
+const markers: ObjectId[] = ["stern","rudder","propeller","anchor","stem","bilge-keel","sea-chest"];
 export function Diagram({scene,target,overlay,stage=0,onPick}: ViewerProps) {
   const pos = target && positions[target];
   const shipY = scene === "dry-dock" ? [-33,-15,0,0][stage]
@@ -42,9 +47,13 @@ export function Diagram({scene,target,overlay,stage=0,onPick}: ViewerProps) {
       <path d="M114 211H568l62-15q-6 30-18 43H116z" fill="#174259" stroke="#8ca3a9"/>
       <path d="M203 210v-38h72v37m-65-39v-15h50v15m-31-17v-24h9v24" fill="#bcc9c7" stroke="#8da5ab" strokeWidth="2"/>
       <path d="M216 162h36m-37 19h49m64 32v-10h73v10m20 0v-10h73v10" fill="none" stroke="#6e909b" strokeWidth="3"/>
+      <path d="M556 210v-6l49-7 8 3" fill="none" stroke="#96aaa9" strokeWidth="3"/>
       <path d="M119 258l23 3-3 45h-23z" fill="#a45a46" stroke="#b77e68"/>
       <path d="M172 272l5-8 6 3-4 15 7 9-6 6-10-10z" fill="#dda65d"/>
       <path d="M582 214v21m-11-8q10 21 22 0" fill="none" stroke="#c2a777" strokeWidth="3"/>
+      <ellipse cx="595" cy="217" rx="6" ry="4" fill="#152b37" stroke="#829aa2" strokeWidth="1.5"/>
+      <circle cx="545" cy="263" r="9" fill="#223b45" stroke="#cc9b7a" strokeWidth="1.5"/>
+      <path d="M541 257v12m4-14v16m4-14v12" stroke="#9cb5b5" strokeWidth="1.5"/>
       <path d="M267 262h19m-18 4h18m-17 4h16m89-6h77" fill="none" stroke="#54362c" strokeWidth="3"/>
       {scene === "dry-dock" && stage === 3 && (["hull", "rudder", "propeller"] as const).map(id => (
         <circle key={id} cx={positions[id][0]} cy={positions[id][1]} r="7" fill="#ffd187" stroke="#183745" strokeWidth="2">
@@ -57,11 +66,14 @@ export function Diagram({scene,target,overlay,stage=0,onPick}: ViewerProps) {
         {(pos && overlay) && <g transform={"translate("+pos[0]+" "+pos[1]+")"} stroke="#f7b578" fill="none" strokeWidth="3">
           {overlay === "crack" ? <path d="M-13-5l8 7 8-4 9 9"/> : overlay === "dent" ? <><ellipse rx="15" ry="8"/><ellipse rx="10" ry="4"/></> : <>{[-9,-4,2,8].map((x,i)=><circle key={x} cx={x} cy={i%2?4:-3} r={i%2?2:3}/>)}</>}
         </g>}
-        {(pos && !markers.includes(target!)) && <circle cx={pos[0]} cy={pos[1]} r="12" fill="none" stroke="#ffbd7e" strokeWidth="2"/>}
         {markers.map(id => { const [x,y]=positions[id]; return <g key={id} className={onPick ? "diagram-pick" : undefined} role={onPick ? "button" : undefined} aria-label={id} tabIndex={onPick ? 0 : undefined}
           onClick={() => onPick?.(id)} onKeyDown={e => { if (onPick && ["Enter"," "].includes(e.key)) { e.preventDefault(); onPick(id); } }}>
           <circle cx={x} cy={y} r="12" stroke={id===target ? "#ffc087" : "#7798a3"} fill={id===target ? "#8e533a" : "#183745"}/>
           <circle cx={x} cy={y} r="3" fill={id===target ? "#ffd19d" : "#d0e1e2"}/></g>; })}
+        {pos && target && !markers.includes(target) && <g pointerEvents="none">
+          <circle cx={pos[0]} cy={pos[1]} r="11" fill="none" stroke="#ffbd7e" strokeWidth="2"/>
+          <circle cx={pos[0]} cy={pos[1]} r="3" fill="#ffd19d" stroke="#182f3a" strokeWidth="1"/>
+        </g>}
       </>}
     </g>
   </svg>;

@@ -36,7 +36,7 @@ hull bow stern rudder rudder-stock propeller propeller-boss shaft
 anchor sea-chest bilge-keel anodes deck
 ```
 
-Keep groups independently selectable; for example put the propeller boss under the propeller and do not put unrelated parts under the hull group. Configure `data/ship-model.json`:
+Keep groups independently selectable, for example by placing the propeller boss under the propeller. The IDs above are required. The additional IDs in `lib/domain.ts`, such as `stem` and `forecastle`, are optional. Selecting an optional part that the GLB lacks opens the labeled schematic for that part. Configure `data/ship-model.json`:
 
 ```json
 {

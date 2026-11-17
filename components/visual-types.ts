@@ -10,3 +10,4 @@ export type ViewerProps = {
 export type ModelManifest = {
   url: string; title: string; author: string; source: string; license: string; optional?: boolean;
 };
+export type ModelLoadState = "pending" | "fallback" | { targets: ReadonlySet<ObjectId> };

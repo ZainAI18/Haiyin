@@ -5,17 +5,26 @@ import { OrbitControls } from "@react-three/drei";
 import { Box3, Color, Group, Mesh, MeshStandardMaterial, Vector3, type Object3D } from "three";
 import type { OrbitControls as OrbitImpl } from "three-stdlib";
 import type { ObjectId, OverlayId } from "@/lib/domain";
-import type { ViewerProps, ModelManifest } from "./visual-types";
+import type { ModelLoadState, ViewerProps, ModelManifest } from "./visual-types";
 import { SchematicShip } from "./schematic-ship";
 import { DockGeometry } from "./dock-geometry";
 import { useProductionAsset } from "./production-asset";
 
-type Props = ViewerProps & {model:ModelManifest|null;onModelState:(s:"pending"|"ready"|"fallback")=>void; onContextLost:()=>void};
+type Props = ViewerProps & {model:ModelManifest|null;onModelState:(state:ModelLoadState)=>void; onContextLost:()=>void};
 const isObject = (o: Object3D): o is Object3D & {userData:{object:ObjectId}} => typeof o.userData.object === "string";
 const orbitShip: [number,number,number] = [-16,8.0,22.5];
 const orbitDock: [number,number,number] = [-21,18,27];
 const origin: [number,number,number] = [0,0,0];
 const amber = new Color("#ff944d");
+const focusDirections: Partial<Record<ObjectId, [number, number, number]>> = {
+  bow: [.53,.32,1], stem: [.86,.17,1], "fore-bottom": [.82,-.65,1], forecastle: [.50,.9,1],
+  hawse: [.32,.14,1], "bow-thruster": [.34,-.29,1], "thruster-grid": [.22,-.21,1],
+  "bottom-shell": [-.38,-.65,1], stern: [-1.12,.3,.65],
+  anchor: [.48,.28,1], "anchor-shank": [.34,.12,1], "anchor-arm": [.34,.12,1],
+  "anchor-ring": [.34,.18,1], fluke: [.34,.12,1], crown: [.34,.12,1],
+  propeller: [-1.14,-.14,.72], "propeller-boss": [-1.14,-.14,.72], "propeller-blade": [.76,-.57,1],
+  "shaft-outlet": [-.64,-.36,1], "rudder-drain-plug": [-.14,-.13,1], hatch: [.12,1,1], superstructure: [-.5,.56,1],
+};
 
 function Defect({ type, point, size }: {type:OverlayId; point:Vector3;size:number}) {
   const paths = [[-.48,.17,-.22,.03],[-.22,.03,-.025,.10],[-.025,.1,.19,-.14],[.19,-.14,.45,-.11],[.19,-.14,.23,-.33]];
@@ -33,6 +42,7 @@ function World({ scene,target,overlay,stage=0,reset,onPick,model,onModelState,on
   const [mark,setMark]=useState<{point:Vector3;size:number}>();
   const { camera, invalidate, gl, size }=useThree();
   const asset = useProductionAsset(model,onModelState);
+  const detailed = asset && (!target || asset.getObjectByName(target)?.userData.object === target) ? asset : undefined;
   useEffect(()=>{
     const lost = (e:Event)=>{e.preventDefault();onContextLost();};
     gl.domElement.addEventListener("webglcontextlost",lost);
@@ -56,9 +66,9 @@ function World({ scene,target,overlay,stage=0,reset,onPick,model,onModelState,on
         box.getCenter(look);
         const ext=box.getSize(new Vector3());
         const whole=target==="hull" || target==="deck";
-        const propFocus=target==="propeller" || target==="propeller-boss";
-        const direction=new Vector3(propFocus?-1.14:target==="anchor"?.48:-.72,propFocus?-.14:whole?.36:.28,propFocus?.72:1).normalize();
-        const distance=Math.max(3.65, ext.length()*(whole?1.62:2.5))/Math.max(.65,ratio);
+        const direction=new Vector3(...(focusDirections[target] ?? [-.72,whole?.36:.28,1])).normalize();
+        const minimumDistance = ext.length() < .8 ? 1.9 : 3.65;
+        const distance=Math.max(minimumDistance, ext.length()*(whole?1.62:2.5))/Math.max(.65,ratio);
         cam.copy(look).addScaledVector(direction,distance);
         const selectedMats=new Set<MeshStandardMaterial>();
         candidates.forEach(root=>root.traverse(child=>{
@@ -104,7 +114,7 @@ function World({ scene,target,overlay,stage=0,reset,onPick,model,onModelState,on
     <gridHelper args={[64,64,"#385463","#284450"]} position={[0,scene ? -4.11 : -2.65,0]}/>
     <group ref={group} onClick={scene || !onPick?undefined:pick}>
       {scene ? <DockGeometry scene={scene} stage={stage} reduced={reduced}/>
-        : asset ? <primitive object={asset} dispose={null}/> : <SchematicShip/>}
+        : detailed ? <primitive object={detailed} dispose={null}/> : <SchematicShip/>}
       {!scene && overlay && mark && <Defect type={overlay} {...mark}/>}
     </group>
     <OrbitControls ref={controls} makeDefault enableDamping={false} minDistance={1.7} maxDistance={90} maxPolarAngle={Math.PI*.88} onStart={()=>{goal.current=null;}}/>

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Material, Mesh, Object3D, Texture } from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { objectIds } from "@/lib/domain";
-import type { ModelManifest } from "./visual-types";
+import { objectIds, requiredObjectIds, type ObjectId } from "@/lib/domain";
+import type { ModelLoadState, ModelManifest } from "./visual-types";
 
 function release(root: Object3D) {
   const geometries = new Set<Mesh["geometry"]>();
@@ -26,7 +26,7 @@ function release(root: Object3D) {
   for (const b of bitmaps) b.close();
 }
 
-export function useProductionAsset(manifest: ModelManifest | null, status: (s:"pending"|"ready"|"fallback")=>void) {
+export function useProductionAsset(manifest: ModelManifest | null, status: (state: ModelLoadState) => void) {
   const [root,setRoot] = useState<Object3D>();
   useEffect(() => {
     if (!manifest) return;
@@ -42,18 +42,19 @@ export function useProductionAsset(manifest: ModelManifest | null, status: (s:"p
       const gltf = await loader.parseAsync(data, new URL(".", response.url).href);
       loaded = gltf.scene;
       if (abort.signal.aborted) { release(loaded); return; }
-      const counts = new Map<string,number>();
+      const counts = new Map<ObjectId,number>();
       loaded.traverse(node => {
-        if (objectIds.some(id => id === node.name) && node.getObjectByProperty("isMesh", true)) {
-          node.userData.object = node.name;
-          counts.set(node.name,(counts.get(node.name) ?? 0)+1);
+        const id = objectIds.find(id => id === node.name);
+        if (id && node.getObjectByProperty("isMesh", true)) {
+          node.userData.object = id;
+          counts.set(id, (counts.get(id) ?? 0) + 1);
         }
       });
       const textured = loaded.getObjectsByProperty("isMesh",true).some(node => {
         const m = (node as Mesh).material;
         return (Array.isArray(m) ? m : [m]).some(mat => "map" in mat && mat.map instanceof Texture);
       });
-      if (!textured || [...counts].some(([,count]) => count !== 1) || objectIds.some(id => !counts.has(id))) {
+      if (!textured || [...counts.values()].some(count => count !== 1) || requiredObjectIds.some(id => !counts.has(id))) {
         release(loaded); loaded = undefined; throw new Error("GLB does not meet the documented model contract.");
       }
       // glTF nodes can share a material. Isolate it so selection only lights the selected meshes.
@@ -65,7 +66,7 @@ export function useProductionAsset(manifest: ModelManifest | null, status: (s:"p
       });
       originals.forEach(mat => mat.dispose());
       setRoot(loaded);
-      status("ready");
+      status({ targets: new Set(counts.keys()) });
     }
     void load(manifest.url).catch(() => { if (!abort.signal.aborted) status("fallback"); });
     return () => { abort.abort(); if (loaded) release(loaded); };

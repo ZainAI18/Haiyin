@@ -13,11 +13,15 @@ export function Atlas({ terms, initial }: { terms: Term[]; initial?: string }) {
   const [selected, setSelected] = useState(initial ?? "");
   const [query, setQuery] = useState("");
   const [topic, setTopic] = useState<Topic>();
+  const [modeledOnly, setModeledOnly] = useState(false);
   const [reset, setReset] = useState(0);
   const viewerHeading = useRef<HTMLHeadingElement>(null);
   const active = index.get(selected);
   const map = active?.mapping;
-  const matches = useMemo(() => searchTerms(terms, query, topic), [terms, query, topic]);
+  const matches = useMemo(() => {
+    const results = searchTerms(terms, query, topic);
+    return modeledOnly ? results.filter(term => term.mapping.status === "schematic") : results;
+  }, [terms, query, topic, modeledOnly]);
   const select = (slug: string) => { setSelected(slug); setReset(n => n + 1); };
   const selectFromIndex = (slug: string) => {
     select(slug);
@@ -54,7 +58,10 @@ export function Atlas({ terms, initial }: { terms: Term[]; initial?: string }) {
         <div className="index-tools">
           <label className="search"><Search size={17}/><input type="search" value={query} onChange={e => setQuery(e.target.value)} placeholder="Search / 搜索术语" aria-label="Search term index"/></label>
           <label className="select-field"><span>Inspection area</span><select value={topic ?? ""} onChange={e => setTopic((e.target.value || undefined) as Topic | undefined)}><option value="">All areas</option>{topics.map(t => <option key={t} value={t}>{topicLabels[t].join(" / ")}</option>)}</select></label>
-          <p className="result-count" role="status">{matches.length} {matches.length === 1 ? "TERM" : "TERMS"}</p>
+          <div className="index-result-controls">
+            <p className="result-count" role="status">{matches.length} {matches.length === 1 ? "TERM" : "TERMS"}</p>
+            <label><input type="checkbox" checked={modeledOnly} onChange={e => setModeledOnly(e.target.checked)}/> Modeled parts only</label>
+          </div>
         </div>
         <ul className="term-list">
           {matches.map(t => {
@@ -63,10 +70,11 @@ export function Atlas({ terms, initial }: { terms: Term[]; initial?: string }) {
             if (mapping.status === "scene") {
               return <li key={t.slug}><Link className="term-row" href={`/scenes/${mapping.scene}`}>{name}<span className="term-action">Open scene <ArrowDownRight size={15}/></span></Link></li>;
             }
-            if (mapping.status === "text") {
-              return <li key={t.slug}><Link className="term-row" href={`/term/${t.slug}`}>{name}<span className="term-action">Read <BookOpen size={15}/></span></Link></li>;
+            if (mapping.status === "text" || mapping.status === "context") {
+              const action = mapping.status === "context" ? "Area + notes" : "Read";
+              return <li key={t.slug}><Link className="term-row" href={`/term/${t.slug}`}>{name}<span className="term-action">{action} <BookOpen size={15}/></span></Link></li>;
             }
-            const action = mapping.status === "context" ? "Focus area" : mapping.status === "demo" ? "Show defect" : "Focus part";
+            const action = mapping.status === "demo" ? "Show defect" : "Focus part";
             return <li key={t.slug}><button type="button" className="term-row" aria-pressed={selected === t.slug} onClick={() => selectFromIndex(t.slug)}>
               {name}<span className="term-action">{action} <ChevronRight size={15}/></span>
             </button></li>;

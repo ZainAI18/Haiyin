@@ -1,6 +1,11 @@
 import { z } from "zod";
 
-export const objectIds = ["hull", "bow", "stern", "rudder", "rudder-stock", "propeller", "propeller-boss", "shaft", "anchor", "sea-chest", "bilge-keel", "anodes", "deck"] as const;
+export const requiredObjectIds = ["hull", "bow", "stern", "rudder", "rudder-stock", "propeller", "propeller-boss", "shaft", "anchor", "sea-chest", "bilge-keel", "anodes", "deck"] as const;
+export const objectIds = [
+  ...requiredObjectIds, "stem", "fore-bottom", "forecastle", "hawse", "bow-thruster", "thruster-grid",
+  "bottom-shell", "side-shell", "hatch", "superstructure", "anchor-shank", "anchor-arm", "anchor-ring",
+  "fluke", "crown", "propeller-blade", "shaft-outlet", "rudder-drain-plug",
+] as const;
 export type ObjectId = (typeof objectIds)[number];
 export const sceneIds = ["dry-dock", "floating-dock", "synchrolift"] as const;
 export type SceneId = (typeof sceneIds)[number];
@@ -39,11 +44,22 @@ export const mappingLabels: Record<Mapping["status"], string> = {
 export function searchTerms(terms: readonly Term[], input: string, topic?: Topic): Term[] {
   const normalize = (s: string) => s.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
   const tokens = normalize(input).split(/\s+/).filter(Boolean);
-  return terms.filter(t => (!topic || t.topic === topic) &&
-    tokens.every(q => normalize([t.en, t.zh, ...t.aliases, t.explanationZh].join(" ")).includes(q)));
+  return terms.filter(term => {
+    if (topic && term.topic !== topic) return false;
+    const searchable = normalize([term.en, term.zh, ...term.aliases, term.explanationZh].join(" "));
+    return tokens.every(token => {
+      if (token === "sterm") return ["stem", "stern", "stem-distortion", "stern-frame"].includes(term.slug);
+      return searchable.includes(token);
+    });
+  });
 }
 export const focusTermByObject: Record<ObjectId, string> = {
-  hull: "shell-plating", bow: "bow", stern: "stern-frame", rudder: "rudder-plate", "rudder-stock": "rudder-stock",
+  hull: "shell-plating", bow: "bow", stern: "stern", rudder: "rudder-plate", "rudder-stock": "rudder-stock",
   propeller: "propeller", "propeller-boss": "propeller-boss", shaft: "propeller-shaft", anchor: "stockless-anchor",
   "sea-chest": "sea-chest", "bilge-keel": "bilge-keel", anodes: "sacrificial-anode", deck: "freeboard-deck",
+  stem: "stem", "fore-bottom": "fore-bottom", forecastle: "forecastle", hawse: "hawse",
+  "bow-thruster": "bow-thruster", "thruster-grid": "thruster-grid", "bottom-shell": "bottom-shell", "side-shell": "side-shell",
+  hatch: "hatch", superstructure: "superstructure", "anchor-shank": "anchor-shank", "anchor-arm": "anchor-arm",
+  "anchor-ring": "anchor-ring", fluke: "fluke", crown: "crown", "propeller-blade": "propeller-blade",
+  "shaft-outlet": "shaft-outlet", "rudder-drain-plug": "rudder-drain-plug",
 };

@@ -4,7 +4,7 @@ import { Component, useCallback, useEffect, useState, type ReactNode } from "rea
 import { Box, Crosshair, Image, RotateCcw } from "lucide-react";
 import modelFile from "@/data/ship-model.json";
 import { Diagram } from "./diagram";
-import type { ModelManifest, ViewerProps } from "./visual-types";
+import type { ModelLoadState, ModelManifest, ViewerProps } from "./visual-types";
 
 const CanvasView = dynamic(() => import("./canvas-view"), { ssr: false, loading: () => <div className="viewer-loading" role="status">Loading 3D viewer…</div> });
 const model = modelFile.production as ModelManifest | null;
@@ -23,7 +23,7 @@ export function Viewer({ onOverview, ...props }: ViewerProps & { onOverview?: ()
   const [twoD, setTwoD] = useState(false);
   const [showOverview, setShowOverview] = useState(false);
   const [revision, setRevision] = useState(0);
-  const [modelState, setModelState] = useState<"pending" | "ready" | "fallback">("pending");
+  const [modelState, setModelState] = useState<ModelLoadState>("pending");
   const report3DFailure = useCallback(() => setFailed3D(true), []);
   useEffect(() => {
     const canvas = document.createElement("canvas");
@@ -44,7 +44,9 @@ export function Viewer({ onOverview, ...props }: ViewerProps & { onOverview?: ()
     : capable === undefined ? "Preparing 3D · showing diagram"
     : twoD ? "2D profile diagram"
     : "Drag to orbit · Scroll or pinch to zoom";
-  const assetLabel = !scene && model && modelState === "ready" && !staticView ? model.title : "Schematic · not to scale";
+  const modelReady = typeof modelState === "object";
+  const detailed = !scene && model && modelReady && (!activeTarget || modelState.targets.has(activeTarget)) && !staticView;
+  const assetLabel = detailed ? model.title : "Schematic · not to scale";
   const resetOverview = () => {
     if (onOverview) onOverview();
     else setShowOverview(true);
@@ -68,6 +70,7 @@ export function Viewer({ onOverview, ...props }: ViewerProps & { onOverview?: ()
         </ViewerBoundary>}
       {!staticView && capable && !scene && model && modelState === "pending" && <span className="viewport-note" role="status">Loading detailed model · showing schematic</span>}
       {!staticView && capable && !scene && model && modelState === "fallback" && <span className="viewport-note" role="status">Detailed model unavailable · showing schematic</span>}
+      {!staticView && modelReady && !detailed && <span className="viewport-note" role="status">Selected part shown on the schematic</span>}
       <div className="viewport-toolbar" aria-label="View controls">
         {target && showOverview
           ? <button type="button" onClick={() => setShowOverview(false)}><Crosshair size={16}/> Focus part</button>
@@ -76,6 +79,6 @@ export function Viewer({ onOverview, ...props }: ViewerProps & { onOverview?: ()
       </div>
     </div>
     <div className="viewer-caption"><span role="status">{viewStatus}</span><span>{activeTarget ? "Focused / " + activeTarget.replaceAll("-", " ") : "Overview"}</span></div>
-    {model && !scene && modelState === "ready" && !staticView && <p className="fine"><a className="underline" href={model.source}>{model.title}</a> · {model.author} · {model.license}</p>}
+    {detailed && <p className="fine"><a className="underline" href={model.source}>{model.title}</a> · {model.author} · {model.license}</p>}
   </div>;
 }

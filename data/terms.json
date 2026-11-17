@@ -285,6 +285,34 @@
     ]
   },
   {
+    "slug": "stern",
+    "en": "Stern",
+    "zh": "船尾",
+    "kind": "component",
+    "topic": "stern",
+    "explanationZh": "船体的后端。由船尾检查舵板是否对中，并查看螺旋桨、艉框和相邻表面。",
+    "aliases": [
+      "Aft end",
+      "船艉"
+    ],
+    "confidence": "high",
+    "mapping": {
+      "status": "schematic",
+      "object": "stern"
+    },
+    "historical": false,
+    "sources": [
+      {
+        "edition": "EN",
+        "page": 3
+      },
+      {
+        "edition": "CN",
+        "page": 3
+      }
+    ]
+  },
+  {
     "slug": "shell-plating",
     "en": "Shell plating",
     "zh": "船壳外板",
@@ -985,7 +1013,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "propeller",
+      "object": "propeller-blade",
       "overlay": "crack"
     },
     "historical": false,
@@ -1309,8 +1337,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "bow"
+      "status": "schematic",
+      "object": "fore-bottom"
     },
     "historical": false,
     "sources": [
@@ -1338,14 +1366,15 @@
     "zh": "艏材",
     "kind": "component",
     "topic": "bow",
-    "explanationZh": "构成船首轮廓的结构，碰撞后留意变形及相邻连接。",
+    "explanationZh": "艏柱位于船首最前缘，上接艏部甲板，下接艏底结构。示意图高亮的是船壳前缘所在位置。",
     "aliases": [
-      "船首骨材"
+      "船首骨材",
+      "艏柱"
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "bow"
+      "status": "schematic",
+      "object": "stem"
     },
     "historical": false,
     "sources": [
@@ -1380,8 +1409,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "hawse"
     },
     "historical": false,
     "sources": [
@@ -1405,8 +1434,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "bow"
+      "status": "schematic",
+      "object": "forecastle"
     },
     "historical": false,
     "sources": [
@@ -1431,7 +1460,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "bow",
+      "object": "hawse",
       "overlay": "wear"
     },
     "historical": false,
@@ -1467,7 +1496,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "bow",
+      "object": "stem",
       "overlay": "dent"
     },
     "historical": false,
@@ -1503,7 +1532,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "bow",
+      "object": "fore-bottom",
       "overlay": "dent"
     },
     "historical": false,
@@ -1537,7 +1566,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "bow",
+      "object": "stem",
       "overlay": "dent"
     },
     "historical": false,
@@ -1570,8 +1599,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "hull"
+      "status": "schematic",
+      "object": "bottom-shell"
     },
     "historical": false,
     "sources": [
@@ -1619,8 +1648,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "hull"
+      "status": "schematic",
+      "object": "side-shell"
     },
     "historical": false,
     "sources": [
@@ -1856,7 +1885,7 @@
     "confidence": "high",
     "mapping": {
       "status": "context",
-      "object": "bow"
+      "object": "forecastle"
     },
     "historical": false,
     "sources": [
@@ -2302,8 +2331,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "deck"
+      "status": "schematic",
+      "object": "hatch"
     },
     "historical": false,
     "sources": [
@@ -2327,8 +2356,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "deck"
+      "status": "schematic",
+      "object": "superstructure"
     },
     "historical": false,
     "sources": [
@@ -4769,8 +4798,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "rudder"
+      "status": "schematic",
+      "object": "rudder-drain-plug"
     },
     "historical": false,
     "sources": [
@@ -5462,7 +5491,7 @@
     "confidence": "high",
     "mapping": {
       "status": "schematic",
-      "object": "propeller"
+      "object": "propeller-blade"
     },
     "historical": false,
     "sources": [
@@ -5569,7 +5598,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "propeller",
+      "object": "propeller-blade",
       "overlay": "crack"
     },
     "historical": false,
@@ -5618,7 +5647,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "propeller",
+      "object": "propeller-blade",
       "overlay": "dent"
     },
     "historical": false,
@@ -5646,7 +5675,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "propeller",
+      "object": "propeller-blade",
       "overlay": "corrosion"
     },
     "historical": false,
@@ -5674,7 +5703,7 @@
     "confidence": "high",
     "mapping": {
       "status": "context",
-      "object": "shaft"
+      "object": "shaft-outlet"
     },
     "historical": false,
     "sources": [
@@ -5721,7 +5750,7 @@
     "confidence": "high",
     "mapping": {
       "status": "context",
-      "object": "shaft"
+      "object": "shaft-outlet"
     },
     "historical": false,
     "sources": [
@@ -5761,8 +5790,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "shaft"
+      "status": "schematic",
+      "object": "shaft-outlet"
     },
     "historical": false,
     "sources": [
@@ -5985,7 +6014,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "shaft",
+      "object": "shaft-outlet",
       "overlay": "ingress"
     },
     "historical": false,
@@ -6047,12 +6076,12 @@
     "zh": "艏侧推",
     "kind": "component",
     "topic": "propeller",
-    "explanationZh": "装于船首、用于横向操纵的推进装置，查孔口格栅和内部叶片。",
+    "explanationZh": "装于船首、用于横向操纵的推进装置，查孔口格栅和内部叶片。 示意船突出舷侧隧道口，供定位检查。",
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "bow"
+      "status": "schematic",
+      "object": "bow-thruster"
     },
     "historical": false,
     "sources": [
@@ -6079,7 +6108,7 @@
     "confidence": "high",
     "mapping": {
       "status": "context",
-      "object": "hull"
+      "object": "bow-thruster"
     },
     "historical": false,
     "sources": [
@@ -6103,8 +6132,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "bow"
+      "status": "schematic",
+      "object": "thruster-grid"
     },
     "historical": false,
     "sources": [
@@ -6364,8 +6393,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "anchor-shank"
     },
     "historical": false,
     "sources": [
@@ -6392,8 +6421,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "anchor-arm"
     },
     "historical": false,
     "sources": [
@@ -6435,8 +6464,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "fluke"
     },
     "historical": false,
     "sources": [
@@ -6482,8 +6511,8 @@
     ],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "crown"
     },
     "historical": false,
     "sources": [
@@ -6540,8 +6569,8 @@
     "aliases": [],
     "confidence": "high",
     "mapping": {
-      "status": "context",
-      "object": "anchor"
+      "status": "schematic",
+      "object": "anchor-ring"
     },
     "historical": false,
     "sources": [
@@ -6645,7 +6674,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "anchor",
+      "object": "anchor-arm",
       "overlay": "crack"
     },
     "historical": false,
@@ -6679,7 +6708,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "anchor",
+      "object": "anchor-shank",
       "overlay": "crack"
     },
     "historical": false,
@@ -6705,7 +6734,7 @@
     "confidence": "high",
     "mapping": {
       "status": "demo",
-      "object": "anchor",
+      "object": "crown",
       "overlay": "wear"
     },
     "historical": false,

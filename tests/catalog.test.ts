@@ -39,7 +39,7 @@ test("defect mappings carry an overlay and cannot conflict with a process route"
   const demo = catalog.filter(t=>t.mapping.status==="demo");
   assert.ok(demo.length);
   for (const t of demo) assert.equal(t.kind,"defect",t.slug);
-  assert.deepEqual(bySlug.get("propeller-root-crack")?.mapping,{status:"demo",object:"propeller",overlay:"crack"});
+  assert.deepEqual(bySlug.get("propeller-root-crack")?.mapping,{status:"demo",object:"propeller-blade",overlay:"crack"});
   assert.equal(bySlug.get("link-fracture")?.mapping.status,"text");
 });
 test("1996 acceptance examples are explicitly historical and retain page provenance", () => {
@@ -57,5 +57,15 @@ test("bilingual, punctuation tolerant search and area filters locate real entrie
   assert.ok(searchTerms(catalog,"无损检测","measurements").some(t=>t.slug==="ndt"));
   assert.ok(searchTerms(catalog,"Ｋｅｎｔｅｒ","anchor").some(t=>t.slug==="kenter-shackle"));
   assert.deepEqual(searchTerms(catalog,"drawing-that-does-not-exist"),[]);
+  assert.ok(searchTerms(catalog, "STERM", "bow").some(term => term.slug === "stem"));
+  assert.ok(searchTerms(catalog, "sterm", "stern").some(term => term.slug === "stern"));
+  assert.ok(searchTerms(catalog, "艏柱").some(term => term.slug === "stem"));
   for (const topic of topics) assert.ok(searchTerms(catalog,"",topic).length);
+});
+test("bow parts, anchor parts, and the stern have specific inspection targets", () => {
+  const parts = ["stem", "fore-bottom", "forecastle", "hawse", "bow-thruster", "thruster-grid", "stern",
+    "anchor-shank", "anchor-arm", "anchor-ring", "fluke", "propeller-blade", "shaft-outlet"];
+  for (const part of parts) assert.deepEqual(bySlug.get(part)?.mapping, { status: "schematic", object: part });
+  assert.deepEqual(bySlug.get("stem-distortion")?.mapping, { status: "demo", object: "stem", overlay: "dent" });
+  assert.deepEqual(bySlug.get("forepeak")?.mapping, { status: "context", object: "forecastle" });
 });
