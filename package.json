@@ -11,7 +11,8 @@
     "start": "next start",
     "test": "tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "check:assets": "node scripts/check-assets.mjs"
+    "check:assets": "node scripts/check-assets.mjs",
+    "build:hai-yin-rudder": "node scripts/build-hai-yin-rudder.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

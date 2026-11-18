@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "id": "hai-yin-i",
+  "name": "MT Hai Yin I",
+  "shipyard_no": "WZ029",
+  "class_no": "RI 88792",
+  "target_cn": "按所提供资料中最新有效图纸重建的设计状态；不声称是现船实测竣工状态。",
+  "status": "partial_reconstruction",
+  "unit": "metre",
+  "sources": {
+    "pdf_count": 160,
+    "page_count": 782,
+    "unique_content_count": 157,
+    "byte_duplicate_count": 3,
+    "not_approved_count": 5,
+    "filename_family_count": 116,
+    "verified_family_count": 12
+  },
+  "facts": [
+    {
+      "id": "loa",
+      "label_cn": "总长",
+      "value": 49.9,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "lpp",
+      "label_cn": "垂线间长",
+      "value": 47,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "lwl",
+      "label_cn": "设计水线长",
+      "value": 48.08,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "breadth",
+      "label_cn": "型宽",
+      "value": 9.8,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "depth",
+      "label_cn": "型深",
+      "value": 4.18,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "design-draft",
+      "label_cn": "设计吃水（几何基准）",
+      "value": 3.4,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": "规格书英文栏另列 3.50 m，冲突保留。"
+    },
+    {
+      "id": "frame-spacing",
+      "label_cn": "肋距",
+      "value": 0.56,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 5,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "double-bottom",
+      "label_cn": "双层底高度",
+      "value": 0.86,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "main-engine-power",
+      "label_cn": "主机单机功率",
+      "value": 201,
+      "unit": "kW",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 5,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "note_cn": "NT855-M，2 台。功率参数不能替代外形尺寸。"
+    },
+    {
+      "id": "propeller-diameter",
+      "label_cn": "螺旋桨直径",
+      "value": 1.73,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Propeller Plan.pdf",
+        "page": 1,
+        "sha256": "e9da9b6f7d8112ae2c36298711b659fb69aed7bf0d81a4103b1454ef7feab5a6"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "rudder-height",
+      "label_cn": "舵叶高度",
+      "value": 2.08,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Rudder Blade Construction.pdf",
+        "page": 1,
+        "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335"
+      },
+      "note_cn": ""
+    },
+    {
+      "id": "rudder-chord",
+      "label_cn": "舵叶弦长",
+      "value": 1.4,
+      "unit": "m",
+      "confidence": "dimension_verified",
+      "source": {
+        "file": "Rudder Blade Construction.pdf",
+        "page": 1,
+        "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335"
+      },
+      "note_cn": ""
+    }
+  ],
+  "cargo_tanks": [
+    {
+      "number": 1,
+      "frames": [
+        63,
+        79
+      ],
+      "sides": [
+        "port",
+        "starboard"
+      ],
+      "capacity_each_m3": 85.6,
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "geometry_status": "not_reconstructed"
+    },
+    {
+      "number": 2,
+      "frames": [
+        48,
+        63
+      ],
+      "sides": [
+        "port",
+        "starboard"
+      ],
+      "capacity_each_m3": 112.3,
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "geometry_status": "not_reconstructed"
+    },
+    {
+      "number": 3,
+      "frames": [
+        34,
+        48
+      ],
+      "sides": [
+        "port",
+        "starboard"
+      ],
+      "capacity_each_m3": 104.9,
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "geometry_status": "not_reconstructed"
+    },
+    {
+      "number": 4,
+      "frames": [
+        20,
+        34
+      ],
+      "sides": [
+        "port",
+        "starboard"
+      ],
+      "capacity_each_m3": 100.7,
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "geometry_status": "not_reconstructed"
+    }
+  ],
+  "components": [
+    {
+      "id": "rudder_blade_envelope",
+      "name_cn": "舵叶外形包络",
+      "quantity": 2,
+      "definition_count": 1,
+      "status": "drawing_derived_envelope",
+      "model_url": "/hai-yin-i/models/rudder-blade-envelope.glb",
+      "source": {
+        "file": "Rudder Blade Construction.pdf",
+        "page": 1,
+        "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335"
+      },
+      "note_cn": "已提取原图矢量外轮廓，以 1.400 m 弦长及 2.080 m 高度生成。尚无法兰、内部隔板、开孔、焊缝和安装坐标；未认证制造精度。"
+    },
+    {
+      "id": "hull",
+      "name_cn": "船体、双层底与舱壁",
+      "quantity": 1,
+      "status": "source_tracing_in_progress",
+      "source": {
+        "file": "Body Line on Frames.pdf",
+        "page": 1,
+        "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+      },
+      "note_cn": "已有肋骨型线、总结构、横剖面和外板展开图；尚未完成逐站曲线核对与闭合船壳。"
+    },
+    {
+      "id": "cargo_tanks",
+      "name_cn": "八个货油舱",
+      "quantity": 8,
+      "status": "dimensions_registered",
+      "source": {
+        "file": "Hull Specification.pdf",
+        "page": 6,
+        "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+      },
+      "note_cn": "四对舱的肋位与容积已登记；容量不是可直接生成精确舱形的几何。"
+    },
+    {
+      "id": "propeller",
+      "name_cn": "双螺旋桨",
+      "quantity": 2,
+      "status": "source_available_not_reconstructed",
+      "source": {
+        "file": "Propeller Plan.pdf",
+        "page": 1,
+        "sha256": "e9da9b6f7d8112ae2c36298711b659fb69aed7bf0d81a4103b1454ef7feab5a6"
+      },
+      "note_cn": "已确认 MAU、4 叶、D=1.730 m；叶片剖面与桨毂需按原表逐项重建。"
+    },
+    {
+      "id": "main_engine",
+      "name_cn": "双主机及机舱设备",
+      "quantity": 2,
+      "status": "installation_data_available_detail_incomplete",
+      "source": {
+        "file": "Main Engine and Gearbox Installation.pdf",
+        "page": 1,
+        "sha256": "b501cdc32a1bac348527a5d4b4b658c3fcf275c4c376d2c30c4d1aebfb1b2b03"
+      },
+      "note_cn": "NT855-M 安装图包含尺寸和现场复核要求；尚无完整设备三维外形或内部构造。"
+    },
+    {
+      "id": "cargo_piping_2019",
+      "name_cn": "2019 货油管系改装",
+      "quantity": 1,
+      "status": "topology_only_nts",
+      "source": {
+        "file": "Modification of Cargo Oil  Transfer Pipe System - Cybermarine Rev0.pdf",
+        "page": 1,
+        "sha256": "de4acbb4035e5286c885c6a57fb60f0a190d7fca72654df743f772b5574f0df1"
+      },
+      "note_cn": "图签为 CT-19-4528-3001 Rev.03，2019-06-24 带意见批准。Rev0 与 Rev3 文件字节相同。N.T.S. 系统图不能提供精确空间走管。"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "main-engine-mass",
+      "severity": "unresolved_bilingual_conflict",
+      "text_cn": "同一机械设备明细表中，NT855-M 主机中文页 2 单机重量 1258 kg，英文页 18 为 3350 kg，数量均为 2。它们是同一设备的双语记录，不能生成四台主机；重量冲突暂不用于质量或重心计算。",
+      "sources": [
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 2,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        },
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 18,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        }
+      ]
+    },
+    {
+      "id": "draft",
+      "severity": "unresolved_source_conflict",
+      "text_cn": "同一版船体规格书的中英文设计吃水为 3.40 / 3.50 m；几何暂依据型线图的 3.40 m，不据此推算营运装载状态。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 5,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        },
+        {
+          "file": "Body Line on Frames.pdf",
+          "page": 1,
+          "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
+        }
+      ]
+    },
+    {
+      "id": "tank-layout",
+      "severity": "superseded_design",
+      "text_cn": "较早 A 版油舱容积 807.2 m³、柴油舱 FR8–11；2011-11-16 B 版为 807.0 m³、柴油舱 FR17–20。采用 B 版对应部位。",
+      "sources": [
+        {
+          "file": "Hull Specification RevA.pdf",
+          "page": 6,
+          "sha256": "f4f00df3e1dda3ee05d282715e8b5e884e97161850c3fad83b9ada15f513966b"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ]
+    },
+    {
+      "id": "windlass",
+      "severity": "rejected_submission",
+      "text_cn": "两版绞锚机基座图和两版基座加强图盖 Not Approved；其中 2012 年加强图指向已批准的艏楼甲板图 SHST-9014，不能把被拒图作为有效版本。",
+      "sources": [
+        {
+          "file": "Windlass Foundation Structure and Arrangement Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "da6a892b85b6a8e6fbc9cee0ab00fc1ed4f82084bc4d8fdb53203bdb509d2953"
+        },
+        {
+          "file": "Structure Strengthening Plan for Windlass Foundation Rev3.pdf",
+          "page": 1,
+          "sha256": "d989dd2b6f5ae0e927bc5c6d834b0cfca7fcb631d8b82e2df88ba314ffae4db7"
+        },
+        {
+          "file": "Forecastle Deck Structure Rev3.pdf",
+          "page": 1,
+          "sha256": "5e0c5f465af3e70e223766541cb8971865175e25eb25558f33ad6c1bab9e087f"
+        }
+      ]
+    }
+  ],
+  "required_for_complete_geometry": [
+    "2019 改装后管系布置图、带坐标的轴测图/施工尺寸：系统图的 N.T.S. 连接关系不能确定空间路由、支架和弯头坐标。",
+    "先逐页核对已有锚机、绞车及舵机厂家手册；主辅机、泵、阀、计量撬等未给全外形尺寸的设备，仍需补足厂家尺寸图或可授权 CAD。设备代号不能替代几何。",
+    "图纸内要求现场确定的安装尺寸及相关复函：尚未给出的数值保留为空，不以猜测补齐。",
+    "如要求现船实况一致，另需竣工/改装记录和实测；本次已确认的目标是这批资料中的最新有效设计。"
+  ]
+}

@@ -16,6 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Link href="/atlas"><Compass size={16}/> <span>Ship atlas</span></Link>
         <Link href="/scenes/dry-dock"><Waves size={16}/> <span>Docking scenes</span></Link>
         <Link href="/guide"><LibraryBig size={16}/> <span>Field guide</span></Link>
+        <Link href="/vessels/hai-yin-i"><Anchor size={16}/> <span>Hai Yin I</span></Link>
       </nav>
       <span className="edition"><span/> EN / 中文</span>
     </div></header>

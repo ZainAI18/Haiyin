@@ -1,0 +1,29 @@
+{
+  "unit": "metre",
+  "dimensions_m": {
+    "chord": 1.399999976158142,
+    "height": 2.0799999237060547,
+    "thickness": 0.25196217000484467
+  },
+  "source": {
+    "file": "Rudder Blade Construction.pdf",
+    "page": 1,
+    "drawing_no": "WUT513B-231-02",
+    "class_reference": "SHST-8439",
+    "stamp_date": "2011-11-29",
+    "stamp_status": "Approved with remarks",
+    "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335",
+    "pdf_path_indices": [
+      1,
+      4799
+    ],
+    "pdf_bounds": [
+      180.1739959716797,
+      733.7839965820312,
+      375.3699951171875,
+      768.9140014648438
+    ]
+  },
+  "status": "drawing_derived_envelope_not_complete_component",
+  "full_vessel": false
+}

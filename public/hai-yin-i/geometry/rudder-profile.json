@@ -1,0 +1,164 @@
+{
+  "id": "rudder_blade_envelope",
+  "description_cn": "从舵叶结构图矢量轮廓提取的舵叶外形包络；尚不包含法兰、内部隔板、焊缝、孔及船上安装坐标。",
+  "status": "drawing_derived_envelope_not_complete_component",
+  "unit": "metre",
+  "chord_m": 1.4,
+  "height_m": 2.08,
+  "profile_xy_m": [
+    [
+      1.4,
+      0.0
+    ],
+    [
+      1.395130126,
+      0.020857128
+    ],
+    [
+      1.383188222,
+      0.038852175
+    ],
+    [
+      1.344960076,
+      0.067068068
+    ],
+    [
+      1.298992751,
+      0.086261266
+    ],
+    [
+      1.258971535,
+      0.098030911
+    ],
+    [
+      1.215113124,
+      0.108351568
+    ],
+    [
+      1.170393856,
+      0.11522967
+    ],
+    [
+      1.079241485,
+      0.122968411
+    ],
+    [
+      0.988942529,
+      0.125550764
+    ],
+    [
+      0.89778994,
+      0.124690126
+    ],
+    [
+      0.807498207,
+      0.1195333
+    ],
+    [
+      0.717199251,
+      0.112654759
+    ],
+    [
+      0.536608344,
+      0.092874085
+    ],
+    [
+      0.356878294,
+      0.067075072
+    ],
+    [
+      0.178008773,
+      0.036980308
+    ],
+    [
+      0.0,
+      0.002582353
+    ],
+    [
+      0.0,
+      -0.002581915
+    ],
+    [
+      0.178008773,
+      -0.037840947
+    ],
+    [
+      0.356878294,
+      -0.06793571
+    ],
+    [
+      0.536608344,
+      -0.092874085
+    ],
+    [
+      0.717199251,
+      -0.112654759
+    ],
+    [
+      0.807498207,
+      -0.120393938
+    ],
+    [
+      0.89778994,
+      -0.12469713
+    ],
+    [
+      0.988942529,
+      -0.126411402
+    ],
+    [
+      1.079241485,
+      -0.123836492
+    ],
+    [
+      1.154987948,
+      -0.117481951
+    ],
+    [
+      1.26161802,
+      -0.098066808
+    ],
+    [
+      1.31343055,
+      -0.08190029
+    ],
+    [
+      1.357260507,
+      -0.06058395
+    ],
+    [
+      1.387857382,
+      -0.033494416
+    ],
+    [
+      1.396564451,
+      -0.017586177
+    ]
+  ],
+  "source": {
+    "file": "Rudder Blade Construction.pdf",
+    "page": 1,
+    "drawing_no": "WUT513B-231-02",
+    "class_reference": "SHST-8439",
+    "stamp_date": "2011-11-29",
+    "stamp_status": "Approved with remarks",
+    "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335",
+    "pdf_path_indices": [
+      1,
+      4799
+    ],
+    "pdf_bounds": [
+      180.1739959716797,
+      733.7839965820312,
+      375.3699951171875,
+      768.9140014648438
+    ]
+  },
+  "method": "Extrude the supplied vector profile through the separately dimensioned height. Preserve the supplied polyline; no invented spline smoothing.",
+  "precision_note": "The 1:1 unit scale does not establish fabrication accuracy. PDF polyline/rounding and unmodelled features remain; no geometric tolerance is certified.",
+  "instances": {
+    "quantity_on_ship": 2,
+    "definition_count": 1,
+    "installation_transform": null
+  }
+}

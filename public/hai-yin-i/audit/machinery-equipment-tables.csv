@@ -1,0 +1,1309 @@
+﻿row_id,source_file,source_page,review_status,sequence_raw,drawing_or_model_raw,name_and_spec_raw,unit_raw,quantity_raw,weight_each_kg_raw,weight_total_kg_raw,manufacturer_raw,notes_raw
+M-02-1-4,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,"机舱及船舶系统部分
+一
+、",,,,,,,,
+M-02-1-5,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,1,主机,"型号 NT855 M
+： -",台,2,1258,2516,"1 重庆康明斯发动机有
+.","1 配齐全部备件及
+."
+M-02-1-6,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"型式 四冲程 增压中冷 直列六缸
+： 、 、",,,,,限公司,"专用工具
+。"
+M-02-1-7,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,船用柴油发动机,,,,,,"2 按规范配齐报警
+."
+M-02-1-8,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,缸径×冲程 ： 140×152 mm,,,,,,"点及二次仪表
+。"
+M-02-1-9,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"额定功率/转速 201kw/1800rpm
+：",,,,,,"3 需持有船检证书
+."
+M-02-1-10,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"燃油消耗率 ≤217 g/kw h
+： .",,,,,,"4 需持有EIAPP证书
+."
+M-02-1-11,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"滑油消耗率 ≤1 2 g/kw h
+： . .",,,,,,"5 配14’’飞轮 0号罩
+. ,"
+M-02-1-12,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"平均有效压力 0 958 MPa
+： .",,,,,,"壳
+。"
+M-02-1-13,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"压缩比 14 5 1 总排量 14 L
+： . ： , ：",,,,,,"6 自由端带 ～160KW
+."
+M-02-1-14,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"最低稳定转速 810 r/ min
+：",,,,,,"的货油泵
+。"
+M-02-1-15,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"旋转方向(面向飞轮端) 逆时针
+：",,,,,,"7 按技术协议订货
+. 。"
+M-02-1-16,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,,"发火顺序 1 5 3 6 2 4
+： - - - - -",,,,,,
+M-02-1-17,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,,"主要附件规格
+：","起动方式 24V电起动
+：",,,,,,
+M-02-1-18,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,"1 1
+.",燃油泵,流量 ： 0 . 155 m 3 /h ， 压力 ： 0 . 71 MPa,台,1,,,,
+M-02-1-19,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,"1 2
+.",滑油泵,流量 ： 30 m 3 /h ， 压力 ： 0 . 45 MPa,台,1,,,,
+M-02-1-20,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,"1 3
+.",海水泵,流量 ： 14 m 3 /h ， 压力 ： 0 . 103 MPa,台,1,,,,
+M-02-1-21,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,"1 4
+.",淡水泵,流量 ： 25 . 6 m 3 /h ， 压力 ： 0 . 103 MPa,台,1,,,,
+M-02-1-23,List of Machinery Equipments.pdf,2,table_extracted_unreviewed,2,船用减速齿轮箱,"型号 D300
+：",台,2,880,1760,"1 杭州前进齿轮箱集团
+.","1 配齐全部备件及
+."
+M-03-1-4,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"型式 船用倒顺离合减速齿轮箱
+：",,,,,股份有限公司,"专用工具
+。"
+M-03-1-5,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"实际减速比 6 56 1
+： . ：",,,,,,"2 配机旁仪表板
+. ："
+M-03-1-6,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,传递能力 ： 0 . 147 KW/ rpm,,,,,,"滑油压力表 滑
+、"
+M-03-1-7,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"最大螺旋桨推力 60 KN
+：",,,,,,"油温度表等
+。"
+M-03-1-8,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"操作型式 电控
+：",,,,,,"3 配14’’飞轮 0号罩
+. ,"
+M-03-1-9,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,,,,,,,"壳
+。"
+M-03-1-10,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,,,,,,,"4 需持有船检证书
+. ."
+M-03-1-12,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,3,主机遥控装置,"1 请按技术协议订货
+. 。",套,1,,,,"1 需持有船检证书
+. ."
+M-03-1-13,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"2 电控
+. 。",,,,,,
+M-03-1-15,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,4,柴油发电机组,"型号 CCFJ50J Y
+： -",台,2,1244,2488,"1 杭州银鹏动力设备有
+.","1 配备启动蓄电池
+."
+M-03-1-16,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,"4 1
+.",（ 柴油机）,"柴油机型号 6BT5 9 GM83
+： . -",台,2,950,1900,限公司,"2只
+。"
+M-03-1-17,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"缸径×冲程 102×120mm
+：",,,,,"1 东风康明斯发动机有
+.","2 配齐全部备件及
+."
+M-03-1-18,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"额定功率 83 KW
+：",,,,,限公司,"专用工具
+。"
+M-03-1-19,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"额定转速 1500 r/ min
+：",,,,,,"3 按规范配齐报警
+."
+M-03-1-20,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"燃油消耗率 :≤214 g/kw h
+.",,,,,,"及二次仪表
+。"
+M-03-1-21,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"滑油消耗率 :≤1 36 g/kw h
+. .",,,,,,"4 需持有船检证书
+. ."
+M-03-1-22,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"冷却方式 闭式循环水冷却
+：",,,,,,
+M-03-1-23,List of Machinery Equipments.pdf,3,table_extracted_unreviewed,,,"旋转方向 逆时针(面向飞轮端)
+：",,,,,,
+M-04-1-4,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"起动方式 24V电启动
+：",,,,,,
+M-04-1-5,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,"4 2
+.",（ 发电机）,"发电机型号 MP H 50 4
+： - - -",台,2,294,588,"1 上海马拉松革 新电气
+. .",
+M-04-1-6,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"额定功率 50 KW
+：",,,,,有限公司,
+M-04-1-7,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"额定电压 400 V
+：",,,,,,
+M-04-1-8,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,额定电流 : 90 A,,,,,,
+M-04-1-9,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"额定频率/转速 50HZ /1500r/ min
+：",,,,,,
+M-04-1-10,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"功率因素 cosφ=0 8（ 滞后）
+： .",,,,,,
+M-04-1-12,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,5,海水冷却泵,"型号 CIG65 20A
+： -",台,1,53,53,"1 浙江黄岩浙东水泵厂
+.","1 需持有船检证书
+. ."
+M-04-1-13,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,"(离心 卧式)
+、","流量 58 m3 /h
+：",,,,,"2 浙江台州白云泵业有
+.","2 电机 泵 公共
+. 、 、"
+M-04-1-14,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"扬程 8 M 汽蚀余量 3 0 M
+： ， ： .",,,,,限公司,"机座成套供应
+。"
+M-04-1-15,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"转速 2900 r/ min
+：",,,,,,"3 配齐全部备件及
+."
+M-04-1-16,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"电机型号 Y90L 2 H
+： - -",,,,,,"专用工具
+。"
+M-04-1-17,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"电机功率 2 2 KW
+： .",,,,,,"4 泵与柴油机连锁
+."
+M-04-1-18,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-04-1-20,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,6,舱底消防总用泵,"型号 65CLZ 6
+： -",台,2,132,264,"1 浙江黄岩浙东水泵厂
+.","1 需持有船检证书
+. ."
+M-04-1-21,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,"(离心 立式 自吸式)
+、 、","流量 25 m3 /h
+：",,,,,"2 浙江台州白云泵业有
+.","2 电机 泵 公共
+. 、 、"
+M-04-1-22,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"扬程 32 M 吸入高度 6 8 M
+： ， ： .",,,,,限公司,"机座成套供应
+。"
+M-04-1-23,List of Machinery Equipments.pdf,4,table_extracted_unreviewed,,,"转速 2900 r/ min
+：",,,,,,"3 配齐全部备件及
+."
+M-05-1-4,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机型号 Y132S1 2 H
+： - -",,,,,,"专用工具
+。"
+M-05-1-5,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机功率 5 5 KW
+： .",,,,,,
+M-05-1-6,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-05-1-8,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,7,压载泵,"型号 CIS100 80 125A
+： - -",台,2,280,560,"1 浙江黄岩浙东水泵厂
+.","1 需持有船检证书
+. ."
+M-05-1-9,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,"(离心 立式 直联式)
+、 、",流量 ： 93 . 5 m 3 /h,,,,,"2 浙江台州白云泵业有
+.","2 电机 泵 公共
+. 、 、"
+M-05-1-10,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"扬程 17 M 汽蚀余量 4 5 M
+： ， ： .",,,,,限公司,"机座成套供应
+。"
+M-05-1-11,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"转速 2900 r/ min
+：",,,,,,"3 配齐全部备件及
+."
+M-05-1-12,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机型号 Y132S2 2 H
+： - -",,,,,,"专用工具
+。"
+M-05-1-13,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机功率 7 5 KW
+： .",,,,,,"4 配隔舱填料函
+. 。"
+M-05-1-14,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-05-1-16,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,8,柴油输送泵,"型号 2CY 3 3/0 33
+： - . .",台,1,45,45,"1 浙江东航消防泵业有
+.","1 需持有船检证书
+. ."
+M-05-1-17,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"型式 外啮合式齿轮泵
+：",,,,,限公司,"2 电机 泵 公共
+. 、 、"
+M-05-1-18,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,流量 ： 3 . 3 m 3 /h,,,,,"2 浙江台州白云泵业有
+.","机座成套供应
+。"
+M-05-1-19,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"压力 0 33 MPa
+： .",,,,,限公司,"3 配齐全部备件及
+."
+M-05-1-20,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"转速 1400 r/ min
+：",,,,,,"专用工具
+。"
+M-05-1-21,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机型号 Y90L 4 H
+： - -",,,,,,
+M-05-1-22,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电机功率 1 5 KW
+： .",,,,,,
+M-05-1-23,List of Machinery Equipments.pdf,5,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-06-1-5,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,9,柴油日用手摇泵,"型号 CS 32Y
+： -",台,各1,7,14,"1 浙江东航消防泵业有
+.","1 需持有船检证书
+. ."
+M-06-1-6,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,污油手摇泵,"流量 40 L/ min
+：",,,,,限公司,
+M-06-1-7,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"压力 0 25 MPa
+： .",,,,,"2 浙江台州白云泵业有
+.",
+M-06-1-8,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,吸入高度 ： 6 m,,,,,限公司,
+M-06-1-10,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,10,油污水分离器,"型号 ZYFM 0 25
+： - .",台,1,300,300,"1 上海势久船舶设备有
+.","1 需持有船检证书
+."
+M-06-1-11,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,处理量 ： 0 . 25 m 3 /h,,,,,限公司,"2 配齐全部配件及
+."
+M-06-1-12,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,排放标准 ： ＜15 ppm,,,,,"2 武汉中舟船舶配套有
+.","专用工具
+。"
+M-06-1-13,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"配套水泵 单螺杆泵
+：",,,,,限公司,"3 满足 IMO MEPC
+. ."
+M-06-1-14,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"排油方式 手动和自动
+：",,,,,,"107(49)号决议
+。"
+M-06-1-15,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"总功率 1 25 KW
+： .",,,,,,
+M-06-1-16,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-06-1-18,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,11,生活污水处理装置,"型号 CSWB 10
+： -",台,1,750,750,"1 上海势久船舶设备有
+.","1 需持有船检证书
+. ."
+M-06-1-19,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"使用人数 10人
+：",,,,,限公司,"2 配齐全部配件及
+."
+M-06-1-20,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"处理量 800 L/d
+：",,,,,"2 温岭华益分离设备有
+.","专用工具
+。"
+M-06-1-21,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"有机负荷 0 24 Kg/d BOD
+： .",,,,,限公司,"3 满足 IMO MEPC
+. ."
+M-06-1-22,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,"排放水质 悬浮固体SS≤35mg/l
+：",,,,,,"159(55)号决议
+."
+M-06-1-23,List of Machinery Equipments.pdf,6,table_extracted_unreviewed,,,生化需氧量BOD 5≤25mg/l,,,,,,
+M-07-1-4,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,大肠杆菌数≤100个/100ml,,,,,,
+M-07-1-5,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"PH值 6 8 5
+： - .",,,,,,
+M-07-1-6,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"总功率 3 1 KW
+： .",,,,,,
+M-07-1-8,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,12,汽笛及杂用空气瓶,"型号 A0 10 1
+： . -",只,1,138,138,"1 姜堰市天顺空压机厂
+.","1 需持有船检证书
+. ."
+M-07-1-9,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,容量 ： 0 . 10 m 3,,,,,,
+M-07-1-10,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"工作压力 1 MPa
+：",,,,,,
+M-07-1-12,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,13,空气压缩机,"型号 CVF 6/1
+： -",台,1,92,92,"1 姜堰市天顺空压机厂
+.","1 需持有船检证书
+. ."
+M-07-1-13,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"排量 10 m3/h
+：",,,,,,"2 配套电动机及控
+."
+M-07-1-14,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"额定排气压力 1 MPa
+：",,,,,,"制箱
+。"
+M-07-1-15,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"电机型号 Y90L 4 H
+： - -",,,,,,
+M-07-1-16,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"电机转速 1450 r/ min
+：",,,,,,
+M-07-1-17,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"电机功率 1 5 KW
+： .",,,,,,
+M-07-1-18,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-07-1-20,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,14,机舱通风机（ 轴流式）,"型号 JCZ 40B
+： -",台,2,68,136,"1 青岛永建船舶机械制
+.","1 可逆转
+. 。"
+M-07-1-21,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"流量 4500 m3 /h
+：",,,,,造有限公司,"2 配C400 CB/T295
+."
+M-07-1-22,List of Machinery Equipments.pdf,7,table_extracted_unreviewed,,,"全压 400 Pa
+：",,,,,,"2000通风头
+— 。"
+M-08-1-4,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"静压 340 Pa
+：",,,,,,"3 需持有船检证书
+. ."
+M-08-1-5,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机转速 2920 r/ min
+：",,,,,,
+M-08-1-6,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机型号 Y 90L 2 H
+： - - -",,,,,,
+M-08-1-7,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机功率 1 1 KW
+： .",,,,,,
+M-08-1-8,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-08-1-10,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,15,CO2室抽风机（ 轴流式）,"型号 CWZ 200G(Ⅱ型)
+： -",台,1,"14 3
+.","14 3
+.","1 青岛永建船舶机械制
+.","1 需持有船检证书
+. ."
+M-08-1-11,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"流量 920 m3 /h
+：",,,,,造有限公司,
+M-08-1-12,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"全压 140 Pa
+：",,,,,,
+M-08-1-13,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机转速 2800 r/ min
+：",,,,,,
+M-08-1-14,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机型号 AO 5022
+： 2-",,,,,,
+M-08-1-15,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机功率 0 06 KW
+： .",,,,,,
+M-08-1-16,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-08-1-18,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,16,蓄电池室抽风机,"型号 CBL 15(Ⅱ型)
+： -",台,1,61,61,"1 青岛永建船舶机械制
+.","1 需持有船检证书
+. ."
+M-08-1-19,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,（ 防爆离心式）,"流量 500 m3 /h
+：",,,,,造有限公司,
+M-08-1-20,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"全压 550 Pa
+：",,,,,,
+M-08-1-21,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机转速 2920 r/ min
+：",,,,,,
+M-08-1-22,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机型号 YB90S 2 H
+： - -",,,,,,
+M-08-1-23,List of Machinery Equipments.pdf,8,table_extracted_unreviewed,,,"电机功率 1 5 KW
+： .",,,,,,
+M-09-1-4,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-09-1-6,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,17,日用淡水泵,"型号 1WZ 0 9
+： - .",台,2,35,70,"1 浙江东航消防泵业有
+.","1 需持有船检证书
+. ."
+M-09-1-7,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"流量 3 m3 /h
+：",,,,,限公司,"2 电机 泵 公共
+. 、 、"
+M-09-1-8,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,扬程 ： 10 m,,,,,"2 浙江台州白云泵业有
+.","机座成套供应
+。"
+M-09-1-9,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"电机型号 Y80L2 4 H
+： - -",,,,,限公司,"3 配齐全部备件及
+."
+M-09-1-10,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"电机功率 0 75 KW
+： .",,,,,,"专用工具
+。"
+M-09-1-11,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-09-1-13,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,18,船用组装式空调装置,型 号 :CLD -20 -DQYL,台,1,3700,3700,"1 泰州长盛机械制造有
+.","1 提供CCS证书
+. 。"
+M-09-1-14,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"制冷能量 23 2KW(2×10 4 kcal/h)
+： .",,,,,限公司,"2 螺旋风管送风
+. 。"
+M-09-1-15,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,名义风量 :3000m3 /h,,,,,"2 江苏兆胜空调有限公
+.","3 制冷剂为不消耗
+."
+M-09-1-16,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"制冷介质 R134a、 R404A R407C
+： 、",,,,,司,"臭氧介质
+。"
+M-09-1-17,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,机外静压 :500Pa,,,,,,"4 按技术协议订货
+. 。"
+M-09-1-18,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"冷却水流量 7m3 /h
+：",,,,,,
+M-09-1-19,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"压缩机功率 4 2KW
+： .",,,,,,
+M-09-1-20,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"风机功率 2 2KW
+： .",,,,,,
+M-09-1-21,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"主电源 380V 50Hz
+： ,",,,,,,
+M-09-1-22,List of Machinery Equipments.pdf,9,table_extracted_unreviewed,,,"控制电路 220V 50Hz
+： ,",,,,,,
+M-10-1-4,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,19,"固定式CO 灭火装置
+2",,套,1,,,"1 武汉现代长江机电制
+.","1 需持有船检证书
+. ."
+M-10-1-5,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 14 00 XD C3
+- - -",1） 气瓶瓶组（ 68L/45Kg/3瓶）,组,1,,,造有限责任公司,"2 按技术协议定货
+."
+M-10-1-6,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"DN25 595XD05 03 00
+- -",2） 气控施放阀(DN25),只,2,,,"2 上海安航海事技术发
+.",
+M-10-1-7,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 01B 00
+- -",3) 遥控施放站（ 气控自动延时）,组,2,,,展有限公司,
+M-10-1-8,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"A 595XD05 17 00
+- -","4） 喷嘴(A4 8 CB/T3294 1998)
+- -",只,5,,,,
+M-10-1-9,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 19 00
+- -",5） 信号叫笛,只,1,,,,
+M-10-1-10,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 12 00
+- -",6） 施放箱,只,1,,,,
+M-10-1-11,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 23 00
+- -",7） 压力信号发生器,只,2,,,,
+M-10-1-12,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,"595XD05 34 00
+- -",8） 背压阀,只,1,,,,
+M-10-1-13,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,9) 警 笛,只,2,,,,
+M-10-1-15,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,20,大型泡沫灭火器,"型号 MPT135
+：",台,1,,,"1 上海金盾消防安全设
+.","1 上甲板货油区域
+."
+M-10-1-16,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,"容量 135L
+：",,,,,备有限公司,"用
+。"
+M-10-1-18,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,21,可携式空气泡沫枪,"型号 PQ8 C
+： .",套,1,,,"1 东台市江海救生消防
+.","1 上甲板货油区域
+."
+M-10-1-19,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,"混合液量 400 L/ min
+：",,,,,设备有限公司,"用
+。"
+M-10-1-20,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,泡沫量 ： 1 . 5 m 3 / min,,,,,,"2 需持有船检证书
+. ."
+M-10-1-21,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,"泡沫液容量 20 L
+：",,,,,,
+M-10-1-22,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,射程 ： ≥15 m,,,,,,
+M-10-1-23,List of Machinery Equipments.pdf,10,table_extracted_unreviewed,,,"工作压力 0 5 MPa
+： .",,,,,,
+M-11-1-5,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,22,泡沫灭火器,"型号 WY02 05
+： -",只,3,"8 5
+.","25 5
+.","1 上海金盾消防安全设
+.","1 机舱用
+. 。"
+M-11-1-6,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"容量 9 L
+：",,,,,备有限公司,
+M-11-1-8,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,23,手提二氧化碳灭火器,"型号 MTZ5
+：",只,3,"6 5
+.","19 5
+.","1 上海安航海事技术发
+.","1 机舱用
+. 。"
+M-11-1-9,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"容量 5 kg
+：",,,,,展有限公司,
+M-11-1-11,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,24,转盘式台虎钳,"型号 QB/T 1558 2 92
+： . -",台,1,,,"1 市 购
+.",
+M-11-1-12,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"钳口宽度 125mm
+：",,,,,,
+M-11-1-14,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,25,直向砂轮机,"型号 S3SL 200
+： -",台,1,,,"1 上海砂轮机厂
+.","1 配齐附件
+. 。"
+M-11-1-15,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"砂轮规格 F200mm×2
+：",,,,,,"2 粗细砂轮各 一。
+."
+M-11-1-16,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"电机功率 0 5 KW
+： .",,,,,,
+M-11-1-17,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-11-1-19,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,26,干式消音器,"型号 GHX1 150
+： -",只,2,140,280,"1 靖江市东星船舶设备
+.","1 需持有船检证书
+. ."
+M-11-1-20,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,,（ 主 机）,通径 ： 150 mm,,,,,厂,
+M-11-1-22,List of Machinery Equipments.pdf,11,table_extracted_unreviewed,27,干式消音器,"型号 GHX1 80
+： -",只,2,30,60,"1 靖江市东星船舶设备
+.","1 需持有船检证书
+. ."
+M-12-1-4,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,（ 付 机）,通径 ： 80 mm,,,,,厂,
+M-12-1-5,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,,"消音量 25 dB
+：",,,,,,
+M-12-1-7,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,28,船用法兰铸钢闸阀,"型号 60150 CB/T466 1995
+： -",只,4,51,204,"1 乐清市阀门厂
+.","1 机舱海水总管用
+. 。"
+M-12-1-8,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,,通径 ： 150 mm,,,,,,"2 需持有船检证书
+. ."
+M-12-1-9,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,,"压力 0 6 MPa
+： .",,,,,,
+M-12-1-11,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,29,吸入粗水滤器,"型号 B150 CB/T497 94
+： -",只,2,"60 2
+.","120 4
+.","1 靖江市东星船舶设备
+.","1 机舱海水总管用
+. 。"
+M-12-1-12,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,,通径 ： 150 mm,,,,,厂,"2 需持有船检证书
+. ."
+M-12-1-13,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,,"公称压力 0 1 MPa
+： .",,,,,,
+M-12-1-15,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,30,"轴系附件
+：",,,,,,,
+M-12-1-16,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,前密封装置,"型号 CMS 170/141
+： -",只,2,,,"1 东台市华纳船舶配件
+.","1 按图纸订货
+. 。"
+M-12-1-17,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,后轴承,"型号 ∅176X∅146X435
+：",只,2,,,有限公司,
+M-12-1-18,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,前轴承,"型号 ∅171X∅141X200
+：",只,2,,,,
+M-12-1-19,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,艉 轴,基本轴径 ： ∅120 mm， L≈3410 mm,根,2,,,"1 厂家定制
+.","1 35号优质钢
+. 。"
+M-12-1-20,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,,中间轴,基本轴径 ： ∅100 mm， L≈400 mm,根,2,,,"1 厂家定制
+.","1 35号优质钢
+. 。"
+M-12-1-22,List of Machinery Equipments.pdf,12,table_extracted_unreviewed,31,不锈钢波形膨胀节,"型号 A150 GB/T12522 1996
+： -",只,2,"7 3
+.","14 6
+.","1 靖江市东星船舶设备
+.","1 需持有船检证书
+. ."
+M-13-1-4,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,（ 主机）,通径 ： 150 mm,,,,,厂,
+M-13-1-5,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"公称压力 0 1 MPa
+： .",,,,,,
+M-13-1-7,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,32,液压舵机(摆缸式),"型号 DYD90 16(S)
+： -",台,1,,,"1 杭州花园机电设备有
+.","1 配齐全部备件及
+."
+M-13-1-8,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,公称扭距 ： 16 KN . m,,,,,限公司,"专用工具
+。"
+M-13-1-9,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"工作压力 9 0 MPa
+： .",,,,,"2 台州市万通船舶机械
+.","2 需持有船检证书
+. ."
+M-13-1-10,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"满舵角 ±35°
+：",,,,,有限公司,
+M-13-1-11,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,舵柄半径 ： 230 mm,,,,,,
+M-13-1-12,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"电机型号 Y100L 6 H
+： - -",,,,,,
+M-13-1-13,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"电机功率 1 5 KW
+： .",,,,,,
+M-13-1-15,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,"二 油船专用系统部分
+、",,,,,,,,
+M-13-1-16,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,1,货油泵,"型号 2HM7000 128
+： -",台,2,540,1080,"1 黄工机械集团有限公
+.","1 需持有船检证书
+. ."
+M-13-1-17,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"型式 卧式双吸双螺杆泵
+：",,,,,司,"2 配齐全部备件及
+."
+M-13-1-18,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,流量 ： 365 m3/h ， 吸程 ： 8 m,,,,,,"专用工具
+。"
+M-13-1-19,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"排出压力 0 8 MPa
+： .",,,,,,"3 不带电机 主机自
+. ,"
+M-13-1-20,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"输入功率 ～160 KW
+：",,,,,,"由端降转速驱动
+。"
+M-13-1-21,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"额定转速 950 r/ min
+：",,,,,,"4 按技术协议定货
+."
+M-13-1-22,List of Machinery Equipments.pdf,13,table_extracted_unreviewed,,,"输送介质 柴油 180cSt/50℃燃料油
+： ，",,,,,,
+M-14-1-4,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,2,货油扫舱泵,"型号 2HM560 50
+： -",台,1,220,220,"1 黄工机械集团有限公
+.","1 需持有船检证书
+. ."
+M-14-1-5,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"型式 卧式双吸双螺杆泵
+：",,,,,司,"2 配齐全部备件及
+."
+M-14-1-6,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,流量 ： 30 m 3 /h ， 吸程 ： 7 m,,,,,,"专用工具
+。"
+M-14-1-7,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"排出压力 0 8 MPa
+： .",,,,,,"3 按技术协议定货
+."
+M-14-1-8,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"额定转速 1450 r/ min
+：",,,,,,
+M-14-1-9,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"输送介质 柴油 180cSt/50℃燃料油
+： ，",,,,,,
+M-14-1-10,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"电机型号 Y180L 4 H
+： - -",,,,,,
+M-14-1-11,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"电机功率 15 KW
+：",,,,,,
+M-14-1-12,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-14-1-14,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,3,船用减速齿轮箱,"型号 J135
+：",台,2,452,904,"1 杭州发达齿轮箱集团
+.","1 配齐全部备件及
+."
+M-14-1-15,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"型式 船用倒顺离合减速齿轮箱
+：",,,,,有限公司,"专用工具
+。"
+M-14-1-16,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"实际减速比 2 03 1
+： . ：",,,,,,"2 配机旁仪表板
+. ："
+M-14-1-17,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,传递能力 ： 0 . 115 KW/ rpm,,,,,,"滑油压力表 滑
+、"
+M-14-1-18,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"最大推力 30 KN
+：",,,,,,"油温度表等
+。"
+M-14-1-19,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"操作型式 电控
+：",,,,,,"3 需持有船检证书
+. ."
+M-14-1-21,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,4,隔舱传动装置（ 气密）,"型号 φ40
+：",台,3,86,258,"1 货油泵和扫舱泵配套
+.","1 配齐全部备件及
+."
+M-14-1-22,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"冷却水流量 1 m3 /h
+：",,,,,"2 靖江市东星船舶
+.","专用工具
+。"
+M-14-1-23,List of Machinery Equipments.pdf,14,table_extracted_unreviewed,,,"配套 温度传感器/联轴器
+：",,,,,设备厂,"2 需持有CCS证书
+. 。"
+M-15-1-5,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,5,泵舱防暴抽风机,"型号 CBZ 30A
+： -",台,1,78,78,"1 青岛永建船舶机械制
+.","1 需持有CCS证书
+. 。"
+M-15-1-6,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"形式 船用轴流防暴风机
+：",,,,,造有限公司,"2 外置式电机
+. 。"
+M-15-1-7,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"风量 1800 m3 /h
+：",,,,,"2 青岛海利达船舶机械
+.","3 风机防暴等级 :
+."
+M-15-1-8,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"全压 170 Pa， 静压 140 Pa
+： ：",,,,,制造有限公司,ExdⅡAT2
+M-15-1-9,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"电机型号 YB80L 2 H
+： 1- -",,,,,,
+M-15-1-10,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"转速 2920 r/ min
+：",,,,,,
+M-15-1-11,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"电机功率 0 75 KW
+： .",,,,,,
+M-15-1-12,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"电源 AC380V/50HZ
+：",,,,,,
+M-15-1-14,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,6,便携式可燃气体探测仪,"型式 手提式
+：",只,1,,,"1 上海融德机电设
+.","1 需持有CCS证书
+. 。"
+M-15-1-15,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,,,,,,备有限公司,
+M-15-1-17,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,7,货油舱高位/高高位报警,"型号 RDLM 04 LS
+： - -",套,1,,,"1 上海融德机电工程设
+.","1 需持有船检证书
+. ."
+M-15-1-18,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,95% / 98%,"防护等级 IP56
+：",,,,,备有限公司,"2 按技术协议订货
+. ."
+M-15-1-19,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"防暴等级 Exia II CT6
+：",,,,,,
+M-15-1-20,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"配套 浮球式液位测量装置
+：",只,8,,,,
+M-15-1-22,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,8,油舱双联呼吸阀,"型号 B100/100HT CB692 84
+： -",只,1,"53 54
+.","53 54
+.","1 乐清市阀门厂
+.","1 需持有船检证书
+. ."
+M-15-1-23,List of Machinery Equipments.pdf,15,table_extracted_unreviewed,,,"通径 DN100/100
+： mm",,,,,"2 靖江奥威船用泵阀制
+.",
+M-16-1-4,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"额定工作压力(压力阀) 21 KPa
+：",,,,,造有限公司,
+M-16-1-5,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"额定工作压力(真空阀) -7 KPa
+：",,,,,,
+M-16-1-6,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,压力阀出口流速 ： ＞30 m/ s,,,,,,
+M-16-1-8,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,9,法兰球铁油轮闸阀,"型号 A10250 CB/T3591 94
+： -",只,～12,157,1884,"1 乐清市阀门厂
+.","1 需持有船检证书
+. ."
+M-16-1-9,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,通径 ： 250 mm,,,,,"2 靖江奥威船用泵阀制
+.",
+M-16-1-10,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"压力 1 0 MPa
+： .",,,,,造有限公司,
+M-16-1-12,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,10,法兰球铁油轮闸阀,"型号 B10250 CB/T3591 94
+： -",只,～1,148,148,"1 乐清市阀门厂
+.","1 按CB693 75配油
+. -"
+M-16-1-13,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,通径 ： 250 mm,,,,,"2 靖江奥威船用泵阀制
+.","舱甲板操纵装置
+。"
+M-16-1-14,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"压力 1 0 MPa
+： .",,,,,造有限公司,"2 需持有船检证书
+. ."
+M-16-1-16,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,11,法兰球铁油轮闸阀,"型号 B10150 CB/T3591 94
+： -",只,～8,66,528,"1 乐清市阀门厂
+.","1 按CB693 75配油
+. -"
+M-16-1-17,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,通径 ： 150 mm,,,,,"2 靖江奥威船用泵阀制
+.","舱甲板操纵装置
+。"
+M-16-1-18,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"压力 1 0 MPa
+： .",,,,,造有限公司,"2 需持有船检证书
+. ."
+M-16-1-20,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,12,铸钢吸入通海阀,"型号 40200 GB 2029 80
+： -",只,1,"68 4
+.","68 4
+.","1 乐清市阀门厂
+.","1 泵舱海水总管用
+. 。"
+M-16-1-21,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,通径 ： 200 mm,,,,,,"2 需持有船检证书
+. ."
+M-16-1-22,List of Machinery Equipments.pdf,16,table_extracted_unreviewed,,,"压力 0 4 MPa
+： .",,,,,,
+M-17-1-4,List of Machinery Equipments.pdf,17,table_extracted_unreviewed,,,通径 ： 200 mm,,,,,,"2 需持有船检证书
+. ."
+M-17-1-5,List of Machinery Equipments.pdf,17,table_extracted_unreviewed,,,"压力 0 4 MPa
+： .",,,,,,
+M-17-1-7,List of Machinery Equipments.pdf,17,table_extracted_unreviewed,14,吸入粗水滤器,"型号 A200 CB/T497 94
+： -",只,1,"89 6
+.","89 6
+.","1 靖江市东星船舶设备
+.","1 泵舱海水总管用
+. 。"
+M-17-1-8,List of Machinery Equipments.pdf,17,table_extracted_unreviewed,,,通径 ： 200 mm,,,,,厂,"2 需持有船检证书
+. ."
+M-17-1-9,List of Machinery Equipments.pdf,17,table_extracted_unreviewed,,,"公称压力 0 1 MPa
+： .",,,,,,
+M-18-1-4,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,"Ⅰ ENGINEROOM&SHIPSYSTEM
+.",,,,,,,,
+M-18-1-5,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,1,Mainengine,Type： NT855 -M,Set,2,3350,6700,"1 CHONGQINGCUMMINSCO LTD
+. ., .","1 Togetherwithallsparesandspecial
+."
+M-18-1-6,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"Model Four- strokes ,on-line 6 cylinders
+： ,",,,,,,"tools
+."
+M-18-1-7,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"direct - spray water cooled ,turbocharged",,,,,,"2Supplyalarmpointsandsecondary
+."
+M-18-1-8,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,Bore×Stroke： 140×152mm,,,,,,instrumentaccordingtothe
+M-18-1-9,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"RatedPower\speed 201 KW/1800rpm
+：",,,,,,"requirements
+."
+M-18-1-10,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,F .O .consumption： ≤217 g/KW .h,,,,,,"3 14’’flywheel&0# housing
+."
+M-18-1-11,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,Lub .O .consumption： ≤1 .2 g/KW .h,,,,,,"4MarineCertificate
+. ."
+M-18-1-12,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"Min .steady Speed 810 r/min
+：",,,,,,"5EIAPPCertificate
+. ."
+M-18-1-13,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"Directionofrevolution(seefromflywheel)
+：",,,,,,"6freeendlinkingtocargo pumpof
+."
+M-18-1-14,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,counterclocKWise,,,,,,"160KW
+~ ."
+M-18-1-15,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,M/Efitting：,"StartingMethod 24Velectricstart
+：",,,,,,"7Orderaccordingto technicalagreement
+. ."
+M-18-1-16,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,"1 1
+.",Seawaterpump,Type： 14 m 3/ h×0 .103 Mpa,Set,1,,,,
+M-18-1-17,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,"1 2
+.",Freshwaterpump,Type： 25 .6 m 3/ h×0 .103 Mpa,Set,1,,,,
+M-18-1-18,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,"1 3
+.",Lubricatingoilpump,Type： 30 m 3/ h×0 .45 Mpa,Set,1,,,,
+M-18-1-19,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,"1 4
+.",Fueloilpump,Type： 0 .155 m 3/ h×0 .71 Mpa,Set,1,,,,
+M-18-1-21,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,2,Marinereductiongearbox,Type： D300,Set,2,880,1760,"1 HANGZHOUADVANCE
+.","1 Togetherwithallsparesandspecial
+."
+M-18-1-22,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"Model Reversible ,clutch ,reduction gearbox
+：",,,,,"GEARBOXGROUPCO LTD
+., .","tools
+."
+M-18-1-23,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,"Gear ratio： 5 .9 1
+：",,,,,,"2SupplymeterpanelofLOpress
+. . . ."
+M-18-1-24,List of Machinery Equipments.pdf,18,table_extracted_unreviewed,,,Trans .Capacity： 0 .184 KW/rpm,,,,,,"&thermometer
+."
+M-19-1-4,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"Max .Propeller thrust 60 KN
+：",,,,,,"3 14’’flywheel&0# housing
+."
+M-19-1-5,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,ControlofGearbox： electriccontrol,,,,,,"4MarineCertificate
+. ."
+M-19-1-7,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,3,M/E remotecontrolunit,"1 Orderaccordingtotechnical agreement
+. .",Set,1,,,,"1 MarineCertificate
+. ."
+M-19-1-8,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"2 .Control electric control
+：",,,,,,
+M-19-1-10,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,4,D/EGeneratingset,Group Type： CCFJ50J -Y,Suit,2,1244,2488,"1 HANGZHOUYINPNEG POWER
+.","1 With2startingbattery
+."
+M-19-1-11,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,"41
+.",DieselEngine,Type： 6BT5 .9 -GM83,Set,2,950,1900,"EQUIPMENTCO LTD
+.,","2Togetherwithall sparesandspecial
+."
+M-19-1-12,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,Bore×Stroke:102×120mm,,,,,"2DONGFENGCUMMINS
+.","tools
+."
+M-19-1-13,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,NormalRatedpower： 83KW,,,,,"CO LTD
+.,","3Supplyalarmpointsandsecondary
+."
+M-19-1-14,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"NormalRatedspeed 1500r/min
+：",,,,,,"instrumentaccordingtotherequirements
+."
+M-19-1-15,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,F .O .consumption： ≤214 g/KW .h,,,,,,"4MarineCertificate
+. ."
+M-19-1-16,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,Lub .O .consumption： ≤1 .36 g/KW .h,,,,,,
+M-19-1-17,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"Directionofrevolution(seefromflywheel)
+：",,,,,,
+M-19-1-18,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,counterclockwise,,,,,,
+M-19-1-19,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"Coolingmethod Closedcyclewatercooler
+：",,,,,,
+M-19-1-20,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"StartingMethod 24Velectricstart
+：",,,,,,
+M-19-1-21,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,"42
+.",Generator,Type： MP -H -50 -4,Set,2,294,588,"1 SHANGHAIMARATHON
+. -",
+M-19-1-22,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,NormalRatedpower： 50KW,,,,,"GEXINELECTRICCO LTD
+.,",
+M-19-1-23,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,NormalRatedVoltage： 400V,,,,,,
+M-19-1-24,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"NormalRatedCurrent 90A
+：",,,,,,
+M-19-1-25,List of Machinery Equipments.pdf,19,table_extracted_unreviewed,,,"Ratedfrequency/Speed 50HZ/1500rpm
+：",,,,,,
+M-20-1-4,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,Power Factor： cosφ=0 .8（ Lagging）,,,,,,
+M-20-1-6,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,5,CoolingseawaterPump,Type： CIG65 -20A,Set,1,53,53,"1 ZHEJIANGDONGHANGFIRE
+.","1 MarineCertificate
+. ."
+M-20-1-7,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,"(Centrifugalvertical)
+,",Capacity： 58m3/ h,,,,,"PUMPSCO LTD
+.,","2Elecmotorpumpcommonseattobe
+. . , ,"
+M-20-1-8,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,"Lift 8 M Height 3 M
+： ， ：",,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.","provided
+."
+M-20-1-9,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,"Rev .speed 2900 r/min
+：",,,,,"PUMPSCO LTD
+.,","3Togetherwithallsparesandspecial
+."
+M-20-1-10,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,Elec .motorType： Y90L -2 -H,,,,,,"tools
+."
+M-20-1-11,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,Elec .motor power： 2 .2 KW,,,,,,"4Pumpanddieselenginechain
+."
+M-20-1-12,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-20-1-15,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,6,Bilge/FireGeneralPump,Type： 65CLZ -6,Set,2,132,264,"1 ZHEJIANGDONGHANGFIRE
+.","1 MarineCertificate
+. ."
+M-20-1-16,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,"(Centrifugal ,vertical ,Self -priming)",Capacity： 25m3/ h,,,,,"PUMPSCO LTD
+.,","2Elecmotorpumpcommonseattobe
+. . , ,"
+M-20-1-17,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,"Lift 32 M Height 6 .8 M
+： ， ：",,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.","provided
+."
+M-20-1-18,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,"Rev .speed 2900 r/min
+：",,,,,"PUMPSCO LTD
+.,","3Togetherwithallsparesandspecial
+."
+M-20-1-19,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,Elec .motorType： Y132S1 -2 -H,,,,,,"tools
+."
+M-20-1-20,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,Elec .motor power： 5 .5 KW,,,,,,
+M-20-1-21,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-20-1-23,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,7,BallastPump,Type： CIS100 -80 -125A,Set,2,280,560,"1 ZHEJIANGDONGHANGFIRE
+.","1 MarineCertificate
+. ."
+M-20-1-24,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,"(CentrifugalverticalInline)
+, ,",Capacity： 93 .5 m 3/ h,,,,,"PUMPSCO LTD
+.,","2Elecmotorpumpcommonseattobe
+. . , ,"
+M-20-1-25,List of Machinery Equipments.pdf,20,table_extracted_unreviewed,,,"Lift 17M NPSH 45M
+： ， ： .",,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.","provided
+."
+M-21-1-4,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,"Rev .speed 2900 r/min
+：",,,,,"PUMPSCO LTD
+.,","3Togetherwithallsparesandspecial
+."
+M-21-1-5,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Elec .motorType： Y132S2 -2 -H,,,,,,"tools
+."
+M-21-1-6,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Elec .motor power： 7 .5 KW,,,,,,"4bulkheadfillerletter
+. 。"
+M-21-1-7,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-21-1-9,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,8,"DOdeliverypump
+. .",Type： 2CY -3 .3/0 .33,Set,1,45,45,"1 ZHEJIANGDONGHANGFIRE
+.","1 MarineCertificate
+. ."
+M-21-1-10,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,"Model externalgearingGearpump
+：",,,,,"PUMPSCO LTD
+.,","2Elecmotorpumpcommonseattobe
+. . , ,"
+M-21-1-11,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Capacity： 3 .3 m 3/ h,,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.","provided
+."
+M-21-1-12,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Pressure： 0 .33 MPa,,,,,"PUMPSCO LTD
+.,","3Togetherwithallsparesandspecial
+."
+M-21-1-13,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,"Rev .speed 1400 r/min
+：",,,,,,"tools
+."
+M-21-1-14,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Elec .motorType： Y90L -4 -H,,,,,,
+M-21-1-15,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Elec .motor power： 1 .5 KW,,,,,,
+M-21-1-16,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-21-1-18,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,9,"DOdeliveryhandpump
+. .",Type： CS -32Y,Set,"EA1
+.",7,14,"1 ZHEJIANGDONGHANGFIRE
+.","1 MarineCertificate
+. ."
+M-21-1-19,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,Slophandpump,Capacity： 40L/min,,,,,"PUMPSCO LTD
+.,",
+M-21-1-20,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Pressure： 0 .25 MPa,,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.",
+M-21-1-21,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,"SuctionHeight 6M
+：",,,,,"PUMPSCO LTD
+.,",
+M-21-1-23,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,10,OilywaterSeperator,Type： ZYFM -0 .25,Set,1,300,300,"1 SHANGHAISHIJIUMARINE
+.","1 MarineCertificate
+. ."
+M-21-1-24,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,Treatment capacity： 0 .25 m 3/ h,,,,,"CO LTD
+.,","2Togetherwithallsparesandspecial
+."
+M-21-1-25,List of Machinery Equipments.pdf,21,table_extracted_unreviewed,,,"Effluentstandard ＜15ppm
+：",,,,,"2WUHANZHONGZHOU SHIP
+.","tools
+."
+M-22-1-4,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,AffiliatedPump： Monopump,,,,,"FITTINGSCO LTD
+.,","3ComplywithIMOResMEPC107(49)
+. . . ."
+M-22-1-5,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Oildrainage： Manualandauto,,,,,,
+M-22-1-6,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Total power： 1 .25 KW,,,,,,
+M-22-1-7,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,PowerSupply： 380V/50HZ,,,,,,
+M-22-1-9,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,11,Sewagetreatmentunit,Type： CSWB -10,Set,1,750,750,"1 SHANGHAISHIJIUMARINE
+.","1 MarineCertificate
+. ."
+M-22-1-10,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,"Served 10person
+：",,,,,"CO LTD
+.,","2Togetherwithallsparesandspecial
+."
+M-22-1-11,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Treatmentcapacity： 800L/d,,,,,"2 WENLINHUAYISEPARATION
+.","tools
+."
+M-22-1-12,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,"Organic load 0 .24 Kg/d BOD
+：",,,,,PLANTFACTORY,"3ComplywithIMOResMEPC159(55)
+. . . ."
+M-22-1-13,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Watertype： SuspendessolidsSS≤35mg/l,,,,,,
+M-22-1-14,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Biochemical oxygen demand BOD 5≤25mg/l,,,,,,
+M-22-1-15,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Colibacillus≤100piece/100ml,,,,,,
+M-22-1-16,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,PH value： 6 -8 .5,,,,,,
+M-22-1-17,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Total power： 3 .1 KW,,,,,,
+M-22-1-19,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,12,SirenandGeneralairreceiver,Type： A0 .10 -3,Set,1,138,138,"1 JIANGYANCITYTIANSHUN
+.","1 MarineCertificate
+. ."
+M-22-1-20,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Capacity： 0 .10 m 3,,,,,AIRCOMPRESSORFACTORY,
+M-22-1-21,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,WorkingPressure： 1 MPa,,,,,,
+M-22-1-23,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,13,Aircompressor,Type： CVF -6/1,Set,1,92,92,"1 JIANGYANCITYTIANSHUN
+.","1 MarineCertificate
+. ."
+M-22-1-24,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,Capacity： 10m3/ h,,,,,AIRCOMPRESSORFACTORY,"2Withelecmotorandcontrolbox
+. . ."
+M-22-1-25,List of Machinery Equipments.pdf,22,table_extracted_unreviewed,,,RatedexhaustPressure： 1 MPa,,,,,,
+M-23-1-4,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Type： Y90L -4 -H,,,,,,
+M-23-1-5,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,"Elec .motor Rev .speed 1450 r/min
+：",,,,,,
+M-23-1-6,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Power： 1 .5 KW,,,,,,
+M-23-1-7,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-23-1-9,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,14,EngineroomAiryfan,Type： JCZ -40B,Set,2,68,136,"1 QINGDAOYONGJIANMARINE
+.","1 Canbereverse
+. ."
+M-23-1-10,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,(Axial -flow),Capacity： 4500m3/ h,,,,,MACHINERYMANUFACTURE,"2 .With C400 CB/T295 -2000 ventilator
+."
+M-23-1-11,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,"Total Press 400 Pa
+.：",,,,,"CO LTD
+.,","3MarineCertificate
+. ."
+M-23-1-12,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,StaticPress： 340Pa,,,,,,
+M-23-1-13,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,"Elec .motor Rev .speed 2920 r/min
+：",,,,,,
+M-23-1-14,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Type： Y -90L -2 -H,,,,,,
+M-23-1-15,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Power： 1 .1 KW,,,,,,
+M-23-1-16,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-23-1-18,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,15,CO2roomExhaustfan,Type： CWZ -200G(Ⅱ型),Set,1,"143
+.","143
+.","1 QINGDAOYONGJIANMARINE
+.","1 MarineCertificate
+. ."
+M-23-1-19,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,(explosion-proof centrifugal),Capacity： 920m3/ h,,,,,MACHINERYMANUFACTURE,
+M-23-1-20,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,"Total Press 140 Pa
+.：",,,,,"CO LTD
+.,",
+M-23-1-21,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,"Elec .motor Rev .speed 2800 r/min
+：",,,,,,
+M-23-1-22,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Type： AO 2-5022,,,,,,
+M-23-1-23,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,Elec .motor Power： 0 .06 KW,,,,,,
+M-23-1-24,List of Machinery Equipments.pdf,23,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-24-1-4,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,16,"BATTERYROOMExhaustfan
+.",Type： CBL -15(Ⅱ型),Set,1,61,61,"1 QINGDAOYONGJIANMARINE
+.","1 MarineCertificate
+. ."
+M-24-1-5,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,(Axial -flow),Capacity： 500m3/ h,,,,,MACHINERYMANUFACTURE,
+M-24-1-6,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,"Total Press 550 Pa
+.：",,,,,"CO LTD
+.,",
+M-24-1-7,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,"Elec .motor Rev .speed 2920 r/min
+：",,,,,,
+M-24-1-8,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Elec .motor Type： YB90S -2 -H,,,,,,
+M-24-1-9,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Elec .motor Power： 1 .5 KW,,,,,,
+M-24-1-10,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-24-1-12,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,17,"FWservicepump
+. .",Type： 1WZ -0 .9,Set,2,35,70,"1 BAYIUNIVERSALMACHINERY
+.","1 MarineCertificate
+. ."
+M-24-1-13,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Capacity： 3m3/ h,,,,,"CO LTDHUANGYANZHEJIANG
+., , ,","2Elecmotorpumpommonseatctobe
+. . , ,"
+M-24-1-14,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,"Lift 10m
+：",,,,,"2ZHEJIANGTAIZHOUBAIYUN
+.","provided
+."
+M-24-1-15,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Elec .motorType： Y80L2 -4 -H,,,,,"PUMPSCO LTD
+.,","3Togetherwithallsparesandspecial
+."
+M-24-1-16,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Elec .motor power： 0 .75 KW,,,,,,"tools
+."
+M-24-1-17,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-24-1-19,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,18,Marineairconditioningplant,Type： CLD -20 -DQYL,set,1,3700,3700,"1 TAIZHOULONGAND
+.","1 Orderaccordingto technical
+."
+M-24-1-20,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,"Coolingcapacity:232KW(2×104kcal/h)
+.",,,,,MACHINERYMANUFACTURING,"agreement
+."
+M-24-1-21,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Namelyairflow： 3000m3/ h,,,,,"CO LTD
+.,",2 .Sets supply air-conditioner pipeline
+M-24-1-22,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,"Cooling medium： R134a R404A R407C
+、 、",,,,,"2JIANGSUJOSUNAIR
+.",accessories
+M-24-1-23,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Externalstaticpressure： 500Pa,,,,,"CONDITIONERCO LTD
+.,","3Spiralductairsupply
+."
+M-24-1-24,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Condenserwaterflow： 7m3/ h,,,,,,"4Excludingconsumptionozone
+."
+M-24-1-25,List of Machinery Equipments.pdf,24,table_extracted_unreviewed,,,Compressor motor power： 4 .2 KW,,,,,,substances
+M-25-1-4,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,fan motor power： 2 .2KW,,,,,,"5MarineCertificate
+. ."
+M-25-1-5,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,"6Choosecoolingtype
+."
+M-25-1-6,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,Elec .motor power of fan： 7 .5 KW,,,,,,
+M-25-1-7,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,"Control circuit 220V ,50Hz
+：",,,,,,
+M-25-1-9,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,19,Fixed CO 2fire-fightingunit,,set,1,,,"1 WUHANMODERN
+.","1 MarineCertificate
+. ."
+M-25-1-10,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 14A 00 XD C(3)
+- - -",1） Airbottle（ 68L/45Kg/3bottles）,Suit,1,,,CHANGJIANGMACHINERY,"2Orderaccordingto technical
+."
+M-25-1-11,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"DN25 595XD05 03 00
+- -",2） Aircontrolledreleasevalve(DN25),set,2,,,"CO LTD
+.,","agreement
+."
+M-25-1-12,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 01B 00
+- -",3) R/C release station(hand -mach .delay）,Suit,2,,,"2SHANGHAIANHANG
+.",
+M-25-1-13,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"A 595XD05 17 00
+- -",4） E/RNozzle（ A4 -8CB/T3294 -1998）,set,6,,,,
+M-25-1-14,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 19 00
+- -",5） Signalhorn,set,1,,,,
+M-25-1-15,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 12 00
+- -",6） Releasebox,set,1,,,,
+M-25-1-16,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 23 00
+- -","7） Presssignalgenerator
+.",set,2,,,,
+M-25-1-17,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,"595XD05 34 00
+- -",8） Back -press .valbe,set,1,,,,
+M-25-1-18,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,9) Alarmwhistle,set,2,,,,
+M-25-1-20,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,20,LargeFoamExtinguisher,Type： MPT135,Set,1,,,"1 SHANGHAIJINDUNFIREFIGHTING
+. -","1 UPPERDECKCARGOOIL
+."
+M-25-1-21,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,Capacity： 135L,,,,,"SECURITYEQUIPMENTCO LTD
+.,",
+M-25-1-23,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,21,Portable foam nozzle,"Type： PQ8 C
+.",set,1,,,"1 DONGTAI CITY JIANGHAI
+.","1 UPPERDECKCARGOOIL
+."
+M-25-1-24,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,"Capacity of mixture liquid 400 L/ min
+：",,,,,LIFE SAVING & FIRE,"2MarineCertificate
+. ."
+M-25-1-25,List of Machinery Equipments.pdf,25,table_extracted_unreviewed,,,"Capacity of foam： 1 5 m3 / min
+.",,,,,FIGHTING EQUIPMENT,
+M-26-1-4,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,"Foam liquid 20 L
+：",,,,,"CO LTD
+. , .",
+M-26-1-5,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,Range： ≥15 m,,,,,,
+M-26-1-6,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,"Work pressure： 0 5 MPa
+.",,,,,,
+M-26-1-8,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,22,FoamExtinguisher,Type： WY02 -05,Set,3,"85
+.","255
+.","1 SHANGHAIJINDUNFIREFIGHTING
+. -","1 ForE/R
+. ."
+M-26-1-9,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,Capacity： 9L,,,,,"SECURITYEQUIPMENTCO LTD
+.,",
+M-26-1-11,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,23,"PortableCO Extinguisher
+2",Type： MTZ5,Set,3,"65
+.","195
+.","1 SHANGHAIANHANG
+.","1 ForE/R
+. ."
+M-26-1-12,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,Capacity： 5kg,,,,,"MARINETECHNOLOGYCO LTD
+.,",
+M-26-1-14,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,24,TableVice,Type： QB/T 1558 .2 -92,Set,1,,,"1 Market
+.",
+M-26-1-15,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,"Breadthofmouth 125mm
+：",,,,,,
+M-26-1-17,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,25,DirectGrindingMachine,Type： S3SL -200,Set,1,,,"1 SHANGHAIGRINDINGMACHINE
+.","1 Withfitting
+. ."
+M-26-1-18,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,"Spec .of grinding wheel F200mm×2
+：",,,,,"CO LTD
+.,","2Eachonecorase/finewheel
+."
+M-26-1-19,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,Elec .motor power： 0 .5 KW,,,,,,
+M-26-1-20,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,,PowerSupply： 380V/50HZ,,,,,,
+M-26-1-22,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,26,DryTypeSilencer,Type： GHX1 -150,Set,2,140,280,"1 JINGJIANGDONGXING
+.","1 MarineCertificate
+. ."
+M-26-1-23,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,,（ M/E）,Dia .： 150 mm,,,,,SHIPEQUIPMENTFACTORY,
+M-26-1-25,List of Machinery Equipments.pdf,26,table_extracted_unreviewed,27,DryTypeSilencer,Type： GHX1 -80,Set,2,30,60,"1 JINGJIANGDONGXING
+.","1 MarineCertificate
+. ."
+M-27-1-4,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,(A/E),Dia .： 80 mm,,,,,SHIPEQUIPMENTFACTORY,
+M-27-1-5,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,,Noisereduction： 25dB,,,,,,
+M-27-1-7,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,28,MarineFlangeCastSteel,Type： 60150 CB/T466 -1995,Set,4,51,204,"1 YUEQINGCITYVALVEFACTORY
+.","1 ForSWMAIN
+. . . ."
+M-27-1-8,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,GateValve,Dia .： 150 mm,,,,,,"2MarineCertificate
+. ."
+M-27-1-9,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,,Pressure： 0 .6 MPa,,,,,,
+M-27-1-11,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,29,SuctionCoarseFilter,Type： B150 CB/T497 -94,Set,2,"602
+.","1204
+.","1 JINGJIANGDONGXING
+.","1 ForSWMAIN
+. . . ."
+M-27-1-12,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,,Dia .： 150 mm,,,,,SHIPEQUIPMENTFACTORY,"2MarineCertificate
+. ."
+M-27-1-13,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,,Nominal Pressure： 0 .1 MPa,,,,,,
+M-27-1-15,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,30,ShaftingFitting：,,,,,,,
+M-27-1-16,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,Forwardsealdevice,Type： CMS -170/141,Set,2,,,"1 JIANGSUHUANAMARINE
+.","1 ORDERASTHEDRAWING
+. ."
+M-27-1-17,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,aftbearing,Type： ∅176X∅146X435,Set,2,,,"FITTINGSCO LTD
+.,",
+M-27-1-18,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,forebearing,Type： ∅171X∅141X200,Set,2,,,,
+M-27-1-19,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,sternshaft,"Axial diameter： ∅120 mm L≈3410 mm
+，",Root,2,,,"1 SUPPLYBYMAKER
+.","1 #35forgingsteel
+. ."
+M-27-1-20,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,Intermediateshaft,"Axial diameter： ∅100 mm L≈400 mm
+，",Root,2,,,"1 SUPPLYBYMAKER
+.","1 #35forgingsteel
+. ."
+M-27-1-22,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,31,StainlessSteel,Type： A150 GB/T12522 -1996,Set,2,"73
+.","146
+.","1 JINGJIANGDONGXING
+.","1 MarineCertificate
+. ."
+M-27-1-23,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,CorrugatedtypeExpansionJoint,Dia .： DN150 mm,,,,,SHIPEQUIPMENTFACTORY,
+M-27-1-24,List of Machinery Equipments.pdf,27,table_extracted_unreviewed,,（ M/E）,Nominal Pressure： 0 .1 MPa,,,,,,
+M-28-1-4,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,32,HydraulicSteeringGear,Type： DYD90 -16(S),Set,1,,,"1 HANGZHOUGARDENELECTRO
+. -","1 Togetherwithallsparesandspecial
+."
+M-28-1-5,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,(OscillatingCylinder),Nominal Torque： 16 KN .m,,,,,MECHANICALDEVICEFACTORY,"tools
+."
+M-28-1-6,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Working Pressure： 9 .0 Mpa,,,,,"2TAIZHOUWANTONGSHIP
+.","2MarineCertificate
+. ."
+M-28-1-7,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Fullrudderangle： ±35°,,,,,"MACHINERYCO LTD
+.,",
+M-28-1-8,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Tillerradius： 230mm,,,,,,
+M-28-1-9,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Elec .motor Type： Y100L -6 -H,,,,,,
+M-28-1-10,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Elec .motor power： 1 .5 KW,,,,,,
+M-28-1-12,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,"ⅡOILTANKERSPECIALSYSTEM
+.",,,,,,,,
+M-28-1-13,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,1,Cargooilpump,Type： 2HM7000 -128,Set,2,540,1080,"1 HUANGGONGMACHINERY
+.","1 MarineCertificate
+. ."
+M-28-1-14,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Model ： Horizontal double suction two-screw pump,,,,,GROUP,"2Togetherwithallsparesandspecial
+."
+M-28-1-15,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Capacity： 365 m 3/ h ， Height ： 8 M,,,,,,"tools
+."
+M-28-1-16,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Discharging Pressure： 0 .8 MPa,,,,,,"3WithoutElecmotor
+. ."
+M-28-1-17,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Inputpower： ~160KW,,,,,,"4Orderaccordingtothetechnical
+."
+M-28-1-18,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,"Rev .speed 950 r/min
+：",,,,,,"agreement
+."
+M-28-1-19,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,"Medium Transported Diesel oil
+： ,",,,,,,
+M-28-1-20,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,180cSt/50℃Fueloil,,,,,,
+M-28-1-22,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,2,Cargooilstrippingpump,Type： 2HM560 -50,Set,1,220,220,"1 HUANGGONGMACHINERY
+.","1 MarineCertificate
+. ."
+M-28-1-23,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Model ： Horizontal double suction two-screw pump,,,,,GROUP,"2Togetherwithallsparesandspecial
+."
+M-28-1-24,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Capacity： 32 .9 m 3/ h ， Height ： 7 M,,,,,,"tools
+."
+M-28-1-25,List of Machinery Equipments.pdf,28,table_extracted_unreviewed,,,Discharging Pressure： 0 .8 MPa,,,,,,"3Orderaccordingtothetechnical
+."
+M-29-1-4,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,"Rev .speed 1450 r/min
+：",,,,,,"agreement
+."
+M-29-1-5,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,"Medium Transported Diesel oil
+： ,",,,,,,
+M-29-1-6,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,180cSt/50℃Fueloil,,,,,,
+M-29-1-7,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,Elec .motor type： Y180L -4 -H,,,,,,
+M-29-1-8,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,Elec .motor power： 15 .2 KW,,,,,,
+M-29-1-9,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,PowerSupply： AC380V/50HZ,,,,,,
+M-29-1-11,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,3,Marinereductiongearbox,Type： J135,Set,2,452,904,"1 HANGZHOUFADA
+.","1 Togetherwithallsparesandspecial
+."
+M-29-1-12,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,"Model Reversible ,clutch ,reduction gearbox
+：",,,,,"GEARBOXGROUPCO LTD
+., .","tools
+."
+M-29-1-13,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,"Gear ratio： 2 .03 1
+：",,,,,,"2SupplymeterpanelofLOpress
+. . ."
+M-29-1-14,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,Trans .Capacity： 0 .115 KW/rpm,,,,,,"&thermometer
+."
+M-29-1-15,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,"Max thrust 30 KN
+. ：",,,,,,"3 14’’flywheel&0# housing
+."
+M-29-1-16,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,ControlofGearbox： electriccontrol,,,,,,"4MarineCertificate
+. ."
+M-29-1-18,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,4,Bulkhead drive device,Type： φ40,Set,3,86,258,"1 CARGOOILPUMPANDCARGO
+.","1 Togetherwithallsparesand
+."
+M-29-1-19,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,( air),Condenser water flow： 1 m3 /h,,,,,OILSTRIPPINGPUMPMATCHING,"specialtools
+."
+M-29-1-20,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,Matching: the temperature sensor/ couplings,,,,,"2JINGJIANGDONGXING
+.","2MarineCertificate
+. ."
+M-29-1-21,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,,,,,,SHIPEQUIPMENTFACTORY,
+M-29-1-23,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,5,Cargooilpumproom,Type： CBZ -30A,set,1,78,78,"2QINGDAOYONGJIAN
+.","1 MarineCertificate
+. ."
+M-29-1-24,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,explosion-proof exhaustfan,"Model Marinenonsparkingaxialfans
+：",,,,,MARINEMACHINERY,"2Externaltypeelectrical
+."
+M-29-1-25,List of Machinery Equipments.pdf,29,table_extracted_unreviewed,,,Capacity： 1800m3/ h,,,,,"MANUFACTURECO LTD
+.,",3 .Fan explosive-proof grade: ExdⅡ
+M-30-1-4,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Totelpressure： 170Pa,,,,,"2QINGDAOHAILIDA
+.",AT2
+M-30-1-5,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Elec .motor type： YB80L 1-2 -H,,,,,MARINEMACHINERY,
+M-30-1-6,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,"Rev .spped 2920 r/min
+：",,,,,"MANUFACTURECO LTD
+.,",
+M-30-1-7,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Elec .motor power： 0 .75 KW,,,,,,
+M-30-1-8,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Powersupply： AC380V/50HZ,,,,,,
+M-30-1-10,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,6,Portableoxygenanalyzer,Type： portable,set,1,,,"1 SHANGHAIRONGDE
+.","1 MarineCertificate
+. ."
+M-30-1-11,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,,,,,,ENGINEERINGEQUIPMENT,
+M-30-1-12,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,,,,,,"CO LTD
+.,",
+M-30-1-14,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,7,Cargotankhigh/higheralarm,Tpye： RDLM -04 -LS,set,1,,,"1 ShanghaiRongDe Electrical
+.","1 MarineCertificate
+. ."
+M-30-1-15,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,95%/98%,Protectionclass： IP56,,,,,andMechanicalEquipment,"2technicalagreement
+. ."
+M-30-1-16,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Riotrating： ExiaIICT6,,,,,"CO LTD
+.,",
+M-30-1-17,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Matching:Floatliquidlevelmeasurementdevice,peace,8,,,,
+M-30-1-19,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,8,Tankdualbreathervalue,Type： B100/100HT CB692 -84,Set,1,"5354
+.","5354
+.","1 YUEQINGCITYVALVEFACTORY
+.","1 MarineCertificate
+. ."
+M-30-1-20,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Dia .： DN100/100 mm,,,,,"2JINGJIANGAOWEI
+.",
+M-30-1-21,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,"Ratedoperatingpressure(pressurevalve) 21KPa
+：",,,,,,
+M-30-1-22,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,"Rated operating pressure(vacuum valve) -7KPa
+：",,,,,,
+M-30-1-23,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,,,Pressurevalveexitvelocity： ＞30m/s,,,,,,
+M-30-1-25,List of Machinery Equipments.pdf,30,table_extracted_unreviewed,9,FlangeMagnesiumiron,Type： A10250 CB/T3591 -94,Set,"12
+~",157,1884,"1 YUEQINGCITYVALVEFACTORY
+.","1 MarineCertificate
+. ."
+M-31-1-4,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,OilTankerGateValve,Dia .： DN250 mm,,,,,"2JINGJIANGAOWEI
+.",
+M-31-1-5,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Nominal Pressure： 1 .0 MPa,,,,,,
+M-31-1-7,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,10,FlangeMagnesiumiron,Type： B10250 CB/T3591 -94,Set,"1
+~",148,148,"1 YUEQINGCITYVALVEFACTORY
+.","1 Deckcontrolunitforoiltanktobe
+."
+M-31-1-8,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,OilTankerGateValve,Dia .： DN250 mm,,,,,"2JINGJIANGAOWEI
+.","equipped according to CB693 -75
+."
+M-31-1-9,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Nominal Pressure： 1 .0 MPa,,,,,,"2MarineCertificate
+. ."
+M-31-1-12,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,11,FlangeMagnesiumiron,Type： B10150 CB/T3591 -94,Set,"8
+~",66,528,"1 YUEQINGCITYVALVEFACTORY
+.","1 Deckcontrolunitforoiltanktobe
+."
+M-31-1-13,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,OilTankerGateValve,Dia .： DN150 mm,,,,,"2JINGJIANGAOWEI
+.","equipped according to CB693 -75
+."
+M-31-1-14,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Nominal Pressure： 1 .0 MPa,,,,,,"2MarineCertificate
+. ."
+M-31-1-17,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,12,Switchboards,Type： 40200GB2029 -80,set,1,"68 4
+.","68 4
+.","1 YUEQINGCITYVALVEFACTORY
+.","1 Forcargooilpumproom
+. ."
+M-31-1-18,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Dia： 200mm,,,,,,"2MarineCertificate
+. ."
+M-31-1-19,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Pressure： 0 .4 MPa,,,,,,
+M-31-1-21,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,13,MarineFlangeCastSteel,Type： 40200 CB/T466 -1995,Set,1,80,80,"1 YUEQINGCITYVALVEFACTORY
+.","1 Forcargooilpumproom
+. ."
+M-31-1-22,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,GateValve,Dia .： 200 mm,,,,,,"2MarineCertificate
+. ."
+M-31-1-23,List of Machinery Equipments.pdf,31,table_extracted_unreviewed,,,Pressure： 0 .4 MPa,,,,,,
+M-32-1-3,List of Machinery Equipments.pdf,32,table_extracted_unreviewed,14,SuctionCoarseFilter,Type： B200 CB/T497 -94,Set,1,"896
+.","896
+.","1 JINGJIANGDONGXING
+.","1 Forcargooilpumproom
+. ."
+M-32-1-4,List of Machinery Equipments.pdf,32,table_extracted_unreviewed,,,Dia .： 200 mm,,,,,SHIPEQUIPMENTFACTORY,"2MarineCertificate
+. ."
+M-32-1-5,List of Machinery Equipments.pdf,32,table_extracted_unreviewed,,,Nominal Pressure： 0 .1 MPa,,,,,,

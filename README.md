@@ -17,6 +17,7 @@ npm start
 Open http://localhost:3000. Use `npm run dev` for development. The build script selects Next.js's Webpack builder for compatibility with the Windows runtime used to verify this project.
 
 - `/atlas`: rotate and zoom a closed hull. Pick a mesh or use Rudder, Propeller, and Anchor to focus. Lookup joins English, simplified Chinese and aliases. Try `/atlas?term=propeller-root-crack` for a defect overlay.
+- `/vessels/hai-yin-i`: drawing-based **partial** MT Hai Yin I reconstruction, a metre-scale rudder envelope, the searchable register of all 160 PDFs, revision decisions and geometry gaps. See [the reconstruction record](docs/HAI-YIN-I-RECONSTRUCTION.md). This model uses actual metre units independently of the schematic atlas scale below; the full ship and engine room are not complete.
 - `/term/[slug]`: the bilingual term, Chinese explanation, PDF provenance and the best available view or scene.
 - `/scenes/dry-dock`, `/scenes/floating-dock`, `/scenes/synchrolift`: learn how the three systems support and expose the ship. Each has four manually selectable stages and optional playback.
 - `/guide`: browse by inspection area or find a reading-only term without starting the 3D viewer.
