@@ -13,7 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <header className="site-header"><div className="topbar">
       <Link className="brand" href="/atlas"><span className="brand-mark"><Anchor size={21}/></span><span>Docking Atlas <b>AI</b><small>MARITIME FIELD GUIDE</small></span></Link>
       <nav aria-label="Main navigation" className="top-nav">
-        <Link href="/atlas"><Compass size={16}/> <span>Ship atlas</span></Link>
+        <Link href="/atlas"><Compass size={16}/> <span>Teaching ship</span></Link>
         <Link href="/scenes/dry-dock"><Waves size={16}/> <span>Docking scenes</span></Link>
         <Link href="/guide"><LibraryBig size={16}/> <span>Field guide</span></Link>
         <Link href="/vessels/hai-yin-i"><Anchor size={16}/> <span>Hai Yin I</span></Link>

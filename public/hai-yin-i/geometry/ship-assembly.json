@@ -1,0 +1,898 @@
+{
+  "id": "hai-yin-i-whole-vessel",
+  "name": "MT Hai Yin I",
+  "unit": "metre",
+  "model_url": "/hai-yin-i/models/hai-yin-i-visual-assembly.glb",
+  "status": "whole_vessel_visual_assembly",
+  "detailed_reconstruction_complete": false,
+  "teaching_ship_route": "/atlas",
+  "vessel_route": "/vessels/hai-yin-i",
+  "scope_cn": "整船可视化装配，包括闭合外壳、艏楼、三层艉楼、八个货油舱、双舷压载包络、双机双轴双桨双舵及甲板设备。各部件精度不同，尚不是全部细节已校核的 1:1 工程模型。",
+  "precision_cn": "甲板轮廓及艏楼轮廓来自有效 B 版总结构图矢量线，按肋距和型宽标定；完整肋骨站位曲线尚未全部核对。船壳为结合横剖面圆舭的插值外形，艉轴隧道及球鼻艏横剖面未精确复原。",
+  "frame_zero_x_m": -23.867886787249944,
+  "metrics": {
+    "bytes": 1188292,
+    "mesh_nodes": 171,
+    "triangles": 28440,
+    "unique_geometries": 152
+  },
+  "targets": [
+    {
+      "id": "hyi_hull",
+      "name_cn": "船体外壳",
+      "layer": "shell",
+      "confidence": "interpolated_envelope",
+      "note_cn": "甲板轮廓及艏楼轮廓来自有效 B 版总结构图矢量线，按肋距和型宽标定；完整肋骨站位曲线尚未全部核对。船壳为结合横剖面圆舭的插值外形，艉轴隧道及球鼻艏横剖面未精确复原。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -24.950000762939453,
+          0,
+          -4.899986743927002
+        ],
+        "max": [
+          23.645601272583008,
+          4.815000057220459,
+          4.899986743927002
+        ]
+      }
+    },
+    {
+      "id": "hyi_bow_bulb",
+      "name_cn": "球鼻艏（横剖面待核对）",
+      "layer": "shell",
+      "confidence": "provisional_lateral_section",
+      "note_cn": "侧轮廓来自总结构图；横向截面用椭圆近似，尚未按各站型线完成校验。非制造精确外形。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          19.398223299999998,
+          0,
+          -0.9
+        ],
+        "max": [
+          23.9982233,
+          3.04,
+          0.9
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_deck",
+      "name_cn": "主甲板",
+      "layer": "deck",
+      "confidence": "plan_contour_envelope",
+      "note_cn": "平面外轮廓按 B 版总结构图提取；面形简化，未重建每根甲板梁。整体单位为米。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -24.950000762939453,
+          4.184999942779541,
+          -4.899986743927002
+        ],
+        "max": [
+          23.645601272583008,
+          4.840000152587891,
+          4.899986743927002
+        ]
+      }
+    },
+    {
+      "id": "hyi_forecastle",
+      "name_cn": "艏楼及艏甲板",
+      "layer": "shell",
+      "confidence": "two_view_interpolation",
+      "note_cn": "B 版艏楼甲板矢量轮廓；艉缘约 FR77，艏端与总长 49.90 m 对齐。上下轮廓之间采用插值面。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        },
+        {
+          "file": "Forecastle Deck Structure Rev3.pdf",
+          "page": 1,
+          "sha256": "5e0c5f465af3e70e223766541cb8971865175e25eb25558f33ad6c1bab9e087f"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          19.249740600585938,
+          4.309267044067383,
+          -4.6175537109375
+        ],
+        "max": [
+          24.950000762939453,
+          6.715000152587891,
+          4.6175537109375
+        ]
+      }
+    },
+    {
+      "id": "hyi_forecastle_deck",
+      "name_cn": "艏楼甲板面",
+      "layer": "deck",
+      "confidence": "plan_contour_envelope",
+      "note_cn": "艏楼平面轮廓与 FR77 位置来自 B 版总结构图；舷弧按标注值插值。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          19.249740600585938,
+          6.085000038146973,
+          -4.6175537109375
+        ],
+        "max": [
+          24.950000762939453,
+          6.739999771118164,
+          4.6175537109375
+        ]
+      }
+    },
+    {
+      "id": "hyi_accommodation",
+      "name_cn": "艉部生活楼",
+      "layer": "superstructure",
+      "confidence": "projection_measured_envelope",
+      "note_cn": "独立 Hai Yin I 上层建筑。层高依据规格书；平面边界按总布置投影量取，门窗和房间未全部施工级复原。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 5,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -23.30788695891132,
+          4.180000023841858,
+          -4.699999809265137
+        ],
+        "max": [
+          -12.667886615588564,
+          8.730000000745058,
+          4.699999809265137
+        ]
+      }
+    },
+    {
+      "id": "hyi_bridge",
+      "name_cn": "驾驶室",
+      "layer": "superstructure",
+      "confidence": "projection_measured_envelope",
+      "note_cn": "驾驶甲板、罗经甲板高度分别按 8.68 m / 11.08 m；玻璃分格为示意，待按门窗图逐项核对。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 5,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -19.69788673956623,
+          8.679999952316285,
+          -2.9000000953674316
+        ],
+        "max": [
+          -14.59788683493366,
+          11.139999998658896,
+          2.9000000953674316
+        ]
+      }
+    },
+    {
+      "id": "hyi_bulkheads",
+      "name_cn": "主要横舱壁",
+      "layer": "structure",
+      "confidence": "frame_positioned_surfaces",
+      "note_cn": "FR20、34、48、63、79 位置来自最新总结构图；只建主要舱壁外形，尚无全部加强材和开孔。",
+      "sources": [
+        {
+          "file": "General Structure Plan Rev2.pdf",
+          "page": 1,
+          "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -12.672886787138184,
+          0.8600000238418577,
+          -4.039968013763428
+        ],
+        "max": [
+          20.3771132126383,
+          4.159999976158142,
+          4.039968013763428
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_tanks",
+      "name_cn": "八个货油舱",
+      "layer": "cargo",
+      "confidence": "compartment_envelopes",
+      "note_cn": "四对八舱按最新 B 版规格书的肋位布置。显示几何为内舱包络，未用于反算容积；标注容量来自原表。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -12.667886734008789,
+          0.8600000143051147,
+          -4.039968013763428
+        ],
+        "max": [
+          20.372112274169922,
+          4.139999866485596,
+          4.039968013763428
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_1_port",
+      "name_cn": "No.1 货油舱 · 左舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR63–79；单舱 85.6 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          11.412113189697266,
+          0.8600000143051147,
+          0.009999999776482582
+        ],
+        "max": [
+          20.372112274169922,
+          4.139999866485596,
+          4.03878927230835
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_1_starboard",
+      "name_cn": "No.1 货油舱 · 右舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR63–79；单舱 85.6 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          11.412113189697266,
+          0.8600000143051147,
+          -4.03878927230835
+        ],
+        "max": [
+          20.372112274169922,
+          4.139999866485596,
+          -0.009999999776482582
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_2_port",
+      "name_cn": "No.2 货油舱 · 左舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR48–63；单舱 112.3 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          3.012113094329834,
+          0.8600000143051147,
+          0.009999999776482582
+        ],
+        "max": [
+          11.412113189697266,
+          4.139999866485596,
+          4.03878927230835
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_2_starboard",
+      "name_cn": "No.2 货油舱 · 右舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR48–63；单舱 112.3 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          3.012113094329834,
+          0.8600000143051147,
+          -4.03878927230835
+        ],
+        "max": [
+          11.412113189697266,
+          4.139999866485596,
+          -0.009999999776482582
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_3_port",
+      "name_cn": "No.3 货油舱 · 左舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR34–48；单舱 104.9 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -4.827886581420898,
+          0.8600000143051147,
+          0.009999999776482582
+        ],
+        "max": [
+          3.012113094329834,
+          4.139999866485596,
+          4.039968013763428
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_3_starboard",
+      "name_cn": "No.3 货油舱 · 右舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR34–48；单舱 104.9 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -4.827886581420898,
+          0.8600000143051147,
+          -4.039968013763428
+        ],
+        "max": [
+          3.012113094329834,
+          4.139999866485596,
+          -0.009999999776482582
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_4_port",
+      "name_cn": "No.4 货油舱 · 左舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR20–34；单舱 100.7 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -12.667886734008789,
+          0.8600000143051147,
+          0.009999999776482582
+        ],
+        "max": [
+          -4.827886581420898,
+          4.139999866485596,
+          4.039968013763428
+        ]
+      }
+    },
+    {
+      "id": "hyi_cargo_4_starboard",
+      "name_cn": "No.4 货油舱 · 右舷",
+      "layer": "cargo",
+      "confidence": "compartment_envelope",
+      "note_cn": "FR20–34；单舱 100.7 m³（原表）。包络包含简化舭部，细部及真实容积尚未几何校验。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -12.667886734008789,
+          0.8600000143051147,
+          -4.039968013763428
+        ],
+        "max": [
+          -4.827886581420898,
+          4.139999866485596,
+          -0.009999999776482582
+        ]
+      }
+    },
+    {
+      "id": "hyi_ballast_tanks",
+      "name_cn": "双舷压载舱包络",
+      "layer": "ballast",
+      "confidence": "compartment_envelopes",
+      "note_cn": "按货油区域外侧与双层底概念显示四对舷侧压载包络。肋位对应 B 版规格书，局部舱形仍需逐站复核。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -12.667886734008789,
+          0.8600000143051147,
+          -4.899968147277832
+        ],
+        "max": [
+          20.372112274169922,
+          4.139999866485596,
+          4.899968147277832
+        ]
+      }
+    },
+    {
+      "id": "hyi_engine_room",
+      "name_cn": "机舱及双机布置",
+      "layer": "machinery",
+      "confidence": "mixed_installation_and_proxies",
+      "note_cn": "机舱与双机独立重建。双轴中心距中线 ±2.500 m、轴线 BL+0.950 m 有原图尺寸；设备外形为安装图量取包络，辅助设备位置未完成施工级校验。",
+      "sources": [
+        {
+          "file": "Main Engine and Gearbox Installation.pdf",
+          "page": 1,
+          "sha256": "b501cdc32a1bac348527a5d4b4b658c3fcf275c4c376d2c30c4d1aebfb1b2b03"
+        },
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -22.467886845424076,
+          0.7300000143051149,
+          -4
+        ],
+        "max": [
+          -12.667886710955997,
+          2.590000004172325,
+          4
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_engine_port",
+      "name_cn": "NT855-M 主机 · 左舷",
+      "layer": "machinery",
+      "confidence": "equipment_envelope",
+      "note_cn": "两台主机之一，201 kW。横向轴线 2.5 m，轴线高度 0.950 m；外壳、附件与安装纵坐标仍是按图量取的包络，不代表厂家精确 CAD。",
+      "sources": [
+        {
+          "file": "Main Engine and Gearbox Installation.pdf",
+          "page": 1,
+          "sha256": "b501cdc32a1bac348527a5d4b4b658c3fcf275c4c376d2c30c4d1aebfb1b2b03"
+        },
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 2,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -22.467886845424076,
+          0.7300000143051149,
+          1.9899999964237214
+        ],
+        "max": [
+          -16.577886763408085,
+          2.590000004172325,
+          2.9149999916553497
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_engine_starboard",
+      "name_cn": "NT855-M 主机 · 右舷",
+      "layer": "machinery",
+      "confidence": "equipment_envelope",
+      "note_cn": "两台主机之一，201 kW。横向轴线 -2.5 m，轴线高度 0.950 m；外壳、附件与安装纵坐标仍是按图量取的包络，不代表厂家精确 CAD。",
+      "sources": [
+        {
+          "file": "Main Engine and Gearbox Installation.pdf",
+          "page": 1,
+          "sha256": "b501cdc32a1bac348527a5d4b4b658c3fcf275c4c376d2c30c4d1aebfb1b2b03"
+        },
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 2,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -22.467886845424076,
+          0.7300000143051149,
+          -3.0100000035762786
+        ],
+        "max": [
+          -16.577886763408085,
+          2.590000004172325,
+          -2.0850000083446503
+        ]
+      }
+    },
+    {
+      "id": "hyi_generators",
+      "name_cn": "两台柴油发电机组（包络）",
+      "layer": "machinery",
+      "confidence": "symbolic_equipment",
+      "note_cn": "CCFJ50J-Y，2 台，来自机械设备明细表第 3 页。当前为辅助设备占位包络，安装位置和厂家外形待核实。",
+      "sources": [
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 3,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -16.124886775329013,
+          0.8949999880790711,
+          -3.039999985694885
+        ],
+        "max": [
+          -14.246886799170872,
+          1.745000011920929,
+          3.039999985694885
+        ]
+      }
+    },
+    {
+      "id": "hyi_diesel_tanks",
+      "name_cn": "柴油舱位置标记",
+      "layer": "machinery",
+      "confidence": "location_markers",
+      "note_cn": "最新规格书将柴油舱由 FR8–11 移至 FR17–20，单舱 6.4 m³。圆球仅标记位置，不代表舱形或尺寸。",
+      "sources": [
+        {
+          "file": "Hull Specification.pdf",
+          "page": 6,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -13.72788678605785,
+          2.0800000011920927,
+          -3.619999998807907
+        ],
+        "max": [
+          -13.287886788442036,
+          2.519999998807907,
+          3.619999998807907
+        ]
+      }
+    },
+    {
+      "id": "hyi_propellers",
+      "name_cn": "双螺旋桨",
+      "layer": "propulsion",
+      "confidence": "dimensioned_outline_parameterization",
+      "note_cn": "MAU、直径 1.730 m、4 叶、螺距比 0.664、后倾 10°来自桨图。弦长/厚度用原表参数化，剖面曲线仍为近似，尚未逐条复原原偏移表。",
+      "sources": [
+        {
+          "file": "Propeller Plan.pdf",
+          "page": 1,
+          "sha256": "e9da9b6f7d8112ae2c36298711b659fb69aed7bf0d81a4103b1454ef7feab5a6"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -22.667886790230177,
+          0.08499999046325679,
+          -3.365000009536743
+        ],
+        "max": [
+          -22.267886784269713,
+          1.8150000095367431,
+          3.365000009536743
+        ]
+      }
+    },
+    {
+      "id": "hyi_rudders",
+      "name_cn": "双舵叶及舵杆",
+      "layer": "propulsion",
+      "confidence": "mixed_vector_outline_and_layout",
+      "note_cn": "舵叶轮廓为原矢量提取，弦长 1.400 m、高 2.080 m；船上纵向安装位置仍按总布置量取，舵杆外形及法兰未完成精确重建。",
+      "sources": [
+        {
+          "file": "Rudder Blade Construction.pdf",
+          "page": 1,
+          "sha256": "86df18f229c76bcea97749819e459000b864e937fed06f41f60f8741e7617335"
+        },
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -24.427886787249943,
+          0.07999999999999999,
+          -2.625550761818886
+        ],
+        "max": [
+          -23.0278868110918,
+          3.359999976158142,
+          2.626411408185959
+        ]
+      }
+    },
+    {
+      "id": "hyi_rails",
+      "name_cn": "舷墙、栏杆与通道",
+      "layer": "fittings",
+      "confidence": "schematic_fittings",
+      "note_cn": "栏杆、支柱与舷墙用可见简化构件表达，尚未逐件复原节点和所有局部尺寸。",
+      "sources": [
+        {
+          "file": "Hand Rail & Bulwark & Ladder Arrangement Rev2.pdf",
+          "page": 1,
+          "sha256": "72ad1ec3727b1d7d1fbe32ecd54b2b3195f1de5dbcc05b1efa69f470b82de3ee"
+        },
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -24.952560424804688,
+          4.179999828338623,
+          -4.925000190734863
+        ],
+        "max": [
+          24.975000381469727,
+          7.090000152587891,
+          4.925000190734863
+        ]
+      }
+    },
+    {
+      "id": "hyi_windlass",
+      "name_cn": "艏部双锚机组",
+      "layer": "fittings",
+      "confidence": "schematic_equipment",
+      "note_cn": "位置依据总布置；现为锚机示意构件。未采用盖 Not Approved 的基座提交图作为几何依据，厂家细节待核对。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          20.954113236591922,
+          6.270000001788139,
+          -1.6499999761581416
+        ],
+        "max": [
+          22.254113188908207,
+          7.229999995231628,
+          1.6499999761581416
+        ]
+      }
+    },
+    {
+      "id": "hyi_anchors",
+      "name_cn": "左右舷锚与锚链标记",
+      "layer": "fittings",
+      "confidence": "schematic_equipment",
+      "note_cn": "总布置可辨认的双锚位置；锚爪、链节尺寸为示意，不能作为真实锚具加工或校核尺寸。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          22.690000000596047,
+          4.1426537620252715,
+          -2.120000000298023
+        ],
+        "max": [
+          23.70999999940395,
+          5.249999976158143,
+          2.120000000298023
+        ]
+      }
+    },
+    {
+      "id": "hyi_deck_fittings",
+      "name_cn": "货油舱口、通气与系泊件",
+      "layer": "fittings",
+      "confidence": "schematic_fittings",
+      "note_cn": "按总布置的分布设置可视化舱口、通气标记与系泊柱，细部尺寸和全部管系未复原。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -24.21788678248157,
+          4.220000001341105,
+          -4.329289539495126
+        ],
+        "max": [
+          17.92211320798169,
+          5.319999998658895,
+          4.329289539495126
+        ]
+      }
+    },
+    {
+      "id": "hyi_loading_arm",
+      "name_cn": "输油臂",
+      "layer": "fittings",
+      "confidence": "reach_based_symbol",
+      "note_cn": "总布置标示 R12000 作业范围。现为设备位置及工作尺度示意，臂段长度、铰接点和真实管径尚未按厂家图精确复原。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        },
+        {
+          "file": "Marine Oil Loading Arm Foundation Structure Plan.pdf",
+          "page": 1,
+          "sha256": "8ed232340e8089fab23000790a2a596196c91abffb79a8ab25e5ec5a9977fbcf"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -8.68594485214739,
+          4.250000023841858,
+          0.2999999940395355
+        ],
+        "max": [
+          3.412113218710523,
+          10.627975589146146,
+          1.1000000059604644
+        ]
+      }
+    },
+    {
+      "id": "hyi_masts",
+      "name_cn": "主桅、艏桅及导航设备",
+      "layer": "fittings",
+      "confidence": "projection_measured_envelope",
+      "note_cn": "桅杆、雷达横臂与天线按总布置可见外形量取和简化；仪器及支架细部未完成。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -18.7678868110918,
+          6.300000000000001,
+          -1.7999999523162837
+        ],
+        "max": [
+          19.2971132145382,
+          20.700000095367432,
+          1.7999999523162837
+        ]
+      }
+    },
+    {
+      "id": "hyi_lifesaving",
+      "name_cn": "两舷救生筏",
+      "layer": "fittings",
+      "confidence": "schematic_equipment",
+      "note_cn": "两舷位置参考总布置救生甲板图；筏架和筏壳目前为示意几何。",
+      "sources": [
+        {
+          "file": "General Arrangement Plan RevA1.pdf",
+          "page": 1,
+          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -18.667886793210407,
+          6.649999994039535,
+          -4.5
+        ],
+        "max": [
+          -17.867886781289478,
+          7.450000005960464,
+          4.5
+        ]
+      }
+    }
+  ]
+}

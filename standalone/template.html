@@ -21,27 +21,29 @@
       <p class="eyebrow">VESSEL RECONSTRUCTION / WZ029 / RI 88792</p>
       <h1>MT Hai Yin <em>I</em></h1>
       <p class="lead">以这批资料中最新有效的图纸为目标，逐部件重建海银一号。</p>
-      <p class="notice"><strong>当前为部分重建。</strong>可查看的三维成果是舵叶外形包络；整船、机舱及管路尚未完成。1:1 单位比例不代表制造精度已获认证。</p>
+      <p class="notice"><strong>Hai Yin I 是独立船舶，原教学船在网站另页保留。</strong>当前已建立整船可视化装配；标注尺寸、插值船壳与设备包络分级说明，尚未完成全部细节的 1:1 工程校核。资料去重只针对重复文件。</p>
       <div id="stats" class="stats" aria-label="资料处理统计"></div>
     </section>
 
     <div class="model-grid" id="model-section">
       <section class="card model-card" aria-labelledby="model-title">
-        <div class="card-title"><div><p class="eyebrow">DRAWING-DERIVED / 1 UNIT = 1 METRE</p><h2 id="model-title">舵叶外形包络</h2></div><span class="chip">双舵 · 一份部件定义</span></div>
+        <div class="card-title"><div><p class="eyebrow">INDEPENDENT VESSEL / 1 UNIT = 1 METRE</p><h2 id="model-title">Hai Yin I 整船三维装配</h2></div><span class="chip">双机 · 双桨 · 双舵 · 八货油舱</span></div>
+        <div class="ship-presets" aria-label="独立 Hai Yin I 查看模式"><button type="button" data-preset="exterior" aria-pressed="true">整船外观</button><button type="button" data-preset="xray">透视全船</button><button type="button" data-preset="cargo">货油舱</button><button type="button" data-preset="engine">机舱</button></div>
         <div id="viewport" class="viewport">
-          <div class="viewport-heading"><span>HAI YIN I / RUDDER BLADE</span><span>H 2.080 m · C 1.400 m</span></div>
+          <div class="viewport-heading"><span>MT HAI YIN I / 独立整船</span><span>LOA 49.90 m · B 9.80 m</span></div>
           <div id="profile" class="profile"><!--__PROFILE__--></div>
           <div id="three-host" class="three-host" hidden></div>
-          <div id="model-loading" class="model-loading" role="status" hidden>正在准备舵叶三维模型…</div>
-          <div class="viewport-actions"><button id="open-3d" type="button">打开 3D 舵叶</button><button id="show-profile" type="button" hidden>二维轮廓</button></div>
+          <div id="model-loading" class="model-loading" role="status" hidden>正在加载 Hai Yin I 整船模型…</div>
+          <div class="viewport-actions"><button id="open-3d" type="button">打开整船 3D</button><button id="show-profile" type="button" hidden>二维布置</button></div>
         </div>
-        <div class="viewer-caption"><span id="viewer-status" role="status" aria-live="polite">二维原图轮廓 · 点击打开三维</span><span>仅外形包络</span></div>
+        <div class="viewer-caption"><span id="viewer-status" role="status" aria-live="polite">正在准备整船三维…</span><span>部件精度分别标注</span></div>
         <div id="camera-tools" class="camera-tools" hidden>
-          <div class="button-group" aria-label="三维视角"><button type="button" data-camera="reset">复位视角</button><button type="button" data-camera="front">正面</button><button type="button" data-camera="side">侧面</button><button type="button" data-camera="top">俯视</button></div>
+          <div class="button-group" aria-label="三维视角"><button type="button" id="ship-reset">全船复位</button><button type="button" data-camera="reset">立体</button><button type="button" data-camera="front">左舷</button><button type="button" data-camera="side">艏视</button><button type="button" data-camera="top">俯视</button></div>
           <label class="check"><input id="wireframe" type="checkbox">显示网格</label>
         </div>
-        <p class="fine">按 WUT513B-231-02 第 1 页矢量轮廓提取，以标注弦长 1.400 m 和高度 2.080 m 生成。尚无法兰、内部隔板、孔、焊缝和船上安装坐标。</p>
-        <div class="downloads"><button type="button" class="primary" data-download="glb">下载舵叶 GLB ↓</button><button type="button" data-download="profile">下载轮廓数据</button></div>
+        <label class="ship-target-label">定位 Hai Yin I 部件<select id="ship-target"><option value="">全船总览</option></select></label>
+        <div id="ship-selection" class="ship-selection" role="status" aria-live="polite"></div>
+        <div class="downloads"><button type="button" class="primary" data-download="ship-glb">下载 Hai Yin I 整船 GLB ↓</button><button type="button" data-download="glb">原舵叶部件 GLB</button><button type="button" data-download="assembly">装配与精度说明 JSON</button></div>
       </section>
 
       <aside class="card dimension-card" aria-labelledby="dimension-title">

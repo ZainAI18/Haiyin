@@ -16,10 +16,12 @@ npm start
 
 Open http://localhost:3000. Use `npm run dev` for development. The build script selects Next.js's Webpack builder for compatibility with the Windows runtime used to verify this project.
 
-For a **single-file offline HTML** of the Hai Yin I reconstruction and source library, open [`standalone/Hai_Yin_I_Atlas.html`](standalone/Hai_Yin_I_Atlas.html) directly in Chrome/Edge. It includes the current rudder envelope, all source records, equipment table data and downloads. Regenerate with `npm run export:html`; see [standalone instructions](standalone/README.md). The full vessel model remains incomplete.
+The site has **two independent vessels**: the original teaching ship at `/atlas`, and MT Hai Yin I at `/vessels/hai-yin-i`. Hai Yin I uses its own GLB, source geometry, component IDs and camera targets. Its whole-vessel visualization includes hull, superstructure, eight cargo compartments and twin propulsion; detailed engineering geometry is not fully verified.
+
+For a **single-file offline HTML** of Hai Yin I, open [`standalone/Hai_Yin_I_Atlas.html`](standalone/Hai_Yin_I_Atlas.html) directly in Chrome/Edge. It embeds the whole-vessel visualization, source records, equipment data and downloads. Regenerate with `npm run export:html`; see [standalone instructions](standalone/README.md).
 
 - `/atlas`: rotate and zoom a closed hull. Pick a mesh or use Rudder, Propeller, and Anchor to focus. Lookup joins English, simplified Chinese and aliases. Try `/atlas?term=propeller-root-crack` for a defect overlay.
-- `/vessels/hai-yin-i`: drawing-based **partial** MT Hai Yin I reconstruction, a metre-scale rudder envelope, the searchable register of all 160 PDFs, revision decisions and geometry gaps. See [the reconstruction record](docs/HAI-YIN-I-RECONSTRUCTION.md). This model uses actual metre units independently of the schematic atlas scale below; the full ship and engine room are not complete.
+- `/vessels/hai-yin-i`: independent MT Hai Yin I whole-vessel visual assembly, with exterior / x-ray / cargo / engine views and 32 component targets. The 160-PDF register and accuracy notes distinguish dimensioned parameters, interpolated hull surfaces and equipment envelopes. See [the reconstruction record](docs/HAI-YIN-I-RECONSTRUCTION.md). Its metre units are independent of the teaching ship's schematic scale.
 - `/term/[slug]`: the bilingual term, Chinese explanation, PDF provenance and the best available view or scene.
 - `/scenes/dry-dock`, `/scenes/floating-dock`, `/scenes/synchrolift`: learn how the three systems support and expose the ship. Each has four manually selectable stages and optional playback.
 - `/guide`: browse by inspection area or find a reading-only term without starting the 3D viewer.

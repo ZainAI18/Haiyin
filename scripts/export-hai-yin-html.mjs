@@ -9,16 +9,17 @@ const files={
   vessel:"master-data.json",register:"audit/source-register.json",equipment:"audit/machinery-equipment-tables.json",
   profile:"geometry/rudder-profile.json",drawingCsv:"audit/drawing-register.csv",equipmentCsv:"audit/machinery-equipment-tables.csv",
   glb:"models/rudder-blade-envelope.glb",
+  shipGlb:"models/hai-yin-i-visual-assembly.glb",shipAssembly:"geometry/ship-assembly.json",shipPlan:"geometry/ship-plan.json",
 };
 const entries=await Promise.all(Object.entries(files).map(async([key,path])=>{
   const content=await readFile(resolve(base,path));
-  return [key,key==="glb"?content.toString("base64"):path.endsWith(".json")?JSON.parse(content.toString("utf8")):content.toString("utf8")];
+  return [key,path.endsWith(".glb")?content.toString("base64"):path.endsWith(".json")?JSON.parse(content.toString("utf8")):content.toString("utf8")];
 }));
 const data=Object.fromEntries(entries);
 if(data.register.source_records.length!==160||data.vessel.status!=="partial_reconstruction") throw new Error("Review the expected source snapshot and model scope.");
 const [template,style,profileSvg,license,bundle]=await Promise.all([
   readFile(resolve(root,"standalone/template.html"),"utf8"),readFile(resolve(root,"standalone/style.css"),"utf8"),
-  readFile(resolve(base,"geometry/rudder-profile.svg"),"utf8"),readFile(resolve(root,"node_modules/three/LICENSE"),"utf8"),
+  readFile(resolve(base,"geometry/ship-overview.svg"),"utf8"),readFile(resolve(root,"node_modules/three/LICENSE"),"utf8"),
   build({entryPoints:[resolve(root,"standalone/app.js")],bundle:true,format:"iife",platform:"browser",target:["es2022"],minify:true,write:false,legalComments:"inline"}),
 ]);
 const safeJson=JSON.stringify(data).replace(/</g,"\\u003c").replace(/\u2028/g,"\\u2028").replace(/\u2029/g,"\\u2029");

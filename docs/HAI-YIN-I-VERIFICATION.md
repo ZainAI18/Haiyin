@@ -1,5 +1,7 @@
 # Hai Yin I reconstruction verification
 
+Historical first-checkpoint record (rudder-only stage). For the current whole-vessel assembly and two independent vessel pages, see [current status](HAI-YIN-I-WHOLE-SHIP-STATUS.md).
+
 Verified locally on 2026-11-18 against the production build. This is a partial reconstruction, not a completed ship.
 
 - `npm run build`: passed, including TypeScript and 343 generated pages. The new route is `/vessels/hai-yin-i`.

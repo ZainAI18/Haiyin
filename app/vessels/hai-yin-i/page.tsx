@@ -1,6 +1,6 @@
 import Link from "next/link";
 import vessel from "@/data/hai-yin-i.json";
-import { HaiYinViewer } from "@/components/hai-yin-viewer";
+import { HaiYinShipViewer } from "@/components/hai-yin-ship-viewer";
 import { DrawingIndex } from "@/components/drawing-index";
 
 export const metadata={title:"MT Hai Yin I · 图纸重建"};
@@ -12,7 +12,8 @@ export default function HaiYinPage() {
       <h1>MT Hai Yin <span>I</span></h1>
       <p>{vessel.target_cn}</p>
     </div>
-    <p className="warning">建模进行中。当前可查看舵叶外形包络，整船及机舱尚未完成。1:1 单位比例不代表已认证的制造精度。</p>
+    <div className="hyi-vessel-switcher" aria-label="两艘独立船舶"><Link href="/atlas">教学参考船 · 原有图谱 →</Link><span aria-current="page">MT Hai Yin I · 独立按图重建</span></div>
+    <p className="warning">已建立 Hai Yin I 整船可视化装配，原有教学船单独保留。图纸标注尺寸、插值外形及设备占位包络在部件说明中分别标明；尚不代表全部细节已经校核完成的 1:1 工程模型。</p>
     <div className="reconstruction-summary" aria-label="资料审核统计">
       <div><strong>{vessel.sources.pdf_count}</strong><span>PDF / {vessel.sources.page_count} 页</span></div>
       <div><strong>{vessel.sources.byte_duplicate_count}</strong><span>份字节重复文件已归并</span></div>
@@ -21,10 +22,9 @@ export default function HaiYinPage() {
     </div>
     <div className="reconstruction-layout">
       <section className="card station">
-        <div className="station-title"><h2>舵叶外形包络</h2><span>DRAWING-DERIVED</span></div>
-        <HaiYinViewer/>
-        <p className="fine">从 WUT513B-231-02 第 1 页矢量轮廓提取，按 1.400 m 弦长和 2.080 m 高度生成。船上两只舵共用一份部件定义；安装坐标尚未确认。未建模法兰、隔板、开孔和焊缝。</p>
-        <a className="primary" href="/hai-yin-i/models/rudder-blade-envelope.glb" download>下载舵叶 GLB</a>
+        <div className="station-title"><h2>Hai Yin I 整船装配</h2><span>INDEPENDENT VESSEL</span></div>
+        <HaiYinShipViewer/>
+        <p className="fine">B 版总结构图矢量轮廓、49.90 × 9.80 m 主尺度、最新货油舱肋位与双机布置分别保留依据。每个可点选部件都有精度及来源说明。</p>
       </section>
       <section className="card detail">
         <p className="eyebrow">DIMENSION REGISTER</p><h2>已核对主尺度</h2>
@@ -43,7 +43,7 @@ export default function HaiYinPage() {
       </section>
     </div>
     <section className="card detail reconstruction-section">
-      <p className="eyebrow">MODEL COVERAGE</p><h2>部件与系统状态</h2>
+      <p className="eyebrow">MODEL COVERAGE</p><h2>部件与系统的几何精度状态</h2>
       <div className="reconstruction-table-wrap"><table className="reconstruction-table">
         <caption className="fine">几何依据按部件合并。表内状态描述实际完成范围，不表示整船已经重建。</caption>
         <thead><tr><th scope="col">部件 / 系统</th><th scope="col">当前范围</th><th scope="col">原始来源</th></tr></thead>

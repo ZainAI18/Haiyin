@@ -191,7 +191,7 @@
         "page": 6,
         "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
       },
-      "geometry_status": "not_reconstructed"
+      "geometry_status": "compartment_envelope_not_volume_verified"
     },
     {
       "number": 2,
@@ -209,7 +209,7 @@
         "page": 6,
         "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
       },
-      "geometry_status": "not_reconstructed"
+      "geometry_status": "compartment_envelope_not_volume_verified"
     },
     {
       "number": 3,
@@ -227,7 +227,7 @@
         "page": 6,
         "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
       },
-      "geometry_status": "not_reconstructed"
+      "geometry_status": "compartment_envelope_not_volume_verified"
     },
     {
       "number": 4,
@@ -245,7 +245,7 @@
         "page": 6,
         "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
       },
-      "geometry_status": "not_reconstructed"
+      "geometry_status": "compartment_envelope_not_volume_verified"
     }
   ],
   "components": [
@@ -267,49 +267,49 @@
       "id": "hull",
       "name_cn": "船体、双层底与舱壁",
       "quantity": 1,
-      "status": "source_tracing_in_progress",
+      "status": "drawing_calibrated_visualization",
       "source": {
         "file": "Body Line on Frames.pdf",
         "page": 1,
         "sha256": "4c3287e46612cba658cb628edebace15b972f661e30508eba1f9fc1a23bfcc4c"
       },
-      "note_cn": "已有肋骨型线、总结构、横剖面和外板展开图；尚未完成逐站曲线核对与闭合船壳。"
+      "note_cn": "已建立 B 版甲板矢量轮廓和圆舭插值船壳；完整肋骨型线、艉轴隧道与球鼻艏横剖面尚未逐站校验。"
     },
     {
       "id": "cargo_tanks",
       "name_cn": "八个货油舱",
       "quantity": 8,
-      "status": "dimensions_registered",
+      "status": "compartment_envelopes",
       "source": {
         "file": "Hull Specification.pdf",
         "page": 6,
         "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
       },
-      "note_cn": "四对舱的肋位与容积已登记；容量不是可直接生成精确舱形的几何。"
+      "note_cn": "已按最新肋位建立四对八舱包络；容量来自原表，未以可视化包络替代精确容积校核。"
     },
     {
       "id": "propeller",
       "name_cn": "双螺旋桨",
       "quantity": 2,
-      "status": "source_available_not_reconstructed",
+      "status": "dimensioned_parameterization",
       "source": {
         "file": "Propeller Plan.pdf",
         "page": 1,
         "sha256": "e9da9b6f7d8112ae2c36298711b659fb69aed7bf0d81a4103b1454ef7feab5a6"
       },
-      "note_cn": "已确认 MAU、4 叶、D=1.730 m；叶片剖面与桨毂需按原表逐项重建。"
+      "note_cn": "已建立两只四叶桨，直径 1.730 m；弦长和厚度采用原表参数，剖面曲线近似仍需核对。"
     },
     {
       "id": "main_engine",
       "name_cn": "双主机及机舱设备",
       "quantity": 2,
-      "status": "installation_data_available_detail_incomplete",
+      "status": "equipment_envelopes",
       "source": {
         "file": "Main Engine and Gearbox Installation.pdf",
         "page": 1,
         "sha256": "b501cdc32a1bac348527a5d4b4b658c3fcf275c4c376d2c30c4d1aebfb1b2b03"
       },
-      "note_cn": "NT855-M 安装图包含尺寸和现场复核要求；尚无完整设备三维外形或内部构造。"
+      "note_cn": "已建立双机双轴布置。±2.500 m 横向轴线及 BL+0.950 m 轴高有安装图尺寸；主辅机外形和部分安装纵坐标为待核验包络。"
     },
     {
       "id": "cargo_piping_2019",
@@ -404,5 +404,12 @@
     "先逐页核对已有锚机、绞车及舵机厂家手册；主辅机、泵、阀、计量撬等未给全外形尺寸的设备，仍需补足厂家尺寸图或可授权 CAD。设备代号不能替代几何。",
     "图纸内要求现场确定的安装尺寸及相关复函：尚未给出的数值保留为空，不以猜测补齐。",
     "如要求现船实况一致，另需竣工/改装记录和实测；本次已确认的目标是这批资料中的最新有效设计。"
-  ]
+  ],
+  "visual_assembly": {
+    "status": "whole_vessel_visual_assembly",
+    "detailed_reconstruction_complete": false,
+    "model_url": "/hai-yin-i/models/hai-yin-i-visual-assembly.glb",
+    "independent_from_teaching_ship": true,
+    "scope_cn": "整船可视化装配，包括闭合外壳、艏楼、三层艉楼、八个货油舱、双舷压载包络、双机双轴双桨双舵及甲板设备。各部件精度不同，尚不是全部细节已校核的 1:1 工程模型。"
+  }
 }

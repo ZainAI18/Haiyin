@@ -41,7 +41,7 @@ test("cargo tank register has eight distinct compartments with the latest specif
   for(const tank of vessel.cargo_tanks) {
     assert.equal(tank.source.file,"Hull Specification.pdf");
     assert.equal(tank.source.page,6);
-    assert.equal(tank.geometry_status,"not_reconstructed");
+    assert.equal(tank.geometry_status,"compartment_envelope_not_volume_verified");
   }
 });
 

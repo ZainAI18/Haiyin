@@ -1,9 +1,10 @@
-import { AmbientLight, Color, DirectionalLight, GridHelper, Mesh, PerspectiveCamera, Scene, Texture, Vector3, WebGLRenderer } from "three";
+import { AmbientLight, Color, DirectionalLight, GridHelper, Mesh, PerspectiveCamera, Raycaster, Scene, Texture, Vector2, Vector3, WebGLRenderer } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import {createShipActions,inspectId} from "../lib/hai-yin-scene";
 
 const data=JSON.parse(document.getElementById("atlas-data").textContent);
-const {vessel,register,equipment,profile}=data;
+const {vessel,register,equipment,profile,shipAssembly}=data;
 const $=id=>document.getElementById(id);
 const node=(tag,className,text)=>{
   const value=document.createElement(tag);
@@ -44,7 +45,7 @@ for(const fact of vessel.facts){
   label.append(button);item.append(label,node("dd",null,`${fact.value.toFixed(fact.id==="frame-spacing"?3:2)} ${fact.unit}`));
   $(primaryFacts.has(fact.id)?"dimensions":"extra-dimensions").append(item);
 }
-const coverageLabels={drawing_derived_envelope:"三维外形包络已生成",source_tracing_in_progress:"型线核对与建模中",dimensions_registered:"肋位与舱容已登记",source_available_not_reconstructed:"原图可用 · 三维未完成",installation_data_available_detail_incomplete:"安装资料可用 · 细节未完成",topology_only_nts:"系统连接关系 · 无精确空间路由"};
+const coverageLabels={drawing_derived_envelope:"原矢量部件外形",drawing_calibrated_visualization:"按图标定的整船外形",compartment_envelopes:"按肋位布置的内舱包络",dimensioned_parameterization:"原尺寸参数化 · 剖面待核对",equipment_envelopes:"安装布置与设备包络",source_tracing_in_progress:"型线核对与建模中",dimensions_registered:"肋位与舱容已登记",source_available_not_reconstructed:"原图可用 · 三维未完成",installation_data_available_detail_incomplete:"安装资料可用 · 细节未完成",topology_only_nts:"系统连接关系 · 无精确空间路由"};
 for(const part of vessel.components){
   const item=node("article","coverage-item"),button=node("button",null,"查看来源与状态 →");button.type="button";
   item.append(node("p","status",coverageLabels[part.status]||part.status),node("h3",null,part.name_cn),node("p",null,part.note_cn));
@@ -62,6 +63,8 @@ for(const gap of vessel.required_for_complete_geometry) $("gaps").append(node("l
 function decodeBase64(value){return Uint8Array.from(atob(value),c=>c.charCodeAt(0));}
 const downloads={
   glb:()=>[decodeBase64(data.glb),"rudder-blade-envelope.glb","model/gltf-binary"],
+  "ship-glb":()=>[decodeBase64(data.shipGlb),"hai-yin-i-visual-assembly.glb","model/gltf-binary"],
+  assembly:()=>[JSON.stringify(shipAssembly,null,2),"hai-yin-i-ship-assembly.json","application/json"],
   profile:()=>[JSON.stringify(profile,null,2),"rudder-profile.json","application/json"],
   master:()=>[JSON.stringify(vessel,null,2),"hai-yin-i-master-data.json","application/json"],
   register:()=>[JSON.stringify(register,null,2),"source-register.json","application/json"],
@@ -146,6 +149,14 @@ function nativePage(){const p=equipment.pages.find(p=>String(p.page)===$("native
 $("native-page").value="2";$("native-page").addEventListener("change",nativePage);nativePage();
 
 let viewer=null,generation=0;
+let selectedId="",activePreset="exterior";
+for(const target of shipAssembly.targets){const option=node("option",null,target.name_cn);option.value=target.id;$("ship-target").append(option);}
+function selectionInfo(id=""){
+  const target=shipAssembly.targets.find(t=>t.id===id);$("ship-target").value=id;
+  const box=$("ship-selection");box.replaceChildren(node("strong",null,target?.name_cn||"独立 Hai Yin I · 整船可视化装配"),node("p",null,target?.note_cn||shipAssembly.scope_cn));
+  if(target)box.append(node("small",null,`来源：${target.sources.map(sourceText).join("；")} / 精度：${target.confidence}`));
+}
+selectionInfo();
 function disposeScene(scene){
   const geometries=new Set(),materials=new Set(),textures=new Set();
   scene.traverse(object=>{
@@ -154,7 +165,7 @@ function disposeScene(scene){
   });
   geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());
 }
-function fallback(message="二维原图轮廓 · 点击打开三维"){
+function fallback(message="Hai Yin I 二维整船布置 · 可打开三维"){
   generation++;if(viewer){viewer.dispose();viewer=null;}
   $("profile").hidden=false;$("three-host").hidden=true;$("model-loading").hidden=true;
   $("three-host").removeAttribute("data-ready");
@@ -164,7 +175,7 @@ function fallback(message="二维原图轮廓 · 点击打开三维"){
 async function openModel(){
   const version=++generation;$("open-3d").hidden=true;$("show-profile").hidden=false;$("model-loading").hidden=false;
   $("viewer-status").textContent="正在准备三维模型…";
-  let renderer,scene,controls,resizeObserver,frame=0,disposed=false,lossHandler,visibilityHandler;
+  let renderer,scene,controls,resizeObserver,frame=0,disposed=false,lossHandler,visibilityHandler,flight=null;
   const host=$("three-host");
   const cleanup=()=>{
     if(disposed) return;disposed=true;cancelAnimationFrame(frame);
@@ -178,40 +189,56 @@ async function openModel(){
     const context=canvas.getContext("webgl2",{antialias:true,alpha:false,powerPreference:"low-power",failIfMajorPerformanceCaveat:true});
     if(!context) throw new Error("unsupported");
     renderer=new WebGLRenderer({canvas,context});renderer.setClearColor(new Color("#173541"));
-    scene=new Scene();const camera=new PerspectiveCamera(40,1,.02,50);
-    scene.add(new AmbientLight(0xffffff,1.6));const light=new DirectionalLight(0xffffff,3);light.position.set(3,5,4);scene.add(light);
-    const grid=new GridHelper(4,8,0x73969b,0x35565e);scene.add(grid);
-    const bytes=decodeBase64(data.glb);const asset=await new GLTFLoader().parseAsync(bytes.buffer,"");scene.add(asset.scene);
+    scene=new Scene();const camera=new PerspectiveCamera(40,1,.04,500);
+    scene.add(new AmbientLight(0xffffff,1.8));const light=new DirectionalLight(0xffffff,3);light.position.set(30,45,25);scene.add(light);
+    const grid=new GridHelper(100,50,0x73969b,0x35565e);grid.position.y=-.04;scene.add(grid);
+    const bytes=decodeBase64(data.shipGlb);const asset=await new GLTFLoader().parseAsync(bytes.buffer,"");scene.add(asset.scene);
     if(version!==generation){cleanup();return;}
     host.replaceChildren(canvas);host.hidden=false;$("profile").hidden=true;
-    canvas.setAttribute("aria-label","海银一号舵叶三维外形包络，拖动旋转，滚轮或双指缩放");
-    controls=new OrbitControls(camera,canvas);controls.enableDamping=false;controls.minDistance=.7;controls.maxDistance=10;
-    const target=new Vector3(.7,profile.height_m/2,0);
-    const invalidate=()=>{if(disposed||frame||document.hidden)return;frame=requestAnimationFrame(()=>{frame=0;if(!disposed)renderer.render(scene,camera);});};
-    const setCamera=view=>{
-      camera.up.set(0,1,0);controls.target.copy(target);
-      if(view==="front") camera.position.set(.7,profile.height_m/2,4.5);
-      else if(view==="side") camera.position.set(5,profile.height_m/2,0);
-      else if(view==="top"){camera.position.set(.7,5.8,.001);camera.up.set(0,0,-1);}
-      else camera.position.set(3.3,2.8,3.6);
-      camera.lookAt(target);controls.update();invalidate();
+    canvas.setAttribute("aria-label","海银一号独立整船模型，点选部件聚焦，拖动旋转");
+    controls=new OrbitControls(camera,canvas);controls.enableDamping=false;controls.minDistance=1.5;controls.maxDistance=180;
+    const actions=createShipActions(asset.scene);
+    const invalidate=()=>{if(disposed||frame||document.hidden)return;frame=requestAnimationFrame(now=>{
+      frame=0;if(disposed)return;
+      if(flight){const t=Math.min(1,(now-flight.start)/650),e=t*t*(3-2*t);camera.position.lerpVectors(flight.from,flight.to,e);controls.target.lerpVectors(flight.targetFrom,flight.targetTo,e);controls.update();if(t===1)flight=null;else invalidate();}
+      renderer.render(scene,camera);
+    });};
+    const setCamera=(view,immediate=false)=>{
+      const focus=actions.focus(selectedId||(activePreset==="engine"?"hyi_engine_room":activePreset==="cargo"?"hyi_cargo_tanks":undefined));
+      camera.up.set(0,view==="top"?0:1,view==="top"?-1:0);
+      const direction=view==="front"?new Vector3(0,.12,1):view==="side"?new Vector3(1,.13,0):view==="top"?new Vector3(0,1,.0001):new Vector3(.82,.46,1);
+      const to=focus.centre.clone().add(direction.normalize().multiplyScalar(focus.distance));
+      if(immediate||matchMedia("(prefers-reduced-motion:reduce)").matches){camera.position.copy(to);controls.target.copy(focus.centre);controls.update();}
+      else flight={start:performance.now(),from:camera.position.clone(),to,targetFrom:controls.target.clone(),targetTo:focus.centre};
+      invalidate();
       host.dataset.camera=view;document.querySelectorAll("[data-camera]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.camera===view)));
     };
+    function syncPreset(){host.dataset.preset=activePreset;document.querySelectorAll("[data-preset]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.preset===activePreset)));}
+    function choose(id){selectedId=id;if(!id){activePreset="exterior";actions.applyPreset(activePreset);}else{activePreset=actions.select(id)||activePreset;}selectionInfo(id);syncPreset();setCamera("reset");}
+    function preset(value){activePreset=value;selectedId="";actions.applyPreset(value);selectionInfo(value==="cargo"?"hyi_cargo_tanks":value==="engine"?"hyi_engine_room":"");syncPreset();setCamera("reset");}
+    const raycaster=new Raycaster(),pointer=new Vector2();let pointerStart=null;
+    canvas.addEventListener("pointerdown",event=>{pointerStart=[event.clientX,event.clientY];});
+    canvas.addEventListener("pointerup",event=>{if(!pointerStart||Math.hypot(event.clientX-pointerStart[0],event.clientY-pointerStart[1])>4)return;const rect=canvas.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObject(asset.scene,true).find(hit=>actions.canPick(hit.object));const id=hit&&inspectId(hit.object);if(id)choose(id);});
     const resize=()=>{
       if(disposed)return;const {width,height}=host.getBoundingClientRect();
       renderer.setPixelRatio(Math.min(devicePixelRatio||1,matchMedia("(max-width:760px), (pointer:coarse)").matches?1.25:1.5));
       renderer.setSize(Math.max(1,width),Math.max(1,height));camera.aspect=Math.max(1,width)/Math.max(1,height);camera.updateProjectionMatrix();invalidate();
     };
-    lossHandler=event=>{event.preventDefault();fallback("3D 上下文已中断 · 已恢复二维轮廓，可重新打开三维");};
+    lossHandler=event=>{event.preventDefault();fallback("3D 上下文已中断 · 已恢复二维整船布置，可重新打开三维");};
     canvas.addEventListener("webglcontextlost",lossHandler);controls.addEventListener("change",invalidate);
+    controls.addEventListener("start",()=>{flight=null;});
     visibilityHandler=()=>{if(!document.hidden)invalidate();};document.addEventListener("visibilitychange",visibilityHandler);
-    resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);resize();setCamera("reset");
-    viewer={dispose:cleanup,setCamera,setWireframe(value){asset.scene.traverse(object=>{if(!(object instanceof Mesh))return;for(const m of Array.isArray(object.material)?object.material:[object.material]){m.wireframe=value;m.needsUpdate=true;}});invalidate();}};
+    resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);resize();actions.applyPreset(activePreset);syncPreset();setCamera("reset",true);
+    viewer={dispose:cleanup,setCamera,choose,preset,setWireframe(value){actions.setWireframe(value);invalidate();}};
     host.dataset.ready="true";$("camera-tools").hidden=false;$("model-loading").hidden=true;
-    $("viewer-status").textContent="拖动旋转 · 滚轮 / 双指缩放 · 静止时停止渲染";
-  }catch(error){cleanup();if(version===generation)fallback("3D 不可用 · 已显示二维原图轮廓，可重试打开三维");}
+    $("viewer-status").textContent="Hai Yin I 整船 · 点选聚焦 · 拖动旋转 · 静止时停止渲染";
+  }catch(error){cleanup();if(version===generation)fallback("3D 不可用 · 已显示二维整船布置，可重试打开三维");}
 }
 $("open-3d").addEventListener("click",openModel);$("show-profile").addEventListener("click",()=>fallback());
 document.querySelectorAll("[data-camera]").forEach(button=>button.addEventListener("click",()=>viewer?.setCamera(button.dataset.camera)));
 $("wireframe").addEventListener("change",event=>viewer?.setWireframe(event.target.checked));
+$("ship-target").addEventListener("change",event=>{if(viewer)viewer.choose(event.target.value);else selectionInfo(event.target.value);});
+document.querySelectorAll("[data-preset]").forEach(button=>button.addEventListener("click",()=>{if(viewer)viewer.preset(button.dataset.preset);else selectionInfo(button.dataset.preset==="engine"?"hyi_engine_room":button.dataset.preset==="cargo"?"hyi_cargo_tanks":"");}));
+$("ship-reset").addEventListener("click",()=>viewer?.choose(""));
 window.addEventListener("pagehide",()=>fallback());
+requestAnimationFrame(()=>openModel());

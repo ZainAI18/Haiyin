@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "check:assets": "node scripts/check-assets.mjs",
     "build:hai-yin-rudder": "node scripts/build-hai-yin-rudder.mjs",
+    "build:hai-yin-ship": "node scripts/build-hai-yin-ship.mjs",
     "export:html": "node scripts/export-hai-yin-html.mjs"
   },
   "dependencies": {
