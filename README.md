@@ -16,6 +16,8 @@ npm start
 
 Open http://localhost:3000. Use `npm run dev` for development. The build script selects Next.js's Webpack builder for compatibility with the Windows runtime used to verify this project.
 
+For a **single-file offline HTML** of the Hai Yin I reconstruction and source library, open [`standalone/Hai_Yin_I_Atlas.html`](standalone/Hai_Yin_I_Atlas.html) directly in Chrome/Edge. It includes the current rudder envelope, all source records, equipment table data and downloads. Regenerate with `npm run export:html`; see [standalone instructions](standalone/README.md). The full vessel model remains incomplete.
+
 - `/atlas`: rotate and zoom a closed hull. Pick a mesh or use Rudder, Propeller, and Anchor to focus. Lookup joins English, simplified Chinese and aliases. Try `/atlas?term=propeller-root-crack` for a defect overlay.
 - `/vessels/hai-yin-i`: drawing-based **partial** MT Hai Yin I reconstruction, a metre-scale rudder envelope, the searchable register of all 160 PDFs, revision decisions and geometry gaps. See [the reconstruction record](docs/HAI-YIN-I-RECONSTRUCTION.md). This model uses actual metre units independently of the schematic atlas scale below; the full ship and engine room are not complete.
 - `/term/[slug]`: the bilingual term, Chinese explanation, PDF provenance and the best available view or scene.

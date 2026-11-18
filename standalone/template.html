@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="海银一号图纸重建、尺寸、修订和设备资料。独立离线 HTML；当前三维成果为舵叶外形包络。">
+  <meta name="color-scheme" content="light">
+  <title>Hai Yin I · Docking Atlas AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142b37'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='46' fill='%23f5d8c0'%3E⚓%3C/text%3E%3C/svg%3E">
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="masthead"><div class="header-inner">
+    <a class="brand" href="#overview"><span class="brand-icon" aria-hidden="true">⚓</span><span>Docking Atlas <b>AI</b><small>HAI YIN I · DRAWING RECONSTRUCTION</small></span></a>
+    <nav aria-label="页面导航"><a href="#model-section">三维部件</a><a href="#drawings">图纸资料</a><a href="#equipment">设备明细</a><a href="#decisions">修订依据</a></nav>
+    <span class="offline-badge">单文件 · 离线可用</span>
+  </div></header>
+  <main id="main">
+    <section id="overview" class="hero">
+      <p class="eyebrow">VESSEL RECONSTRUCTION / WZ029 / RI 88792</p>
+      <h1>MT Hai Yin <em>I</em></h1>
+      <p class="lead">以这批资料中最新有效的图纸为目标，逐部件重建海银一号。</p>
+      <p class="notice"><strong>当前为部分重建。</strong>可查看的三维成果是舵叶外形包络；整船、机舱及管路尚未完成。1:1 单位比例不代表制造精度已获认证。</p>
+      <div id="stats" class="stats" aria-label="资料处理统计"></div>
+    </section>
+
+    <div class="model-grid" id="model-section">
+      <section class="card model-card" aria-labelledby="model-title">
+        <div class="card-title"><div><p class="eyebrow">DRAWING-DERIVED / 1 UNIT = 1 METRE</p><h2 id="model-title">舵叶外形包络</h2></div><span class="chip">双舵 · 一份部件定义</span></div>
+        <div id="viewport" class="viewport">
+          <div class="viewport-heading"><span>HAI YIN I / RUDDER BLADE</span><span>H 2.080 m · C 1.400 m</span></div>
+          <div id="profile" class="profile"><!--__PROFILE__--></div>
+          <div id="three-host" class="three-host" hidden></div>
+          <div id="model-loading" class="model-loading" role="status" hidden>正在准备舵叶三维模型…</div>
+          <div class="viewport-actions"><button id="open-3d" type="button">打开 3D 舵叶</button><button id="show-profile" type="button" hidden>二维轮廓</button></div>
+        </div>
+        <div class="viewer-caption"><span id="viewer-status" role="status" aria-live="polite">二维原图轮廓 · 点击打开三维</span><span>仅外形包络</span></div>
+        <div id="camera-tools" class="camera-tools" hidden>
+          <div class="button-group" aria-label="三维视角"><button type="button" data-camera="reset">复位视角</button><button type="button" data-camera="front">正面</button><button type="button" data-camera="side">侧面</button><button type="button" data-camera="top">俯视</button></div>
+          <label class="check"><input id="wireframe" type="checkbox">显示网格</label>
+        </div>
+        <p class="fine">按 WUT513B-231-02 第 1 页矢量轮廓提取，以标注弦长 1.400 m 和高度 2.080 m 生成。尚无法兰、内部隔板、孔、焊缝和船上安装坐标。</p>
+        <div class="downloads"><button type="button" class="primary" data-download="glb">下载舵叶 GLB ↓</button><button type="button" data-download="profile">下载轮廓数据</button></div>
+      </section>
+
+      <aside class="card dimension-card" aria-labelledby="dimension-title">
+        <p class="eyebrow">DIMENSIONS / SOURCE-PAGED</p><h2 id="dimension-title">已核对尺寸</h2>
+        <dl id="dimensions" class="dimensions"></dl>
+        <details class="dimension-more"><summary>其余尺寸与技术参数</summary><dl id="extra-dimensions" class="dimensions compact"></dl></details>
+        <p class="fine">点选尺寸查看来源页码。设计吃水的 3.40 / 3.50 m 原文冲突保留在修订记录中。</p>
+        <div class="download-list"><button type="button" data-download="master">尺寸与来源 JSON ↓</button><button type="button" data-download="drawings-csv">160 份图纸台账 CSV ↓</button><button type="button" data-download="equipment-csv">设备原表 CSV ↓</button><button type="button" data-download="register">修订与去重 JSON ↓</button></div>
+      </aside>
+    </div>
+
+    <section class="section card" aria-labelledby="coverage-title">
+      <div class="section-heading"><div><p class="eyebrow">MODEL COVERAGE</p><h2 id="coverage-title">整船重建范围</h2></div><span class="chip">如实记录完成度</span></div>
+      <div id="coverage" class="coverage-grid"></div>
+      <div class="tank-section"><h3>货油舱 · 四对八舱</h3><p class="fine">肋位与舱容来自 Hull Specification.pdf 第 6 页；尚未重建精确舱形。</p><div id="tanks" class="tanks"></div><p class="tank-total">已登记货油总舱容 <strong>807.0 m³</strong></p></div>
+    </section>
+
+    <section class="section card" id="drawings" aria-labelledby="drawings-title">
+      <div class="section-heading"><div><p class="eyebrow">SOURCE LIBRARY</p><h2 id="drawings-title">全部图纸资料</h2></div><button type="button" data-download="drawings-csv">导出台账 CSV ↓</button></div>
+      <p class="fine">160 份 PDF 的文件、页数、印章候选和重复关系。仅 12 个关键候选图组已人工核对；“已登记”不表示逐页几何已重建。</p>
+      <div class="filters"><label class="search"><span>查找图纸</span><input id="drawing-search" type="search" placeholder="文件名、编号，或中文：舵、机舱、锚…"></label><label>来源状态<select id="drawing-filter"><option value="all">全部文件</option><option value="rejected">未获批准 · 排除</option><option value="duplicates">完全重复 · 归并</option><option value="verified">人工核对的来源</option><option value="pending">待人工核验</option></select></label><button id="drawing-clear" type="button">清除筛选</button></div>
+      <p id="drawing-count" class="result-count" role="status" aria-live="polite"></p>
+      <div class="table-scroll" tabindex="0" aria-label="图纸资料表格，可横向滚动"><table><thead><tr><th scope="col">编号 / 文件</th><th scope="col">页数</th><th scope="col">候选状态</th><th scope="col">候选日期</th><th scope="col">查看</th></tr></thead><tbody id="drawing-rows"></tbody></table></div>
+      <div class="pagination"><button id="drawing-prev" type="button">上一页</button><span id="drawing-page"></span><button id="drawing-next" type="button">下一页</button></div>
+    </section>
+
+    <section class="section card" id="equipment" aria-labelledby="equipment-title">
+      <div class="section-heading"><div><p class="eyebrow">MACHINERY / ORIGINAL TABLE ROWS</p><h2 id="equipment-title">机械设备明细</h2></div><button type="button" data-download="equipment-json">原表与每页文字 JSON ↓</button></div>
+      <p class="fine">32 页资料中 31 页已提取表格，另有封面。下表保留跨页续行、子项和中英文记录，<strong>519 个原表行不代表 519 台设备</strong>，尚未完成设备归并。</p>
+      <div class="filters"><label class="search"><span>查找原表行</span><input id="equipment-search" type="search" placeholder="例如 NT855、D300、pump、主机"></label><label>原始页码<select id="equipment-page-filter"><option value="all">全部页面</option></select></label><button id="equipment-clear" type="button">清除筛选</button></div>
+      <p id="equipment-count" class="result-count" role="status" aria-live="polite"></p>
+      <div class="table-scroll" tabindex="0" aria-label="机械设备原表，可横向滚动"><table class="equipment-table"><thead><tr><th scope="col">源页 / 原序号</th><th scope="col">图号、型号或名称原文</th><th scope="col">名称及规格原文</th><th scope="col">数量 / 单位</th><th scope="col">查看</th></tr></thead><tbody id="equipment-rows"></tbody></table></div>
+      <div class="pagination"><button id="equipment-prev" type="button">上一页</button><span id="equipment-page"></span><button id="equipment-next" type="button">下一页</button></div>
+      <details class="page-text"><summary>按页查看原生提取文字</summary><label>原始页码<select id="native-page"></select></label><pre id="native-text"></pre><p class="fine">原生文字提取可能丢失图形、版式或符号，不能替代原 PDF。</p></details>
+    </section>
+
+    <section class="section decision-grid" id="decisions">
+      <div class="card"><p class="eyebrow">REVISION DECISIONS</p><h2>修订与数据冲突</h2><div id="conflicts"></div></div>
+      <div class="card"><p class="eyebrow">NEXT GEOMETRY INPUTS</p><h2>未完成部位与资料缺项</h2><ul id="gaps" class="notes"></ul><p class="fine">以所提供资料的最新有效设计为目标；不声称是现船实测竣工状态。Filed / For information 不等同于 Approved。</p></div>
+    </section>
+    <noscript><p class="notice">请在浏览器中启用 JavaScript，以使用图纸搜索、数据下载及三维查看。此文件不需要联网。</p></noscript>
+  </main>
+  <footer><span>DOCKING ATLAS AI / HAI YIN I</span><span>独立 HTML · 无需安装或联网 · 原始 PDF 未嵌入</span></footer>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><h2 id="dialog-title"></h2><button id="dialog-close" type="button" aria-label="关闭详情">关闭 ×</button></div><div id="dialog-content"></div></dialog>
+  <div id="download-status" class="sr-only" role="status" aria-live="polite"></div>
+  <script type="application/json" id="atlas-data">/*__DATA__*/</script>
+  <script>/*__SCRIPT__*/</script>
+</body>
+</html>

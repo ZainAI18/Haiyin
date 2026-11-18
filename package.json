@@ -12,7 +12,8 @@
     "test": "tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "check:assets": "node scripts/check-assets.mjs",
-    "build:hai-yin-rudder": "node scripts/build-hai-yin-rudder.mjs"
+    "build:hai-yin-rudder": "node scripts/build-hai-yin-rudder.mjs",
+    "export:html": "node scripts/export-hai-yin-html.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
@@ -27,6 +28,7 @@
     "zod": "^4.3.0"
   },
   "devDependencies": {
+    "esbuild": "0.28.2",
     "@tailwindcss/postcss": "^4.2.0",
     "@types/node": "^24.0.0",
     "@types/react": "^19.0.0",
