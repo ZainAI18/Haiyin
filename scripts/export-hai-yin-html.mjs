@@ -10,6 +10,7 @@ const files={
   profile:"geometry/rudder-profile.json",drawingCsv:"audit/drawing-register.csv",equipmentCsv:"audit/machinery-equipment-tables.csv",
   glb:"models/rudder-blade-envelope.glb",
   shipGlb:"models/hai-yin-i-visual-assembly.glb",shipAssembly:"geometry/ship-assembly.json",shipPlan:"geometry/ship-plan.json",
+  interior:"geometry/interior-layout.json",
 };
 const entries=await Promise.all(Object.entries(files).map(async([key,path])=>{
   const content=await readFile(resolve(base,path));

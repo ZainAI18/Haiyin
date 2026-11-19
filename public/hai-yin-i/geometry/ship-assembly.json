@@ -7,14 +7,14 @@
   "detailed_reconstruction_complete": false,
   "teaching_ship_route": "/atlas",
   "vessel_route": "/vessels/hai-yin-i",
-  "scope_cn": "整船可视化装配，包括闭合外壳、艏楼、三层艉楼、八个货油舱、双舷压载包络、双机双轴双桨双舵及甲板设备。各部件精度不同，尚不是全部细节已校核的 1:1 工程模型。",
+  "scope_cn": "独立整船装配、两层生活区和机舱可行走内部、楼梯与消防器材示意。房间平面按图量取，统一米制；船壳、设备和家具仍存在简化几何，尚不是全部细节已校核的 1:1 工程模型。",
   "precision_cn": "甲板轮廓及艏楼轮廓来自有效 B 版总结构图矢量线，按肋距和型宽标定；完整肋骨站位曲线尚未全部核对。船壳为结合横剖面圆舭的插值外形，艉轴隧道及球鼻艏横剖面未精确复原。",
   "frame_zero_x_m": -23.867886787249944,
   "metrics": {
-    "bytes": 1188292,
-    "mesh_nodes": 171,
-    "triangles": 28440,
-    "unique_geometries": 152
+    "bytes": 1591388,
+    "mesh_nodes": 375,
+    "triangles": 31012,
+    "unique_geometries": 356
   },
   "targets": [
     {
@@ -30,6 +30,7 @@
           "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
         }
       ],
+      "inspectId": "hyi_hull",
       "bounds_m": {
         "min": [
           -24.950000762939453,
@@ -56,6 +57,7 @@
           "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
         }
       ],
+      "inspectId": "hyi_bow_bulb",
       "bounds_m": {
         "min": [
           19.398223299999998,
@@ -82,6 +84,7 @@
           "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
         }
       ],
+      "inspectId": "hyi_main_deck",
       "bounds_m": {
         "min": [
           -24.950000762939453,
@@ -113,6 +116,7 @@
           "sha256": "5e0c5f465af3e70e223766541cb8971865175e25eb25558f33ad6c1bab9e087f"
         }
       ],
+      "inspectId": "hyi_forecastle",
       "bounds_m": {
         "min": [
           19.249740600585938,
@@ -139,6 +143,7 @@
           "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
         }
       ],
+      "inspectId": "hyi_forecastle_deck",
       "bounds_m": {
         "min": [
           19.249740600585938,
@@ -157,29 +162,40 @@
       "name_cn": "艉部生活楼",
       "layer": "superstructure",
       "confidence": "projection_measured_envelope",
-      "note_cn": "独立 Hai Yin I 上层建筑。层高依据规格书；平面边界按总布置投影量取，门窗和房间未全部施工级复原。",
+      "note_cn": "两层生活区按最新消防完工图、通风图及门窗图重建。内部平面为按图量取；楼梯踏步和家具高度简化。",
       "sources": [
         {
-          "file": "General Arrangement Plan RevA1.pdf",
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
           "page": 1,
-          "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
         },
         {
           "file": "Hull Specification.pdf",
-          "page": 5,
+          "page": 21,
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_accommodation",
       "bounds_m": {
         "min": [
-          -23.30788695891132,
-          4.180000023841858,
-          -4.699999809265137
+          -20.552886789038084,
+          4.100000000894069,
+          -3.6450000017881394
         ],
         "max": [
-          -12.667886615588564,
-          8.730000000745058,
-          4.699999809265137
+          -14.302886785461803,
+          8.75999999910593,
+          3.6450000017881394
         ]
       }
     },
@@ -201,6 +217,7 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_bridge",
       "bounds_m": {
         "min": [
           -19.69788673956623,
@@ -227,6 +244,7 @@
           "sha256": "ed1a7557233f57bc98e368189fb6d5fa1e0b31431fd34f10d4c1c2493b9ea9db"
         }
       ],
+      "inspectId": "hyi_bulkheads",
       "bounds_m": {
         "min": [
           -12.672886787138184,
@@ -253,6 +271,7 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_cargo_tanks",
       "bounds_m": {
         "min": [
           -12.667886734008789,
@@ -278,6 +297,12 @@
           "page": 6,
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
+      ],
+      "inspectId": "hyi_cargo_1_port",
+      "capacity_source_m3": 85.6,
+      "frames": [
+        63,
+        79
       ],
       "bounds_m": {
         "min": [
@@ -305,6 +330,12 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_cargo_1_starboard",
+      "capacity_source_m3": 85.6,
+      "frames": [
+        63,
+        79
+      ],
       "bounds_m": {
         "min": [
           11.412113189697266,
@@ -330,6 +361,12 @@
           "page": 6,
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
+      ],
+      "inspectId": "hyi_cargo_2_port",
+      "capacity_source_m3": 112.3,
+      "frames": [
+        48,
+        63
       ],
       "bounds_m": {
         "min": [
@@ -357,6 +394,12 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_cargo_2_starboard",
+      "capacity_source_m3": 112.3,
+      "frames": [
+        48,
+        63
+      ],
       "bounds_m": {
         "min": [
           3.012113094329834,
@@ -382,6 +425,12 @@
           "page": 6,
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
+      ],
+      "inspectId": "hyi_cargo_3_port",
+      "capacity_source_m3": 104.9,
+      "frames": [
+        34,
+        48
       ],
       "bounds_m": {
         "min": [
@@ -409,6 +458,12 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_cargo_3_starboard",
+      "capacity_source_m3": 104.9,
+      "frames": [
+        34,
+        48
+      ],
       "bounds_m": {
         "min": [
           -4.827886581420898,
@@ -434,6 +489,12 @@
           "page": 6,
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
+      ],
+      "inspectId": "hyi_cargo_4_port",
+      "capacity_source_m3": 100.7,
+      "frames": [
+        20,
+        34
       ],
       "bounds_m": {
         "min": [
@@ -461,6 +522,12 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_cargo_4_starboard",
+      "capacity_source_m3": 100.7,
+      "frames": [
+        20,
+        34
+      ],
       "bounds_m": {
         "min": [
           -12.667886734008789,
@@ -487,6 +554,7 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_ballast_tanks",
       "bounds_m": {
         "min": [
           -12.667886734008789,
@@ -517,6 +585,10 @@
           "page": 1,
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
+      ],
+      "inspectId": "hyi_engine_room",
+      "walkZones": [
+        "engine"
       ],
       "bounds_m": {
         "min": [
@@ -549,6 +621,7 @@
           "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
         }
       ],
+      "inspectId": "hyi_main_engine_port",
       "bounds_m": {
         "min": [
           -22.467886845424076,
@@ -580,6 +653,7 @@
           "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
         }
       ],
+      "inspectId": "hyi_main_engine_starboard",
       "bounds_m": {
         "min": [
           -22.467886845424076,
@@ -598,24 +672,30 @@
       "name_cn": "两台柴油发电机组（包络）",
       "layer": "machinery",
       "confidence": "symbolic_equipment",
-      "note_cn": "CCFJ50J-Y，2 台，来自机械设备明细表第 3 页。当前为辅助设备占位包络，安装位置和厂家外形待核实。",
+      "note_cn": "两台柴油发电机位于两主机之间，按通风布置第 2 页平面量取；设备壳体不是厂家 CAD。",
       "sources": [
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 2,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
         {
           "file": "List of Machinery Equipments.pdf",
           "page": 3,
           "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
         }
       ],
+      "inspectId": "hyi_generators",
       "bounds_m": {
         "min": [
-          -16.124886775329013,
-          0.8949999880790711,
-          -3.039999985694885
+          -17.474886763408087,
+          1.419999988079071,
+          -1.200000013113022
         ],
         "max": [
-          -14.246886799170872,
-          1.745000011920929,
-          3.039999985694885
+          -15.475886775329014,
+          2.2700000119209287,
+          1.200000013113022
         ]
       }
     },
@@ -632,6 +712,8 @@
           "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
         }
       ],
+      "inspectId": "hyi_diesel_tanks",
+      "symbolicMarker": true,
       "bounds_m": {
         "min": [
           -13.72788678605785,
@@ -658,6 +740,7 @@
           "sha256": "e9da9b6f7d8112ae2c36298711b659fb69aed7bf0d81a4103b1454ef7feab5a6"
         }
       ],
+      "inspectId": "hyi_propellers",
       "bounds_m": {
         "min": [
           -22.667886790230177,
@@ -689,6 +772,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_rudders",
       "bounds_m": {
         "min": [
           -24.427886787249943,
@@ -720,6 +804,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_rails",
       "bounds_m": {
         "min": [
           -24.952560424804688,
@@ -746,6 +831,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_windlass",
       "bounds_m": {
         "min": [
           20.954113236591922,
@@ -772,6 +858,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_anchors",
       "bounds_m": {
         "min": [
           22.690000000596047,
@@ -798,6 +885,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_deck_fittings",
       "bounds_m": {
         "min": [
           -24.21788678248157,
@@ -829,6 +917,7 @@
           "sha256": "8ed232340e8089fab23000790a2a596196c91abffb79a8ab25e5ec5a9977fbcf"
         }
       ],
+      "inspectId": "hyi_loading_arm",
       "bounds_m": {
         "min": [
           -8.68594485214739,
@@ -855,6 +944,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_masts",
       "bounds_m": {
         "min": [
           -18.7678868110918,
@@ -881,6 +971,7 @@
           "sha256": "51e2515858b1878cddc1cf4badb7d607ad2d10a13b83c73074b0afba0559699d"
         }
       ],
+      "inspectId": "hyi_lifesaving",
       "bounds_m": {
         "min": [
           -18.667886793210407,
@@ -891,6 +982,1122 @@
           -17.867886781289478,
           7.450000005960464,
           4.5
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_interior_shell",
+      "name_cn": "生活区一层墙体与门口",
+      "layer": "superstructure",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_main_interior_shell",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -20.552886789038084,
+          4.100000000894069,
+          -3.6450000017881394
+        ],
+        "max": [
+          -14.302886785461803,
+          6.55999999910593,
+          3.6450000017881394
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_crew_port",
+      "name_cn": "一层左舷船员室",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_main_crew_port",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -16.477886777713202,
+          4.1799999761581415,
+          0.18499999403953554
+        ],
+        "max": [
+          -14.457886796786687,
+          5.880000023841857,
+          3.480000007152557
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_crew_starboard",
+      "name_cn": "一层右舷船员室",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_main_crew_starboard",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -16.477886777713202,
+          4.1799999761581415,
+          -3.480000007152557
+        ],
+        "max": [
+          -14.457886796786687,
+          5.880000023841857,
+          -0.18499999403953554
+        ]
+      }
+    },
+    {
+      "id": "hyi_main_stair_enclosure",
+      "name_cn": "一层内楼梯间",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_main_stair_enclosure",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.760886789038082,
+          4.180000023841858,
+          -1.100000023841858
+        ],
+        "max": [
+          -17.606886785461803,
+          6.479999976158142,
+          1.100000023841858
+        ]
+      }
+    },
+    {
+      "id": "hyi_upper_interior_shell",
+      "name_cn": "生活区二层墙体与门口",
+      "layer": "superstructure",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_upper_interior_shell",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.872886789038084,
+          6.40000000089407,
+          -3.6450000017881394
+        ],
+        "max": [
+          -14.302886785461803,
+          8.75999999910593,
+          3.6450000017881394
+        ]
+      }
+    },
+    {
+      "id": "hyi_upper_crew_port",
+      "name_cn": "二层左舷船员室",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_upper_crew_port",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -16.477886777713202,
+          6.479999976158142,
+          0.18499999403953554
+        ],
+        "max": [
+          -14.457886796786687,
+          8.180000023841858,
+          3.480000007152557
+        ]
+      }
+    },
+    {
+      "id": "hyi_upper_crew_starboard",
+      "name_cn": "二层右舷船员室",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_upper_crew_starboard",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -16.477886777713202,
+          6.479999976158142,
+          -3.480000007152557
+        ],
+        "max": [
+          -14.457886796786687,
+          8.180000023841858,
+          -0.18499999403953554
+        ]
+      }
+    },
+    {
+      "id": "hyi_upper_stair_enclosure",
+      "name_cn": "二层内楼梯间",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_upper_stair_enclosure",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.760886789038082,
+          6.479999976158142,
+          -1.100000023841858
+        ],
+        "max": [
+          -17.606886785461803,
+          8.680000023841858,
+          1.100000023841858
+        ]
+      }
+    },
+    {
+      "id": "hyi_galley",
+      "name_cn": "厨房 Galley",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_galley",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -20.5078867610239,
+          4.1799999880790715,
+          1.0049999982118607
+        ],
+        "max": [
+          -18.777886786504887,
+          6.479999998807907,
+          3.599999978542328
+        ]
+      }
+    },
+    {
+      "id": "hyi_mess",
+      "name_cn": "餐厅 Mess Room",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_mess",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.382886799170873,
+          4.180000005960464,
+          1.7600000004470346
+        ],
+        "max": [
+          -17.032886775329015,
+          4.969999996423721,
+          3.339999999552965
+        ]
+      }
+    },
+    {
+      "id": "hyi_toilet",
+      "name_cn": "公共卫生间 / 淋浴",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_toilet",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -20.507886763408088,
+          4.179999994039536,
+          -3.600000001192093
+        ],
+        "max": [
+          -17.657886786504886,
+          6.479999998807907,
+          -1.9549999982118607
+        ]
+      }
+    },
+    {
+      "id": "hyi_engine_casing",
+      "name_cn": "机舱围井（不能穿越）",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_engine_casing",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -20.5078867610239,
+          4.180000023841858,
+          -1.0499999523162842
+        ],
+        "max": [
+          -18.82788681347599,
+          6.479999976158142,
+          1.0499999523162842
+        ]
+      }
+    },
+    {
+      "id": "hyi_co2_room",
+      "name_cn": "CO₂ 瓶间 · 外侧独立入口",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_co2_room",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.70788678963413,
+          4.180000023841858,
+          -2.4450000017881393
+        ],
+        "max": [
+          -16.58788678486576,
+          6.479999976158142,
+          -2.3549999982118606
+        ]
+      }
+    },
+    {
+      "id": "hyi_battery_room",
+      "name_cn": "蓄电池室 Battery Room",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_battery_room",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.827886792018315,
+          6.479999976158142,
+          1.8549999982118606
+        ],
+        "max": [
+          -16.587886782481572,
+          8.680000023841858,
+          3.600000023841858
+        ]
+      }
+    },
+    {
+      "id": "hyi_charge_room",
+      "name_cn": "充放电室 Charge / Discharge",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_charge_room",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.49788678128948,
+          6.480000011920929,
+          3.1999999940395356
+        ],
+        "max": [
+          -16.79788679321041,
+          7.879999988079071,
+          3.5000000059604646
+        ]
+      }
+    },
+    {
+      "id": "hyi_air_conditioning_room",
+      "name_cn": "空调室 Air Conditioning",
+      "layer": "interior",
+      "confidence": "plan_measured_interior",
+      "note_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_air_conditioning_room",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.827886792018315,
+          6.479999976158142,
+          -3.374999988079071
+        ],
+        "max": [
+          -16.587886782481572,
+          8.680000023841858,
+          -1.8549999982118606
+        ]
+      }
+    },
+    {
+      "id": "hyi_internal_stairs",
+      "name_cn": "生活区两层内楼梯",
+      "layer": "interior",
+      "confidence": "source_position_simplified_flight",
+      "note_cn": "楼梯位置与 4.18 / 6.48 m 层高按原图；直跑踏步及行走坡面为教学简化，不是施工放样。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "inspectId": "hyi_internal_stairs",
+      "walkZones": [
+        "main",
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -18.665886780574223,
+          4.2769230778171465,
+          -1.217297674353445
+        ],
+        "max": [
+          -17.701886793925663,
+          7.398049743744364,
+          1.217297674353445
+        ]
+      }
+    },
+    {
+      "id": "hyi_engine_interior",
+      "name_cn": "机舱舱壁、平台与通风管",
+      "layer": "interior",
+      "confidence": "plan_measured_shell_simplified_platform",
+      "note_cn": "机舱 FR6–17；FR17–20 为泵舱 / 两舷柴油舱。平台 BL+1.42 m 按剖面比例量取，未经尺寸标注校核；通风管截面采用原表 300×240 mm。设备附件及全部管系未完成。",
+      "sources": [
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 1,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 2,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_engine_interior",
+      "walkZones": [
+        "engine"
+      ],
+      "bounds_m": {
+        "min": [
+          -20.552886789038084,
+          1.3600000006705522,
+          -4.045000001788139
+        ],
+        "max": [
+          -14.302886785461803,
+          4.13999999910593,
+          4.045000001788139
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_main_foam",
+      "name_cn": "一层泡沫灭火器（示意）",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_main_foam",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.45688678814401,
+          4.470000006556511,
+          1.5649999991059302
+        ],
+        "max": [
+          -17.259886787145632,
+          4.960000006556511,
+          1.7350000008940696
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_main_call",
+      "name_cn": "一层手动报警按钮",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_main_call",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -16.769886787547968,
+          5.44499999910593,
+          0.6200000006705523
+        ],
+        "max": [
+          -16.62988678695192,
+          5.615000000894069,
+          0.6799999993294478
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_main_smoke",
+      "name_cn": "一层烟感探测器",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_main_smoke",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.24788678874006,
+          6.20749999910593,
+          -0.10000000149011612
+        ],
+        "max": [
+          -17.04788678575983,
+          6.252500000894069,
+          0.10000000149011612
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_upper_foam",
+      "name_cn": "二层灭火器（示意）",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_upper_foam",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.45688678814401,
+          6.770000006556511,
+          1.5649999991059302
+        ],
+        "max": [
+          -17.259886787145632,
+          7.260000006556512,
+          1.7350000008940696
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_upper_smoke",
+      "name_cn": "二层烟感探测器",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_upper_smoke",
+      "walkZones": [
+        "upper"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.24788678874006,
+          8.507499999105931,
+          -0.10000000149011612
+        ],
+        "max": [
+          -17.04788678575983,
+          8.55250000089407,
+          0.10000000149011612
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_engine_foam",
+      "name_cn": "机舱泡沫灭火器（示意）",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_engine_foam",
+      "walkZones": [
+        "engine"
+      ],
+      "bounds_m": {
+        "min": [
+          -14.992886788144013,
+          1.7100000065565109,
+          3.21499999910593
+        ],
+        "max": [
+          -14.795886787145635,
+          2.200000006556511,
+          3.3850000008940695
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_engine_call",
+      "name_cn": "机舱手动报警按钮",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_engine_call",
+      "walkZones": [
+        "engine"
+      ],
+      "bounds_m": {
+        "min": [
+          -14.809886787547965,
+          2.6849999991059303,
+          0.07000000067055226
+        ],
+        "max": [
+          -14.669886786951919,
+          2.8550000008940697,
+          0.12999999932944775
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_engine_hose",
+      "name_cn": "机舱消火栓与水带箱（示意）",
+      "layer": "safety",
+      "confidence": "source_location_symbolic_equipment",
+      "note_cn": "位置参考最新消防完工图；器材外形、尺寸与支架为示意。仅供布置学习，不是操作指导。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "inspectId": "hyi_fire_engine_hose",
+      "walkZones": [
+        "engine"
+      ],
+      "bounds_m": {
+        "min": [
+          -15.36288678426971,
+          1.520000011920929,
+          -3.8000000014901163
+        ],
+        "max": [
+          -14.932886786877413,
+          2.6950000059604644,
+          -3.599999998509884
+        ]
+      }
+    },
+    {
+      "id": "hyi_fire_pumps",
+      "name_cn": "机舱双消防泵 · 示意壳体",
+      "layer": "safety",
+      "confidence": "plan_measured_location_symbolic_casing",
+      "note_cn": "按消防完工图机舱布置及机械设备表表达两台消防泵。位置为按图量取，泵壳和电机为示意，未铺设未经坐标核实的全船管路。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "List of Machinery Equipments.pdf",
+          "page": 1,
+          "sha256": "083309beec492b108f52e42064448cb915e47c57c8b18ca7993aa74742a64a3b"
+        }
+      ],
+      "inspectId": "hyi_fire_pumps",
+      "walkZones": [
+        "engine"
+      ],
+      "bounds_m": {
+        "min": [
+          -15.547886801555057,
+          1.4200000008940696,
+          -3.139999994635582
+        ],
+        "max": [
+          -14.767886781289478,
+          1.8300000071525573,
+          3.139999994635582
+        ]
+      }
+    },
+    {
+      "id": "hyi_co2_bank",
+      "name_cn": "CO₂ 固定灭火系统 · 瓶组示意",
+      "layer": "safety",
+      "confidence": "symbolic_system_bank",
+      "note_cn": "最新消防图标明 CO₂ 瓶间与保护机舱 / 泵舱。此处用瓶组符号表示一套系统，瓶数和连接细节未据厂家图重建，不代表真实瓶数。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Principle of CO2 Fire Extinguishing System.pdf",
+          "page": 1,
+          "sha256": "84706b5ebb95b0cd3486454dacc83069b3ebd7a815038651ee90d5ad0e790711"
+        }
+      ],
+      "inspectId": "hyi_co2_bank",
+      "walkZones": [
+        "main"
+      ],
+      "bounds_m": {
+        "min": [
+          -17.55788678248157,
+          4.179999976158142,
+          -3.4499999952316283
+        ],
+        "max": [
+          -16.87288678128948,
+          5.529999999329448,
+          -3.1900000047683714
         ]
       }
     }

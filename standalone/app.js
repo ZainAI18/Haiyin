@@ -1,11 +1,15 @@
 import { AmbientLight, Color, DirectionalLight, GridHelper, Mesh, PerspectiveCamera, Raycaster, Scene, Texture, Vector2, Vector3, WebGLRenderer } from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import {createShipActions,inspectId} from "../lib/hai-yin-scene";
+import {createShipActions,inspectId,walkingZone} from "../lib/hai-yin-scene";
+import {createWalkController} from "../lib/hai-yin-walk-controller";
 
 const data=JSON.parse(document.getElementById("atlas-data").textContent);
 const {vessel,register,equipment,profile,shipAssembly}=data;
 const $=id=>document.getElementById(id);
+$("interior-precision").textContent=data.interior.precision_cn;
+$("fire-scope").textContent=data.interior.fire_register.modeled_scope_cn;
+$("fire-conflict").textContent=data.interior.fire_register.conflicts[0].text_cn;
 const node=(tag,className,text)=>{
   const value=document.createElement(tag);
   if(className) value.className=className;
@@ -45,7 +49,7 @@ for(const fact of vessel.facts){
   label.append(button);item.append(label,node("dd",null,`${fact.value.toFixed(fact.id==="frame-spacing"?3:2)} ${fact.unit}`));
   $(primaryFacts.has(fact.id)?"dimensions":"extra-dimensions").append(item);
 }
-const coverageLabels={drawing_derived_envelope:"原矢量部件外形",drawing_calibrated_visualization:"按图标定的整船外形",compartment_envelopes:"按肋位布置的内舱包络",dimensioned_parameterization:"原尺寸参数化 · 剖面待核对",equipment_envelopes:"安装布置与设备包络",source_tracing_in_progress:"型线核对与建模中",dimensions_registered:"肋位与舱容已登记",source_available_not_reconstructed:"原图可用 · 三维未完成",installation_data_available_detail_incomplete:"安装资料可用 · 细节未完成",topology_only_nts:"系统连接关系 · 无精确空间路由"};
+const coverageLabels={drawing_derived_envelope:"原矢量部件外形",drawing_calibrated_visualization:"按图标定的整船外形",compartment_envelopes:"按肋位布置的内舱包络",dimensioned_parameterization:"原尺寸参数化 · 剖面待核对",equipment_envelopes:"安装布置与设备包络",plan_measured_interior:"按图量取的可行走内部",source_location_symbolic_equipment:"原图位置 · 器材外形示意",source_tracing_in_progress:"型线核对与建模中",dimensions_registered:"肋位与舱容已登记",source_available_not_reconstructed:"原图可用 · 三维未完成",installation_data_available_detail_incomplete:"安装资料可用 · 细节未完成",topology_only_nts:"系统连接关系 · 无精确空间路由"};
 for(const part of vessel.components){
   const item=node("article","coverage-item"),button=node("button",null,"查看来源与状态 →");button.type="button";
   item.append(node("p","status",coverageLabels[part.status]||part.status),node("h3",null,part.name_cn),node("p",null,part.note_cn));
@@ -62,6 +66,7 @@ for(const gap of vessel.required_for_complete_geometry) $("gaps").append(node("l
 
 function decodeBase64(value){return Uint8Array.from(atob(value),c=>c.charCodeAt(0));}
 const downloads={
+  interior:()=>[JSON.stringify(data.interior,null,2),"hai-yin-i-interior-layout.json","application/json"],
   glb:()=>[decodeBase64(data.glb),"rudder-blade-envelope.glb","model/gltf-binary"],
   "ship-glb":()=>[decodeBase64(data.shipGlb),"hai-yin-i-visual-assembly.glb","model/gltf-binary"],
   assembly:()=>[JSON.stringify(shipAssembly,null,2),"hai-yin-i-ship-assembly.json","application/json"],
@@ -171,17 +176,18 @@ function fallback(message="Hai Yin I 二维整船布置 · 可打开三维"){
   $("three-host").removeAttribute("data-ready");
   $("open-3d").hidden=false;$("open-3d").disabled=false;$("show-profile").hidden=true;$("camera-tools").hidden=true;
   $("viewer-status").textContent=message;$("wireframe").checked=false;
+  $("walk-panel").hidden=true;
 }
 async function openModel(){
   const version=++generation;$("open-3d").hidden=true;$("show-profile").hidden=false;$("model-loading").hidden=false;
   $("viewer-status").textContent="正在准备三维模型…";
-  let renderer,scene,controls,resizeObserver,frame=0,disposed=false,lossHandler,visibilityHandler,flight=null;
+  let renderer,scene,controls,walk,resizeObserver,frame=0,disposed=false,lossHandler,visibilityHandler,flight=null,lastTime=0;
   const host=$("three-host");
   const cleanup=()=>{
     if(disposed) return;disposed=true;cancelAnimationFrame(frame);
     resizeObserver?.disconnect();if(visibilityHandler) document.removeEventListener("visibilitychange",visibilityHandler);
     if(renderer&&lossHandler) renderer.domElement.removeEventListener("webglcontextlost",lossHandler);
-    controls?.dispose();if(scene) disposeScene(scene);
+    walk?.dispose();controls?.dispose();if(scene) disposeScene(scene);
     if(renderer){renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();}
   };
   try{
@@ -200,10 +206,12 @@ async function openModel(){
     const actions=createShipActions(asset.scene);
     const invalidate=()=>{if(disposed||frame||document.hidden)return;frame=requestAnimationFrame(now=>{
       frame=0;if(disposed)return;
+      const delta=Math.min(.05,(now-(lastTime||now-16))/1000);lastTime=now;if(walk?.tick(delta))invalidate();
       if(flight){const t=Math.min(1,(now-flight.start)/650),e=t*t*(3-2*t);camera.position.lerpVectors(flight.from,flight.to,e);controls.target.lerpVectors(flight.targetFrom,flight.targetTo,e);controls.update();if(t===1)flight=null;else invalidate();}
       renderer.render(scene,camera);
     });};
     const setCamera=(view,immediate=false)=>{
+      if(walk?.active())return;
       const focus=actions.focus(selectedId||(activePreset==="engine"?"hyi_engine_room":activePreset==="cargo"?"hyi_cargo_tanks":undefined));
       camera.up.set(0,view==="top"?0:1,view==="top"?-1:0);
       const direction=view==="front"?new Vector3(0,.12,1):view==="side"?new Vector3(1,.13,0):view==="top"?new Vector3(0,1,.0001):new Vector3(.82,.46,1);
@@ -214,8 +222,9 @@ async function openModel(){
       host.dataset.camera=view;document.querySelectorAll("[data-camera]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.camera===view)));
     };
     function syncPreset(){host.dataset.preset=activePreset;document.querySelectorAll("[data-preset]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.preset===activePreset)));}
-    function choose(id){selectedId=id;if(!id){activePreset="exterior";actions.applyPreset(activePreset);}else{activePreset=actions.select(id)||activePreset;}selectionInfo(id);syncPreset();setCamera("reset");}
-    function preset(value){activePreset=value;selectedId="";actions.applyPreset(value);selectionInfo(value==="cargo"?"hyi_cargo_tanks":value==="engine"?"hyi_engine_room":"");syncPreset();setCamera("reset");}
+    walk=createWalkController(camera,canvas,data.interior,invalidate,updateWalkState);
+    function choose(id){if(!id){preset("exterior");return;}selectedId=id;activePreset=actions.select(id,walk.active())||activePreset;selectionInfo(id);syncPreset();setCamera("reset");}
+    function preset(value){activePreset=value;selectedId="";flight=null;actions.applyPreset(value);const zone=walkingZone(value);controls.enabled=!zone;$("walk-panel").hidden=!zone;document.querySelectorAll("[data-camera]").forEach(b=>b.disabled=!!zone);if(zone)walk.enter(zone);else walk.exit();selectionInfo(value==="cargo"?"hyi_cargo_tanks":value==="engine"?"hyi_engine_room":"");syncPreset();setCamera("reset");invalidate();}
     const raycaster=new Raycaster(),pointer=new Vector2();let pointerStart=null;
     canvas.addEventListener("pointerdown",event=>{pointerStart=[event.clientX,event.clientY];});
     canvas.addEventListener("pointerup",event=>{if(!pointerStart||Math.hypot(event.clientX-pointerStart[0],event.clientY-pointerStart[1])>4)return;const rect=canvas.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const hit=raycaster.intersectObject(asset.scene,true).find(hit=>actions.canPick(hit.object));const id=hit&&inspectId(hit.object);if(id)choose(id);});
@@ -229,7 +238,8 @@ async function openModel(){
     controls.addEventListener("start",()=>{flight=null;});
     visibilityHandler=()=>{if(!document.hidden)invalidate();};document.addEventListener("visibilitychange",visibilityHandler);
     resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);resize();actions.applyPreset(activePreset);syncPreset();setCamera("reset",true);
-    viewer={dispose:cleanup,setCamera,choose,preset,setWireframe(value){actions.setWireframe(value);invalidate();}};
+    viewer={dispose:cleanup,setCamera,choose,preset,walk,setWireframe(value){actions.setWireframe(value);invalidate();}};
+    if(walkingZone(activePreset))preset(activePreset);
     host.dataset.ready="true";$("camera-tools").hidden=false;$("model-loading").hidden=true;
     $("viewer-status").textContent="Hai Yin I 整船 · 点选聚焦 · 拖动旋转 · 静止时停止渲染";
   }catch(error){cleanup();if(version===generation)fallback("3D 不可用 · 已显示二维整船布置，可重试打开三维");}
@@ -238,7 +248,12 @@ $("open-3d").addEventListener("click",openModel);$("show-profile").addEventListe
 document.querySelectorAll("[data-camera]").forEach(button=>button.addEventListener("click",()=>viewer?.setCamera(button.dataset.camera)));
 $("wireframe").addEventListener("change",event=>viewer?.setWireframe(event.target.checked));
 $("ship-target").addEventListener("change",event=>{if(viewer)viewer.choose(event.target.value);else selectionInfo(event.target.value);});
-document.querySelectorAll("[data-preset]").forEach(button=>button.addEventListener("click",()=>{if(viewer)viewer.preset(button.dataset.preset);else selectionInfo(button.dataset.preset==="engine"?"hyi_engine_room":button.dataset.preset==="cargo"?"hyi_cargo_tanks":"");}));
+document.querySelectorAll("[data-preset]").forEach(button=>button.addEventListener("click",async()=>{if(!viewer)await openModel();viewer?.preset(button.dataset.preset);}));
 $("ship-reset").addEventListener("click",()=>viewer?.choose(""));
 window.addEventListener("pagehide",()=>fallback());
+let currentWalkZone="main";
+function updateWalkState(state){currentWalkZone=state.zone;$("walk-level").textContent=data.interior.zones[state.zone].name_cn;$("walk-room").textContent=state.room;$("walk-stairs").hidden=state.zone==="engine";$("stair-hint").hidden=state.zone==="engine";$("walk-stairs").textContent=state.zone==="main"?"去楼梯上楼":"去楼梯下楼";const select=$("walk-room-select");select.replaceChildren(node("option",null,"选择房间查看内部…"));select.firstChild.value="";for(const room of data.interior.rooms.filter(r=>r.zone===state.zone)){const option=node("option",null,room.name_cn);option.value=room.id;select.append(option);}}
+$("walk-room-select").addEventListener("change",event=>{if(event.target.value)viewer?.walk.enter(currentWalkZone,event.target.value);event.target.value="";});
+$("walk-stairs").addEventListener("click",()=>viewer?.walk.stairs());$("walk-exit").addEventListener("click",()=>viewer?.preset("exterior"));
+document.querySelectorAll("[data-walk-dir]").forEach(button=>{const direction=button.dataset.walkDir;const release=()=>viewer?.walk.hold(direction,false);button.addEventListener("pointerdown",event=>{event.preventDefault();button.setPointerCapture(event.pointerId);viewer?.walk.hold(direction,true);});for(const name of ["pointerup","pointercancel","lostpointercapture","blur"])button.addEventListener(name,release);button.addEventListener("keydown",event=>{if(event.key===" "||event.key==="Enter"){event.preventDefault();viewer?.walk.hold(direction,true,false);}});button.addEventListener("keyup",release);});
 requestAnimationFrame(()=>openModel());

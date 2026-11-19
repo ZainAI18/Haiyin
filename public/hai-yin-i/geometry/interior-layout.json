@@ -1,0 +1,1369 @@
+{
+  "version": 1,
+  "unit": "metre",
+  "eye_height_m": 1.55,
+  "body_radius_m": 0.14,
+  "walk_speed_m_s": 1.15,
+  "source_review": {
+    "fire": {
+      "file": "Fire Control Plan approved 06Jun2012.pdf",
+      "page": 1,
+      "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93",
+      "drawing": "WUT513B-050-05",
+      "approval": "SHFP-4292 / 06 JUN 2012 / Approved with Remarks",
+      "replaces": "SHFP-4280",
+      "completion_date": "2012-04"
+    },
+    "ventilation": {
+      "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+      "page": 3,
+      "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b",
+      "drawing": "WUT513B-424-01",
+      "approval": "SHFP-3955 / 09 DEC 2011",
+      "replaces": "SHFP-3886 for RI88792"
+    },
+    "doors": {
+      "file": "Door & Window Arrangement.pdf",
+      "page": 1,
+      "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a",
+      "approval": "SHST-8445 / 30 NOV 2011"
+    }
+  },
+  "precision_cn": "房间边界按 2012 完工消防图和通风图平面量取，米制；不是逐项标注的施工尺寸。家具平面参考原图，家具高度、饰面和附件为简化示意。门洞宽度 685 mm 来自门窗表；虚拟行走自动跨门槛。独立外门的服务房间通过房间菜单定位，不能视为实际逃生通路。",
+  "zones": {
+    "main": {
+      "id": "main",
+      "name_cn": "Accommodation 一层 · 主甲板",
+      "floor": 4.18,
+      "bounds": [
+        -20.507886787249944,
+        -14.347886787249942,
+        -3.6,
+        3.6
+      ],
+      "spawn": [
+        -17.147886787249945,
+        0,
+        -1.5707963267948966
+      ]
+    },
+    "upper": {
+      "id": "upper",
+      "name_cn": "Accommodation 二层 · 救生甲板",
+      "floor": 6.48,
+      "bounds": [
+        -18.827886787249945,
+        -14.347886787249942,
+        -3.6,
+        3.6
+      ],
+      "spawn": [
+        -17.147886787249945,
+        0,
+        -1.5707963267948966
+      ]
+    },
+    "engine": {
+      "id": "engine",
+      "name_cn": "Engine Room · 机舱",
+      "floor": 1.42,
+      "bounds": [
+        -20.507886787249944,
+        -14.347886787249942,
+        -4,
+        4
+      ],
+      "spawn": [
+        -14.963886787249942,
+        -3.35,
+        1.5707963267948966
+      ]
+    }
+  },
+  "rooms": [
+    {
+      "id": "hyi_main_crew_port",
+      "name_cn": "一层左舷船员室",
+      "zone": "main",
+      "rect": [
+        -16.587886787249943,
+        -14.347886787249942,
+        0,
+        3.6
+      ],
+      "spawn": [
+        -15.971886787249943,
+        1.1,
+        -2.89
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_main_crew_starboard",
+      "name_cn": "一层右舷船员室",
+      "zone": "main",
+      "rect": [
+        -16.587886787249943,
+        -14.347886787249942,
+        -3.6,
+        0
+      ],
+      "spawn": [
+        -15.971886787249943,
+        -1.1,
+        -0.25
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_upper_crew_port",
+      "name_cn": "二层左舷船员室",
+      "zone": "upper",
+      "rect": [
+        -16.587886787249943,
+        -14.347886787249942,
+        0,
+        3.6
+      ],
+      "spawn": [
+        -15.971886787249943,
+        1.1,
+        -2.89
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_upper_crew_starboard",
+      "name_cn": "二层右舷船员室",
+      "zone": "upper",
+      "rect": [
+        -16.587886787249943,
+        -14.347886787249942,
+        -3.6,
+        0
+      ],
+      "spawn": [
+        -15.971886787249943,
+        -1.1,
+        -0.25
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_galley",
+      "name_cn": "厨房 Galley",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -18.827886787249945,
+        1.05,
+        3.6
+      ],
+      "spawn": [
+        -19.555886787249943,
+        1.65,
+        3.03
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_mess",
+      "name_cn": "餐厅 Mess Room",
+      "zone": "main",
+      "rect": [
+        -18.827886787249945,
+        -16.587886787249943,
+        1.05,
+        3.6
+      ],
+      "spawn": [
+        -17.259886787249943,
+        1.35,
+        2.78
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_toilet",
+      "name_cn": "公共卫生间 / 淋浴",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -17.707886787249944,
+        -3.6,
+        -2
+      ],
+      "spawn": [
+        -18.379886787249944,
+        -2.7,
+        1.27
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_co2_room",
+      "name_cn": "CO₂ 瓶间 · 外侧独立入口",
+      "zone": "main",
+      "rect": [
+        -17.707886787249944,
+        -16.587886787249943,
+        -3.6,
+        -2.4
+      ],
+      "spawn": [
+        -17.147886787249945,
+        -2.95,
+        0.647
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_battery_room",
+      "name_cn": "蓄电池室 Battery Room",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -17.707886787249944,
+        1.9,
+        3.6
+      ],
+      "spawn": [
+        -18.267886787249942,
+        2.2,
+        -2.96
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_charge_room",
+      "name_cn": "充放电室 Charge / Discharge",
+      "zone": "upper",
+      "rect": [
+        -17.707886787249944,
+        -16.587886787249943,
+        1.9,
+        3.6
+      ],
+      "spawn": [
+        -17.147886787249945,
+        2.2,
+        3.141592653589793
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_air_conditioning_room",
+      "name_cn": "空调室 Air Conditioning",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -16.587886787249943,
+        -3.6,
+        -1.9
+      ],
+      "spawn": [
+        -17.147886787249945,
+        -2.4,
+        0.84
+      ],
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 3,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Door & Window Arrangement.pdf",
+          "page": 1,
+          "sha256": "a089d89e89dcc02c09bf4e52dea06e0c6ff1a1e79979c4f9a6e2c4ebdd0fce5a"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 21,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ],
+      "confidence": "projection_measured_footprint_simplified_furniture"
+    },
+    {
+      "id": "hyi_engine_interior",
+      "name_cn": "机舱双机、发电机与通风",
+      "zone": "engine",
+      "rect": [
+        -20.507886787249944,
+        -14.347886787249942,
+        -4,
+        4
+      ],
+      "spawn": [
+        -14.963886787249942,
+        -3.35,
+        1.5707963267948966
+      ],
+      "sources": [
+        {
+          "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+          "page": 2,
+          "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+        },
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        }
+      ],
+      "confidence": "mixed_dimensioned_axes_plan_measured_equipment"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "main_forward_wall",
+      "zone": "main",
+      "rect": [
+        -14.392886787249942,
+        -14.302886787249943,
+        -3.6,
+        3.6
+      ]
+    },
+    {
+      "id": "main_aft_wall",
+      "zone": "main",
+      "rect": [
+        -20.552886787249946,
+        -20.462886787249943,
+        -3.6,
+        3.6
+      ]
+    },
+    {
+      "id": "main_side_wall_-1",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -14.34788678724994,
+        -3.645,
+        -3.555
+      ]
+    },
+    {
+      "id": "main_side_wall_1",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -14.34788678724994,
+        3.555,
+        3.645
+      ]
+    },
+    {
+      "id": "main_crew_center",
+      "zone": "main",
+      "rect": [
+        -16.587886787249943,
+        -14.34788678724994,
+        -0.045,
+        0.045
+      ]
+    },
+    {
+      "id": "main_crew_door_1",
+      "zone": "main",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        0,
+        1.1575
+      ]
+    },
+    {
+      "id": "main_crew_door_1",
+      "zone": "main",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        1.8424999999999998,
+        3.6
+      ]
+    },
+    {
+      "id": "main_bed_1",
+      "zone": "main",
+      "rect": [
+        -16.477886787249943,
+        -14.457886787249944,
+        2.6199999999999997,
+        3.48
+      ]
+    },
+    {
+      "id": "main_desk_1",
+      "zone": "main",
+      "rect": [
+        -15.307886787249943,
+        -14.507886787249943,
+        1.26,
+        1.7
+      ]
+    },
+    {
+      "id": "main_wardrobe_1",
+      "zone": "main",
+      "rect": [
+        -16.43588678724994,
+        -15.955886787249943,
+        0.185,
+        0.7350000000000001
+      ]
+    },
+    {
+      "id": "main_crew_door_-1",
+      "zone": "main",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        -3.6,
+        -1.8424999999999998
+      ]
+    },
+    {
+      "id": "main_crew_door_-1",
+      "zone": "main",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        -1.1575,
+        0
+      ]
+    },
+    {
+      "id": "main_bed_-1",
+      "zone": "main",
+      "rect": [
+        -16.477886787249943,
+        -14.457886787249944,
+        -3.48,
+        -2.6199999999999997
+      ]
+    },
+    {
+      "id": "main_desk_-1",
+      "zone": "main",
+      "rect": [
+        -15.307886787249943,
+        -14.507886787249943,
+        -1.7,
+        -1.26
+      ]
+    },
+    {
+      "id": "main_wardrobe_-1",
+      "zone": "main",
+      "rect": [
+        -16.43588678724994,
+        -15.955886787249943,
+        -0.7350000000000001,
+        -0.185
+      ]
+    },
+    {
+      "id": "main_stair_side",
+      "zone": "main",
+      "rect": [
+        -18.760886787249945,
+        -18.67088678724994,
+        -1.1,
+        1.1
+      ]
+    },
+    {
+      "id": "main_stair_side",
+      "zone": "main",
+      "rect": [
+        -17.696886787249944,
+        -17.60688678724994,
+        -1.1,
+        1.1
+      ]
+    },
+    {
+      "id": "upper_forward_wall",
+      "zone": "upper",
+      "rect": [
+        -14.392886787249942,
+        -14.302886787249943,
+        -3.6,
+        3.6
+      ]
+    },
+    {
+      "id": "upper_aft_wall",
+      "zone": "upper",
+      "rect": [
+        -18.872886787249946,
+        -18.782886787249943,
+        -3.6,
+        3.6
+      ]
+    },
+    {
+      "id": "upper_side_wall_-1",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -14.34788678724994,
+        -3.645,
+        -3.555
+      ]
+    },
+    {
+      "id": "upper_side_wall_1",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -14.34788678724994,
+        3.555,
+        3.645
+      ]
+    },
+    {
+      "id": "upper_crew_center",
+      "zone": "upper",
+      "rect": [
+        -16.587886787249943,
+        -14.34788678724994,
+        -0.045,
+        0.045
+      ]
+    },
+    {
+      "id": "upper_crew_door_1",
+      "zone": "upper",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        0,
+        1.1575
+      ]
+    },
+    {
+      "id": "upper_crew_door_1",
+      "zone": "upper",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        1.8424999999999998,
+        3.6
+      ]
+    },
+    {
+      "id": "upper_bed_1",
+      "zone": "upper",
+      "rect": [
+        -16.477886787249943,
+        -14.457886787249944,
+        2.6199999999999997,
+        3.48
+      ]
+    },
+    {
+      "id": "upper_desk_1",
+      "zone": "upper",
+      "rect": [
+        -15.307886787249943,
+        -14.507886787249943,
+        1.26,
+        1.7
+      ]
+    },
+    {
+      "id": "upper_wardrobe_1",
+      "zone": "upper",
+      "rect": [
+        -16.43588678724994,
+        -15.955886787249943,
+        0.185,
+        0.7350000000000001
+      ]
+    },
+    {
+      "id": "upper_crew_door_-1",
+      "zone": "upper",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        -3.6,
+        -1.8424999999999998
+      ]
+    },
+    {
+      "id": "upper_crew_door_-1",
+      "zone": "upper",
+      "rect": [
+        -16.632886787249944,
+        -16.54288678724994,
+        -1.1575,
+        0
+      ]
+    },
+    {
+      "id": "upper_bed_-1",
+      "zone": "upper",
+      "rect": [
+        -16.477886787249943,
+        -14.457886787249944,
+        -3.48,
+        -2.6199999999999997
+      ]
+    },
+    {
+      "id": "upper_desk_-1",
+      "zone": "upper",
+      "rect": [
+        -15.307886787249943,
+        -14.507886787249943,
+        -1.7,
+        -1.26
+      ]
+    },
+    {
+      "id": "upper_wardrobe_-1",
+      "zone": "upper",
+      "rect": [
+        -16.43588678724994,
+        -15.955886787249943,
+        -0.7350000000000001,
+        -0.185
+      ]
+    },
+    {
+      "id": "upper_stair_side",
+      "zone": "upper",
+      "rect": [
+        -18.760886787249945,
+        -18.67088678724994,
+        -1.1,
+        1.1
+      ]
+    },
+    {
+      "id": "upper_stair_side",
+      "zone": "upper",
+      "rect": [
+        -17.696886787249944,
+        -17.60688678724994,
+        -1.1,
+        1.1
+      ]
+    },
+    {
+      "id": "galley_forward_door",
+      "zone": "main",
+      "rect": [
+        -18.872886787249946,
+        -18.782886787249943,
+        1.05,
+        1.0574999999999999
+      ]
+    },
+    {
+      "id": "galley_forward_door",
+      "zone": "main",
+      "rect": [
+        -18.872886787249946,
+        -18.782886787249943,
+        1.7425000000000002,
+        3.6
+      ]
+    },
+    {
+      "id": "galley_inner",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -18.827886787249945,
+        1.0050000000000001,
+        1.095
+      ]
+    },
+    {
+      "id": "galley_range",
+      "zone": "main",
+      "rect": [
+        -20.396886787249944,
+        -19.94688678724994,
+        2.84,
+        3.42
+      ]
+    },
+    {
+      "id": "galley_sink",
+      "zone": "main",
+      "rect": [
+        -19.916886787249943,
+        -19.46688678724994,
+        2.84,
+        3.42
+      ]
+    },
+    {
+      "id": "galley_counter",
+      "zone": "main",
+      "rect": [
+        -19.436886787249943,
+        -18.98688678724994,
+        2.84,
+        3.42
+      ]
+    },
+    {
+      "id": "galley_fridge",
+      "zone": "main",
+      "rect": [
+        -20.41188678724994,
+        -19.931886787249944,
+        1.5,
+        2.02
+      ]
+    },
+    {
+      "id": "mess_table",
+      "zone": "main",
+      "rect": [
+        -18.382886787249944,
+        -17.032886787249943,
+        2.19,
+        2.9099999999999997
+      ]
+    },
+    {
+      "id": "toilet_inner",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -17.707886787249947,
+        -2.045,
+        -1.955
+      ]
+    },
+    {
+      "id": "toilet_door",
+      "zone": "main",
+      "rect": [
+        -17.752886787249945,
+        -17.662886787249942,
+        -3.6000000000000005,
+        -3.04
+      ]
+    },
+    {
+      "id": "toilet_door",
+      "zone": "main",
+      "rect": [
+        -17.752886787249945,
+        -17.662886787249942,
+        -2.3550000000000004,
+        -2
+      ]
+    },
+    {
+      "id": "toilet_fixture",
+      "zone": "main",
+      "rect": [
+        -20.299886787249942,
+        -19.819886787249946,
+        -3.3600000000000003,
+        -2.84
+      ]
+    },
+    {
+      "id": "toilet_fixture",
+      "zone": "main",
+      "rect": [
+        -19.459886787249943,
+        -18.979886787249946,
+        -3.3600000000000003,
+        -2.84
+      ]
+    },
+    {
+      "id": "wash_basin",
+      "zone": "main",
+      "rect": [
+        -18.380886787249946,
+        -17.930886787249943,
+        -3.3400000000000003,
+        -2.94
+      ]
+    },
+    {
+      "id": "engine_casing",
+      "zone": "main",
+      "rect": [
+        -20.507886787249944,
+        -18.827886787249945,
+        -1.05,
+        1.05
+      ]
+    },
+    {
+      "id": "co2_corridor_wall",
+      "zone": "main",
+      "rect": [
+        -17.707886787249947,
+        -16.587886787249943,
+        -2.445,
+        -2.355
+      ]
+    },
+    {
+      "id": "battery_charge_partition",
+      "zone": "upper",
+      "rect": [
+        -17.752886787249945,
+        -17.662886787249942,
+        1.9,
+        3.6
+      ]
+    },
+    {
+      "id": "upper_port_service_wall",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -16.587886787249943,
+        1.855,
+        1.9449999999999998
+      ]
+    },
+    {
+      "id": "upper_hvac_wall",
+      "zone": "upper",
+      "rect": [
+        -18.827886787249945,
+        -16.587886787249943,
+        -1.9449999999999998,
+        -1.855
+      ]
+    },
+    {
+      "id": "battery_rack_0",
+      "zone": "upper",
+      "rect": [
+        -18.661886787249944,
+        -18.32188678724994,
+        2.88,
+        3.3600000000000003
+      ]
+    },
+    {
+      "id": "battery_rack_1",
+      "zone": "upper",
+      "rect": [
+        -18.281886787249945,
+        -17.941886787249942,
+        2.88,
+        3.3600000000000003
+      ]
+    },
+    {
+      "id": "battery_rack_2",
+      "zone": "upper",
+      "rect": [
+        -17.901886787249943,
+        -17.56188678724994,
+        2.88,
+        3.3600000000000003
+      ]
+    },
+    {
+      "id": "charging_panel",
+      "zone": "upper",
+      "rect": [
+        -17.497886787249946,
+        -16.797886787249944,
+        3.2,
+        3.5
+      ]
+    },
+    {
+      "id": "ac_unit",
+      "zone": "upper",
+      "rect": [
+        -18.475886787249944,
+        -17.27588678724994,
+        -3.375,
+        -2.7249999999999996
+      ]
+    },
+    {
+      "id": "generator_envelope_-1",
+      "zone": "engine",
+      "rect": [
+        -17.474886787249943,
+        -15.924886787249944,
+        -1.2,
+        -0.54
+      ]
+    },
+    {
+      "id": "generator_envelope_1",
+      "zone": "engine",
+      "rect": [
+        -17.474886787249943,
+        -15.924886787249944,
+        0.54,
+        1.2
+      ]
+    },
+    {
+      "id": "main_engine_-1",
+      "zone": "engine",
+      "rect": [
+        -19.331886787249942,
+        -16.475886787249944,
+        -2.9699999999999998,
+        -2.0300000000000002
+      ]
+    },
+    {
+      "id": "main_engine_1",
+      "zone": "engine",
+      "rect": [
+        -19.331886787249942,
+        -16.475886787249944,
+        2.0300000000000002,
+        2.9699999999999998
+      ]
+    },
+    {
+      "id": "engine_aft_bulkhead",
+      "zone": "engine",
+      "rect": [
+        -20.552886787249946,
+        -20.462886787249943,
+        -4,
+        4
+      ]
+    },
+    {
+      "id": "engine_forward_bulkhead",
+      "zone": "engine",
+      "rect": [
+        -14.392886787249942,
+        -14.302886787249943,
+        -4,
+        4
+      ]
+    },
+    {
+      "id": "engine_side_bulkhead",
+      "zone": "engine",
+      "rect": [
+        -20.507886787249944,
+        -14.34788678724994,
+        -4.045,
+        -3.955
+      ]
+    },
+    {
+      "id": "engine_side_bulkhead",
+      "zone": "engine",
+      "rect": [
+        -20.507886787249944,
+        -14.34788678724994,
+        3.955,
+        4.045
+      ]
+    },
+    {
+      "id": "fire_pump_base_-1",
+      "zone": "engine",
+      "rect": [
+        -15.547886787249942,
+        -14.827886787249943,
+        -3.1399999999999997,
+        -2.66
+      ]
+    },
+    {
+      "id": "fire_pump_base_1",
+      "zone": "engine",
+      "rect": [
+        -15.547886787249942,
+        -14.827886787249943,
+        2.66,
+        3.1399999999999997
+      ]
+    }
+  ],
+  "stair": {
+    "rect": [
+      -18.665886787249942,
+      -17.701886787249943,
+      -1.2,
+      1.2
+    ],
+    "lower": "main",
+    "upper": "upper",
+    "lower_floor": 4.18,
+    "upper_floor": 6.48,
+    "landing_x": -18.183886787249943
+  },
+  "safety": [
+    {
+      "id": "hyi_fire_main_foam",
+      "name_cn": "一层泡沫灭火器（示意）",
+      "zone": "main",
+      "type": "extinguisher",
+      "frame": 11.6,
+      "z": 1.65,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_main_call",
+      "name_cn": "一层手动报警按钮",
+      "zone": "main",
+      "type": "callpoint",
+      "frame": 12.8,
+      "z": 0.65,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_main_smoke",
+      "name_cn": "一层烟感探测器",
+      "zone": "main",
+      "type": "detector",
+      "frame": 12,
+      "z": 0,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_upper_foam",
+      "name_cn": "二层灭火器（示意）",
+      "zone": "upper",
+      "type": "extinguisher",
+      "frame": 11.6,
+      "z": 1.65,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_upper_smoke",
+      "name_cn": "二层烟感探测器",
+      "zone": "upper",
+      "type": "detector",
+      "frame": 12,
+      "z": 0,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_engine_foam",
+      "name_cn": "机舱泡沫灭火器（示意）",
+      "zone": "engine",
+      "type": "extinguisher",
+      "frame": 16,
+      "z": 3.3,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_engine_call",
+      "name_cn": "机舱手动报警按钮",
+      "zone": "engine",
+      "type": "callpoint",
+      "frame": 16.3,
+      "z": 0.1,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    },
+    {
+      "id": "hyi_fire_engine_hose",
+      "name_cn": "机舱消火栓与水带箱（示意）",
+      "zone": "engine",
+      "type": "hydrant",
+      "frame": 15.5,
+      "z": -3.7,
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      }
+    }
+  ],
+  "fire_register": {
+    "source": {
+      "file": "Fire Control Plan approved 06Jun2012.pdf",
+      "page": 1,
+      "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+    },
+    "modeled_scope_cn": "展示部分有原图位置依据的消防器材和一套 CO₂ 瓶组符号；尚未逐件复原全船所有设施、支架及管线。",
+    "conflicts": [
+      {
+        "text_cn": "2012-06 消防完工图列消火栓 / 水带箱各 8；Hull Specification 第 16 页存在 9 的记录。本次布置以较晚的消防完工图为依据，数量差异保留，未凭规格书添加第九套。",
+        "sources": [
+          {
+            "file": "Fire Control Plan approved 06Jun2012.pdf",
+            "page": 1,
+            "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+          },
+          {
+            "file": "Hull Specification.pdf",
+            "page": 16,
+            "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+          }
+        ]
+      }
+    ]
+  }
+}

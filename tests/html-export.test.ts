@@ -20,6 +20,7 @@ test("embedded GLB and CSV downloads preserve the original bytes",()=>{
   assert.ok(Buffer.from(embedded.glb,"base64").equals(asset("models/rudder-blade-envelope.glb")));
   assert.ok(Buffer.from(embedded.shipGlb,"base64").equals(asset("models/hai-yin-i-visual-assembly.glb")));
   assert.deepEqual(embedded.shipAssembly,JSON.parse(asset("geometry/ship-assembly.json").toString("utf8")));
+  assert.deepEqual(embedded.interior,JSON.parse(asset("geometry/interior-layout.json").toString("utf8")));
   assert.equal(embedded.drawingCsv,asset("audit/drawing-register.csv").toString("utf8"));
   assert.equal(embedded.equipmentCsv,asset("audit/machinery-equipment-tables.csv").toString("utf8"));
 });

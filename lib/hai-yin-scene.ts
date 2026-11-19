@@ -1,7 +1,7 @@
 import {Box3,Material,Mesh,Object3D,Vector3} from "three";
-
-export type ShipPreset="exterior"|"xray"|"cargo"|"engine";
-export type ShipTarget={id:string;name_cn:string;layer:string;confidence:string;note_cn:string;sources:{file:string;page:number}[]};
+import {walkingZone,type ShipPreset} from "./hai-yin-view";
+export {walkingZone} from "./hai-yin-view";
+export type {ShipPreset,ShipTarget} from "./hai-yin-view";
 export function inspectId(object:Object3D):string|undefined {
   for(let current:Object3D|null=object;current;current=current.parent)if(current.userData.inspectId)return current.userData.inspectId;
 }
@@ -18,7 +18,13 @@ export function createShipActions(root:Object3D){
     preset=value;
     for(const object of meshes){
       const kind=layer(object);let opacity=1,visible=true;
-      if(value==="exterior")visible=!["cargo","ballast","structure","machinery"].includes(kind);
+      if(walkingZone(value)){
+        const zone=walkingZone(value);let tags:string[]=[];
+        for(let ancestor:Object3D|null=object;ancestor;ancestor=ancestor.parent)if(ancestor.userData.walkZones){tags=ancestor.userData.walkZones;break;}
+        visible=zone==="engine"?tags.includes("engine"):tags.some(z=>z==="main"||z==="upper");
+      }
+      else if(value==="fire"){visible=!["cargo","ballast","structure"].includes(kind);if(kind==="shell"||kind==="deck"||kind==="superstructure")opacity=.08;if(kind==="interior")opacity=.20;}
+      else if(value==="exterior")visible=!["cargo","ballast","structure","machinery","interior","safety"].includes(kind);
       else if(value==="xray"){
         if(kind==="deck"||kind==="structure")visible=false;
         if(kind==="shell")opacity=.12;if(kind==="superstructure")opacity=.22;if(kind==="cargo")opacity=.72;if(kind==="ballast")opacity=.23;
@@ -36,10 +42,13 @@ export function createShipActions(root:Object3D){
       }
     }
   }
-  function select(id:string){
+  function select(id:string,preservePreset=false){
     const object=root.getObjectByName(id);if(!object)return;
     const kind=layer(object);
-    if(kind==="cargo"||kind==="ballast")applyPreset("cargo");
+    if(preservePreset)applyPreset(preset);
+    else if(kind==="safety")applyPreset("fire");
+    else if(kind==="interior")applyPreset("xray");
+    else if(kind==="cargo"||kind==="ballast")applyPreset("cargo");
     else if(kind==="machinery")applyPreset("engine");
     else if(["exterior","cargo","engine"].includes(preset))applyPreset("exterior");
     else applyPreset(preset);

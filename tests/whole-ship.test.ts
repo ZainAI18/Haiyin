@@ -17,7 +17,8 @@ test("Hai Yin I is an independent whole-vessel asset with metre geometry and two
   assert.equal(gltf.scenes[0].extras.unit,"metre");
   assert.equal(gltf.scenes[0].extras.independent_of_teaching_vessel,true);
   assert.equal(gltf.scenes[0].extras.detailed_reconstruction_complete,false);
-  assert.equal(new Set(assembly.targets.map((t:{id:string})=>t.id)).size,32);
+  assert.equal(new Set(assembly.targets.map((t:{id:string})=>t.id)).size,assembly.targets.length);
+  assert.ok(assembly.targets.some((t:{id:string})=>t.id==="hyi_galley"));
   for(const target of assembly.targets)assert.ok(!objectIds.includes(target.id));
   const hull=assembly.targets.find((t:{id:string})=>t.id==="hyi_hull").bounds_m;
   const bow=assembly.targets.find((t:{id:string})=>t.id==="hyi_forecastle").bounds_m;

@@ -4,6 +4,7 @@ import {fileURLToPath} from "node:url";
 import {Box3,BoxGeometry,BufferGeometry,Color,CylinderGeometry,DoubleSide,ExtrudeGeometry,Float32BufferAttribute,Group,Mesh,MeshStandardMaterial,Quaternion,Scene,Shape,SphereGeometry,Vector2,Vector3} from "three";
 import {GLTFExporter} from "three/addons/exporters/GLTFExporter.js";
 import {mergeGeometries} from "three/addons/utils/BufferGeometryUtils.js";
+import {addHaiYinInterior} from "./hai-yin-interior.mjs";
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 const base=resolve(root,"public/hai-yin-i");
@@ -142,12 +143,14 @@ beam("main_mast",[fx(10),11.15,0],[fx(10),20.7,0],.055,"white",masts);beam("rada
 const lifesaving=component("hyi_lifesaving","两舷救生筏","fittings","schematic_equipment","两舷位置参考总布置救生甲板图；筏架和筏壳目前为示意几何。",[ga]);
 for(const sign of [-1,1]){const raft=cylinder(`liferaft_${sign}`,.40,1.0,[fx(10),7.05,sign*4.0],"white",lifesaving);raft.rotation.x=Math.PI/2;}
 
+const interior=addHaiYinInterior({component,box,cylinder,beam,fx,source,house,engineRoom,aux});
+await writeFile(resolve(base,"geometry/interior-layout.json"),JSON.stringify(interior,null,2));
 scene.updateMatrixWorld(true);
-for(const target of targets){const object=scene.getObjectByName(target.id);const bounds=new Box3().setFromObject(object);target.bounds_m={min:bounds.min.toArray(),max:bounds.max.toArray()};}
+for(const target of targets){const object=scene.getObjectByName(target.id);Object.assign(target,object.userData);const bounds=new Box3().setFromObject(object);target.bounds_m={min:bounds.min.toArray(),max:bounds.max.toArray()};}
 let meshes=0,triangles=0;const geometries=new Set();scene.traverse(o=>{if(o instanceof Mesh){meshes++;geometries.add(o.geometry);triangles+=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;}});
 globalThis.FileReader??=class{readAsArrayBuffer(blob){blob.arrayBuffer().then(result=>{this.result=result;this.onloadend?.();});}readAsDataURL(blob){blob.arrayBuffer().then(result=>{this.result=`data:${blob.type};base64,${Buffer.from(result).toString("base64")}`;this.onloadend?.();});}};
 const glb=await new GLTFExporter().parseAsync(scene,{binary:true});
 await mkdir(resolve(base,"models"),{recursive:true});await writeFile(resolve(base,"models/hai-yin-i-visual-assembly.glb"),Buffer.from(glb));
-const manifest={id:plan.id,name:"MT Hai Yin I",unit:"metre",model_url:"/hai-yin-i/models/hai-yin-i-visual-assembly.glb",status:"whole_vessel_visual_assembly",detailed_reconstruction_complete:false,teaching_ship_route:"/atlas",vessel_route:"/vessels/hai-yin-i",scope_cn:"整船可视化装配，包括闭合外壳、艏楼、三层艉楼、八个货油舱、双舷压载包络、双机双轴双桨双舵及甲板设备。各部件精度不同，尚不是全部细节已校核的 1:1 工程模型。",precision_cn:plan.precision_cn,frame_zero_x_m:plan.frame_zero_x_m,metrics:{bytes:glb.byteLength,mesh_nodes:meshes,triangles,unique_geometries:geometries.size},targets};
+const manifest={id:plan.id,name:"MT Hai Yin I",unit:"metre",model_url:"/hai-yin-i/models/hai-yin-i-visual-assembly.glb",status:"whole_vessel_visual_assembly",detailed_reconstruction_complete:false,teaching_ship_route:"/atlas",vessel_route:"/vessels/hai-yin-i",scope_cn:"独立整船装配、两层生活区和机舱可行走内部、楼梯与消防器材示意。房间平面按图量取，统一米制；船壳、设备和家具仍存在简化几何，尚不是全部细节已校核的 1:1 工程模型。",precision_cn:plan.precision_cn,frame_zero_x_m:plan.frame_zero_x_m,metrics:{bytes:glb.byteLength,mesh_nodes:meshes,triangles,unique_geometries:geometries.size},targets};
 await writeFile(resolve(base,"geometry/ship-assembly.json"),JSON.stringify(manifest,null,2));
 console.log(JSON.stringify({file:"hai-yin-i-visual-assembly.glb",...manifest.metrics,targets:targets.length,teaching_ship_changed:false},null,2));

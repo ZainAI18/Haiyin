@@ -14,7 +14,7 @@
     "byte_duplicate_count": 3,
     "not_approved_count": 5,
     "filename_family_count": 116,
-    "verified_family_count": 12
+    "verified_family_count": 15
   },
   "facts": [
     {
@@ -322,6 +322,42 @@
         "sha256": "de4acbb4035e5286c885c6a57fb60f0a190d7fca72654df743f772b5574f0df1"
       },
       "note_cn": "图签为 CT-19-4528-3001 Rev.03，2019-06-24 带意见批准。Rev0 与 Rev3 文件字节相同。N.T.S. 系统图不能提供精确空间走管。"
+    },
+    {
+      "id": "accommodation_interiors",
+      "name_cn": "两层生活区及内楼梯",
+      "quantity": 2,
+      "status": "plan_measured_interior",
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      },
+      "note_cn": "按最新消防完工图、三页通风图及门窗图补充两层房间、四间船员室、厨房、餐厅、卫生间、CO₂ 瓶间与设备房。支持第一视角、方向移动、楼梯上下层及独立房间定位；家具高度和踏步为简化示意。"
+    },
+    {
+      "id": "engine_room_interior",
+      "name_cn": "机舱内部、通风与发电机位置",
+      "quantity": 1,
+      "status": "plan_measured_interior",
+      "source": {
+        "file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
+        "page": 2,
+        "sha256": "819de5fbd3732f37c828f392e6f8f3ade90599de8833d500e26be343697d849b"
+      },
+      "note_cn": "机舱内部可第一视角移动，发电机调整为双主机之间。通风采用原表 300×240 mm 截面；机舱平台高度按剖面量取，设备壳体与附件仍非厂家精确 CAD。"
+    },
+    {
+      "id": "fire_safety_interior",
+      "name_cn": "消防布置与 CO₂ 系统",
+      "quantity": 1,
+      "status": "source_location_symbolic_equipment",
+      "source": {
+        "file": "Fire Control Plan approved 06Jun2012.pdf",
+        "page": 1,
+        "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+      },
+      "note_cn": "展示部分有原图位置依据的消防器材和一套 CO₂ 瓶组符号；尚未逐件复原全船所有设施、支架及管线。"
     }
   ],
   "conflicts": [
@@ -397,6 +433,23 @@
           "sha256": "5e0c5f465af3e70e223766541cb8971865175e25eb25558f33ad6c1bab9e087f"
         }
       ]
+    },
+    {
+      "id": "fire-hydrant-count",
+      "severity": "source_quantity_conflict_later_completion_plan_preferred",
+      "text_cn": "2012-06 消防完工图列消火栓 / 水带箱各 8；Hull Specification 第 16 页存在 9 的记录。本次布置以较晚的消防完工图为依据，数量差异保留，未凭规格书添加第九套。",
+      "sources": [
+        {
+          "file": "Fire Control Plan approved 06Jun2012.pdf",
+          "page": 1,
+          "sha256": "46bbd50a1e78bfdfedee1025f6dc1d78f7b9791cf000241dbf678a081ecabe93"
+        },
+        {
+          "file": "Hull Specification.pdf",
+          "page": 16,
+          "sha256": "7846096a9a348517cc3e4565997d8cbcf646168bf4135526f8ed719d9df14869"
+        }
+      ]
     }
   ],
   "required_for_complete_geometry": [
@@ -410,6 +463,6 @@
     "detailed_reconstruction_complete": false,
     "model_url": "/hai-yin-i/models/hai-yin-i-visual-assembly.glb",
     "independent_from_teaching_ship": true,
-    "scope_cn": "整船可视化装配，包括闭合外壳、艏楼、三层艉楼、八个货油舱、双舷压载包络、双机双轴双桨双舵及甲板设备。各部件精度不同，尚不是全部细节已校核的 1:1 工程模型。"
+    "scope_cn": "独立整船装配、两层生活区和机舱可行走内部、楼梯与消防器材示意。房间平面按图量取，统一米制；船壳、设备和家具仍存在简化几何，尚不是全部细节已校核的 1:1 工程模型。"
   }
 }

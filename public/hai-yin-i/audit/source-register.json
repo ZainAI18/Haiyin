@@ -564,15 +564,15 @@
       "family_hint": "Door & Window Arrangement",
       "source_id": "HYI-D029",
       "stamp_date_candidate": "2011-11-30",
-      "date_review": "pending",
-      "date_evidence": "OCR of approval stamp; needs verification",
-      "drawing_no_verified": "",
-      "class_reference_verified": "",
+      "date_review": "visually_verified",
+      "date_evidence": "WZ029, RI88792 + RI89874; approval 30 NOV 2011. Door schedule and floor plans visually reviewed; D107 A-60 revision retained.",
+      "drawing_no_verified": "WUT513B-260-01",
+      "class_reference_verified": "SHST-8445",
       "stamp_status_detected": "approved",
       "replacement_text": "",
       "canonical_file": "Door & Window Arrangement.pdf",
       "duplicate_of": "",
-      "selection": "candidate_single_source",
+      "selection": "verified_source",
       "selected_family_file": "Door & Window Arrangement.pdf",
       "page_count": 1
     },
@@ -621,15 +621,15 @@
       "family_hint": "Engine & Pump Room Ventilation Pipeline Arrangement",
       "source_id": "HYI-D032",
       "stamp_date_candidate": "2011-12-09",
-      "date_review": "pending",
-      "date_evidence": "OCR of approval stamp; needs verification",
-      "drawing_no_verified": "",
-      "class_reference_verified": "",
+      "date_review": "visually_verified",
+      "date_evidence": "WZ029 / RI88792; revision 2011.12.07. Approved with Remarks 09 DEC 2011, explicitly replaces SHFP-3886 for RI88792. All three pages visually reviewed.",
+      "drawing_no_verified": "WUT513B-424-01",
+      "class_reference_verified": "SHFP-3955",
       "stamp_status_detected": "approved",
       "replacement_text": "This drawing annuls and replaces the previously\napproved drawing SHFP-3886 for RI 88792.",
       "canonical_file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
       "duplicate_of": "",
-      "selection": "candidate_latest_stamp",
+      "selection": "verified_latest_in_family",
       "selected_family_file": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
       "page_count": 3
     },
@@ -849,15 +849,15 @@
       "family_hint": "Fire Control Plan",
       "source_id": "HYI-D044",
       "stamp_date_candidate": "2012-06-06",
-      "date_review": "pending",
-      "date_evidence": "filename; stamp visual review pending",
-      "drawing_no_verified": "",
-      "class_reference_verified": "",
+      "date_review": "visually_verified",
+      "date_evidence": "Completion drawing 2012.04; WZ029 / Hai Yin I. Approved with Remarks 06 JUN 2012, explicitly annuls and replaces SHFP-4280.",
+      "drawing_no_verified": "WUT513B-050-05",
+      "class_reference_verified": "SHFP-4292",
       "stamp_status_detected": "approved",
       "replacement_text": "THIS DRAWING ANNULS AND REPLACES THE\nPREVIOUSLY APPROVED DRAWING SHFP-4280.",
       "canonical_file": "Fire Control Plan approved 06Jun2012.pdf",
       "duplicate_of": "",
-      "selection": "candidate_latest_stamp",
+      "selection": "verified_latest_in_family",
       "selected_family_file": "Fire Control Plan approved 06Jun2012.pdf",
       "page_count": 1
     },
@@ -3258,12 +3258,12 @@
     },
     {
       "family": "Door & Window Arrangement",
-      "state": "candidate_single_source",
+      "state": "verified_source",
       "selected": "Door & Window Arrangement.pdf",
       "candidates": [
         "Door & Window Arrangement.pdf"
       ],
-      "review_needed": true
+      "review_needed": false
     },
     {
       "family": "ER Bilge, Fire & Water Ballast Piping System",
@@ -3295,13 +3295,13 @@
     },
     {
       "family": "Engine & Pump Room Ventilation Pipeline Arrangement",
-      "state": "candidate_latest_stamp",
+      "state": "verified_latest_in_family",
       "selected": "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
       "candidates": [
         "Engine & Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf",
         "Engine & Pump Room Ventilation Pipeline Arrangement approved 16Nov2011.pdf"
       ],
-      "review_needed": true
+      "review_needed": false
     },
     {
       "family": "Engine Structure Plan",
@@ -3352,7 +3352,7 @@
     },
     {
       "family": "Fire Control Plan",
-      "state": "candidate_latest_stamp",
+      "state": "verified_latest_in_family",
       "selected": "Fire Control Plan approved 06Jun2012.pdf",
       "candidates": [
         "Fire Control Plan approved 06Jun2012.pdf",
@@ -3360,7 +3360,7 @@
         "Fire Control Plan approved 18May2012.pdf",
         "Fire Control Plan approved 22May2012.pdf"
       ],
-      "review_needed": true
+      "review_needed": false
     },
     {
       "family": "Fire Resisting Region Division Plan",

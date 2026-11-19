@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="海银一号图纸重建、尺寸、修订和设备资料。独立离线 HTML；当前三维成果为舵叶外形包络。">
+  <meta name="description" content="海银一号独立整船模型、两层生活区与机舱第一视角、消防布置和图纸来源。离线 HTML。">
   <meta name="color-scheme" content="light">
   <title>Hai Yin I · Docking Atlas AI</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142b37'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='46' fill='%23f5d8c0'%3E⚓%3C/text%3E%3C/svg%3E">
@@ -28,7 +28,8 @@
     <div class="model-grid" id="model-section">
       <section class="card model-card" aria-labelledby="model-title">
         <div class="card-title"><div><p class="eyebrow">INDEPENDENT VESSEL / 1 UNIT = 1 METRE</p><h2 id="model-title">Hai Yin I 整船三维装配</h2></div><span class="chip">双机 · 双桨 · 双舵 · 八货油舱</span></div>
-        <div class="ship-presets" aria-label="独立 Hai Yin I 查看模式"><button type="button" data-preset="exterior" aria-pressed="true">整船外观</button><button type="button" data-preset="xray">透视全船</button><button type="button" data-preset="cargo">货油舱</button><button type="button" data-preset="engine">机舱</button></div>
+        <div class="ship-presets" aria-label="独立 Hai Yin I 查看模式"><button type="button" data-preset="exterior" aria-pressed="true">整船外观</button><button type="button" data-preset="xray">透视全船</button><button type="button" data-preset="cargo">货油舱</button><button type="button" data-preset="engine">机舱总览</button><button type="button" data-preset="fire">消防布置</button></div>
+        <div class="ship-presets" aria-label="第一视角入口"><button type="button" data-preset="walk-main">Accommodation 一层</button><button type="button" data-preset="walk-upper">Accommodation 二层</button><button type="button" data-preset="walk-engine">Engine Room 第一视角</button></div>
         <div id="viewport" class="viewport">
           <div class="viewport-heading"><span>MT HAI YIN I / 独立整船</span><span>LOA 49.90 m · B 9.80 m</span></div>
           <div id="profile" class="profile"><!--__PROFILE__--></div>
@@ -37,6 +38,14 @@
           <div class="viewport-actions"><button id="open-3d" type="button">打开整船 3D</button><button id="show-profile" type="button" hidden>二维布置</button></div>
         </div>
         <div class="viewer-caption"><span id="viewer-status" role="status" aria-live="polite">正在准备整船三维…</span><span>部件精度分别标注</span></div>
+        <div id="walk-panel" class="hyi-walk-panel" hidden>
+          <div class="hyi-walk-location" role="status"><strong id="walk-level"></strong><span id="walk-room"></span></div>
+          <p>拖动画面环视 360°。先点画面，再用方向键 / WASD 前后左右移动；Q / E 转向。手机可长按下方按钮。</p>
+          <div class="hyi-walk-actions"><div class="hyi-dpad"><button type="button" data-walk-dir="forward">↑ 前进</button><div><button type="button" data-walk-dir="left">← 左移</button><button type="button" data-walk-dir="back">↓ 后退</button><button type="button" data-walk-dir="right">→ 右移</button></div></div><div class="hyi-turn"><button type="button" data-walk-dir="turnLeft">↶ 左转</button><button type="button" data-walk-dir="turnRight">右转 ↷</button></div><button type="button" id="walk-stairs">去楼梯上楼</button><button type="button" id="walk-exit">退出第一视角</button></div>
+          <p id="stair-hint" class="fine">到楼梯后向前走即可上下楼，也可用上方楼层按钮直接切换。</p>
+          <label class="hyi-room-select">定位房间（虚拟入口）<select id="walk-room-select"><option value="">选择房间查看内部…</option></select></label>
+          <small>虚拟定位可进入外门独立房间，不表示真实连通或逃生路线。门槛自动跨越，楼梯踏步与家具高度简化。</small>
+        </div>
         <div id="camera-tools" class="camera-tools" hidden>
           <div class="button-group" aria-label="三维视角"><button type="button" id="ship-reset">全船复位</button><button type="button" data-camera="reset">立体</button><button type="button" data-camera="front">左舷</button><button type="button" data-camera="side">艏视</button><button type="button" data-camera="top">俯视</button></div>
           <label class="check"><input id="wireframe" type="checkbox">显示网格</label>
@@ -44,6 +53,7 @@
         <label class="ship-target-label">定位 Hai Yin I 部件<select id="ship-target"><option value="">全船总览</option></select></label>
         <div id="ship-selection" class="ship-selection" role="status" aria-live="polite"></div>
         <div class="downloads"><button type="button" class="primary" data-download="ship-glb">下载 Hai Yin I 整船 GLB ↓</button><button type="button" data-download="glb">原舵叶部件 GLB</button><button type="button" data-download="assembly">装配与精度说明 JSON</button></div>
+        <details class="hyi-interior-notes"><summary>内部模型依据与消防范围</summary><p id="interior-precision"></p><p>房间：Fire Control Plan approved 06Jun2012.pdf 第 1 页；家具 / 机舱位置：Engine &amp; Pump Room Ventilation Pipeline Arrangement approved 09Dec2011.pdf 第 2–3 页；门洞：Door &amp; Window Arrangement.pdf 第 1 页。</p><p id="fire-scope"></p><p id="fire-conflict"></p><button type="button" data-download="interior">下载内部模型与消防来源 JSON ↓</button></details>
       </section>
 
       <aside class="card dimension-card" aria-labelledby="dimension-title">
@@ -63,7 +73,7 @@
 
     <section class="section card" id="drawings" aria-labelledby="drawings-title">
       <div class="section-heading"><div><p class="eyebrow">SOURCE LIBRARY</p><h2 id="drawings-title">全部图纸资料</h2></div><button type="button" data-download="drawings-csv">导出台账 CSV ↓</button></div>
-      <p class="fine">160 份 PDF 的文件、页数、印章候选和重复关系。仅 12 个关键候选图组已人工核对；“已登记”不表示逐页几何已重建。</p>
+      <p class="fine">160 份 PDF 的文件、页数、印章候选和重复关系。15 个关键候选图组已人工核对；“已登记”不表示逐页几何已重建。</p>
       <div class="filters"><label class="search"><span>查找图纸</span><input id="drawing-search" type="search" placeholder="文件名、编号，或中文：舵、机舱、锚…"></label><label>来源状态<select id="drawing-filter"><option value="all">全部文件</option><option value="rejected">未获批准 · 排除</option><option value="duplicates">完全重复 · 归并</option><option value="verified">人工核对的来源</option><option value="pending">待人工核验</option></select></label><button id="drawing-clear" type="button">清除筛选</button></div>
       <p id="drawing-count" class="result-count" role="status" aria-live="polite"></p>
       <div class="table-scroll" tabindex="0" aria-label="图纸资料表格，可横向滚动"><table><thead><tr><th scope="col">编号 / 文件</th><th scope="col">页数</th><th scope="col">候选状态</th><th scope="col">候选日期</th><th scope="col">查看</th></tr></thead><tbody id="drawing-rows"></tbody></table></div>

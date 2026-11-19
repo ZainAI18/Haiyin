@@ -2,12 +2,12 @@
 
 目标：按用户提供资料中的最新有效设计重建，单位为米，1 GLB 单位 = 1 m。网站保留两艘独立船：`/atlas` 原教学船，`/vessels/hai-yin-i` 为 Hai Yin I。教学船有什么部件，不影响 Hai Yin I 按其图纸独立建立相应部件；去重只针对来源文件。
 
-目前已建立 Hai Yin I 整船可视化装配，包括船壳、艏楼、三层艉楼、八货油舱、双舷压载包络、双机双轴双桨双舵和甲板设备，32 个可定位部件。**尚不是全部几何已核对的 1:1 工程模型**：圆舭船壳为插值面，球鼻艏横剖面、艉轴隧道、机舱及甲板设备细部、2019 改装管系仍未完成精确重建。
+目前已建立 Hai Yin I 整船可视化装配，包括船壳、艏楼、三层艉楼、八货油舱、双舷压载包络、双机双轴双桨双舵和甲板设备，60 个可定位部件。**尚不是全部几何已核对的 1:1 工程模型**：圆舭船壳为插值面，球鼻艏横剖面、艉轴隧道、机舱及甲板设备细部、2019 改装管系仍未完成精确重建。
 
 ## 可直接查看的成果
 
-- 路由 `/vessels/hai-yin-i`：独立整船、透视 / 货油舱 / 机舱视图、32 个部件定位、尺寸和来源记录。
-- `public/hai-yin-i/models/hai-yin-i-visual-assembly.glb`：整船可视化装配，约 1.2 MB、171 个网格节点、约 2.84 万三角面；不共享原教学船的几何。
+- 路由 `/vessels/hai-yin-i`：独立整船、透视 / 货油舱 / 机舱视图、60 个部件定位、尺寸和来源记录。
+- `public/hai-yin-i/models/hai-yin-i-visual-assembly.glb`：整船可视化装配，约 1.59 MB、375 个网格节点、31,012 个三角面；不共享原教学船的几何。
 - `public/hai-yin-i/geometry/ship-plan.json`：从 2012-02-08 B 版总结构图提取的甲板、艏楼、艉底及艏部侧轮廓，带原 PDF 哈希。按 FR20–FR34 的 14 × 560 mm 标定纵坐标，型宽 9.80 m 标定横坐标；艏楼根部得到约 FR77，主甲板长度约 48.596 m，艏楼前伸补足总长 49.90 m。
 - `public/hai-yin-i/geometry/ship-assembly.json`：每个部件的来源、几何精度类型、说明及边界，原图标注尺寸与待核实包络分别记录。
 - `public/hai-yin-i/audit/drawing-register.csv`：160 份 PDF、782 页的文件名、SHA-256、日期候选、人工复核状态、去重关系。
@@ -23,7 +23,7 @@
 3. 检出五份盖有 **Not Approved / Non Approvato** 的提交图，包括 Mooring Equipment Arrangement.pdf、两版 Windlass Foundation Structure and Arrangement Plan、两版 Structure Strengthening Plan for Windlass Foundation。这些图均排除为几何依据。
 4. 2012 年基座加强图明确引用已批准艏楼甲板图 SHST-9014（Forecastle Deck Structure Rev3.pdf，第 1 页，2012-02-08）。需要读取该图及意见来重建相应结构，不能沿用被拒图。
 5. **Filed / For information** 保留其原始状态，不能改称 Approved。Body Line on Frames.pdf 的型线可用于资料重建，但其印章就是 Filed。
-6. 已人工核对关键来源的 12 个候选图组；其余仍是候选来源，必须继续核对图号、船号、适用范围与审批意见。自动日期排序不是最终有效性确认。
+6. 已人工核对关键来源的 15 个候选图组；其余仍是候选来源，必须继续核对图号、船号、适用范围与审批意见。自动日期排序不是最终有效性确认。
 7. 机械设备明细表的中英文是相同设备的两种语言记录，不能累计设备数量。NT855-M 主机中文第 2 页写 1258 kg/台，英文第 18 页写 3350 kg/台，两者均写 2 台。重量冲突未解决前，不用其计算质量和重心，也不因双语记录生成四台主机。
 
 ## 已核对且有来源的尺寸
@@ -77,3 +77,5 @@ GLB 构建器使用已提取的 `public/hai-yin-i/geometry/rudder-profile.json`�
 整船构建器 `scripts/build-hai-yin-ship.mjs` 使用 `ship-plan.json` 与舵叶轮廓生成独立 Hai Yin I 装配；不会修改原教学船几何。已核对的 B 版轮廓可通过 `python scripts/extract-hai-yin-ship-plan.py "<原始 PDF 所在目录>"` 重新提取，源文件哈希变化时会停止并要求重新核对图纸。当前范围与验证详见 [整船状态](HAI-YIN-I-WHOLE-SHIP-STATUS.md)。
 
 原始 PDF 保留在用户资料位置，没有作为本次新增内容复制到公开仓库。仓库内包含模型、提取轮廓、来源元数据和处理记录。
+
+2026-11-19：新增两层生活区、机舱第一视角与消防示意，来源、操作及精度详见 [内部重建记录](HAI-YIN-I-INTERIORS.md)。
